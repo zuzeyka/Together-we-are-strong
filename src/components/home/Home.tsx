@@ -2,22 +2,31 @@ import React from "react";
 
 const Home: React.FC = () => {
     return (
-        <div>
-            <div className="relative bg-blue-600 text-white h-screen flex items-center justify-center text-center">
-                <div className="space-y-6">
+        <div className="w-full h-screen">
+            <div className="relative h-screen overflow-hidden">
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    src="src/assets/mainVideo.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                ></video>
+
+                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+                <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full">
                     <h1 className="text-5xl font-extrabold">
                         Together We Are Strong
                     </h1>
-                    <p className="text-xl">
+                    <p className="mt-4 text-xl">
                         Empowering communities to create lasting change. Join us
                         today.
                     </p>
-                    <button className="mt-4 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500">
+                    <button className="mt-6 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500">
                         Get Involved
                     </button>
                 </div>
-
-                <div className="absolute inset-0 bg-black opacity-30"></div>
             </div>
 
             <div className="bg-gray-100 py-16">
@@ -28,9 +37,9 @@ const Home: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                             <img
-                                src="https://www.lifeatspotify.com/images/470x500/WhoWeAre-c-940.jpg"
+                                src="/src/assets/DSC_4478.jpg"
                                 alt="Campaign"
-                                className="w-full h-48 object-cover"
+                                className="w-full h-64  object-cover object-top"
                             />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold">
@@ -47,9 +56,9 @@ const Home: React.FC = () => {
                         </div>
                         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                             <img
-                                src="https://www.lifeatspotify.com/images/470x500/WhoWeAre-c-940.jpg"
+                                src="/src/assets/DSC_4443.jpg"
                                 alt="Campaign"
-                                className="w-full h-48 object-cover"
+                                className="w-full h-64  object-cover object-top"
                             />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold">
@@ -66,9 +75,9 @@ const Home: React.FC = () => {
                         </div>
                         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                             <img
-                                src="https://www.lifeatspotify.com/images/470x500/WhoWeAre-c-940.jpg"
+                                src="/src/assets/DSC_4471.jpg"
                                 alt="Campaign"
-                                className="w-full h-48 object-cover"
+                                className="w-full h-64  object-cover object-top"
                             />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold">
@@ -83,11 +92,11 @@ const Home: React.FC = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div className="bg-white shadow-lg rounded-t-lg overflow-hidden">
                             <img
-                                src="https://www.lifeatspotify.com/images/470x500/WhoWeAre-c-940.jpg"
+                                src="/src/assets/DSC_4457.jpg"
                                 alt="Campaign"
-                                className="w-full h-48 object-cover"
+                                className="w-full h-64 object-cover object-top"
                             />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold">
