@@ -1,4 +1,5 @@
 import React from "react";
+import TeamCard from "./TeamCard";
 
 const Home: React.FC = () => {
     return (
@@ -32,85 +33,39 @@ const Home: React.FC = () => {
             <div className="bg-gray-100 py-16">
                 <div className="container mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-8 text-gray-800">
-                        Featured Campaigns
+                        Our Team
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-                            <img
-                                src="/src/assets/DSC_4478.jpg"
-                                alt="Campaign"
-                                className="w-full h-64  object-cover object-top"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold">
-                                    Campaign Title
-                                </h3>
-                                <p className="text-gray-600 mt-2">
-                                    Brief description of the campaign's purpose
-                                    and impact.
-                                </p>
-                                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
-                        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-                            <img
-                                src="/src/assets/DSC_4443.jpg"
-                                alt="Campaign"
-                                className="w-full h-64  object-cover object-top"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold">
-                                    Campaign Title
-                                </h3>
-                                <p className="text-gray-600 mt-2">
-                                    Brief description of the campaign's purpose
-                                    and impact.
-                                </p>
-                                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
-                        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-                            <img
-                                src="/src/assets/DSC_4471.jpg"
-                                alt="Campaign"
-                                className="w-full h-64  object-cover object-top"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold">
-                                    Campaign Title
-                                </h3>
-                                <p className="text-gray-600 mt-2">
-                                    Brief description of the campaign's purpose
-                                    and impact.
-                                </p>
-                                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
-                        <div className="bg-white shadow-lg rounded-t-lg overflow-hidden">
-                            <img
-                                src="/src/assets/DSC_4457.jpg"
-                                alt="Campaign"
-                                className="w-full h-64 object-cover object-top"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold">
-                                    Campaign Title
-                                </h3>
-                                <p className="text-gray-600 mt-2">
-                                    Brief description of the campaign's purpose
-                                    and impact.
-                                </p>
-                                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
+                        <TeamCard
+                            name="Karina Hrebenchukova-Rozumei"
+                            position="Director"
+                            image="/src/assets/DSC_4478.jpg"
+                        />
+                        <TeamCard
+                            name="Dmitry Rozumei"
+                            position="Campaign Manager"
+                            image="/src/assets/DSC_4443.jpg"
+                        />
+                        <TeamCard
+                            name="Svitlana Lievashova"
+                            position="Volunteer"
+                            image="/src/assets/DSC_4471.jpg"
+                        />
+                        <TeamCard
+                            name="Artur Karamian"
+                            position="Volunteer"
+                            image="/src/assets/DSC_4457.jpg"
+                        />
+                        <TeamCard
+                            name="Andrii Porokhnia"
+                            position="Volunteer"
+                            image="/src/assets/DSC_4463.jpg"
+                        />
+                        <TeamCard
+                            name="Svitlana Karatsiuba"
+                            position="Volunteer"
+                            image="/src/assets/DSC_4427.jpg"
+                        />
                     </div>
                 </div>
             </div>
