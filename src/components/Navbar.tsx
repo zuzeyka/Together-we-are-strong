@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navbar: React.FC = () => {
     return (
@@ -36,6 +37,7 @@ const Navbar: React.FC = () => {
                         </Link>
                     </li>
                 </ul>
+                <LanguageSwitcher />
             </div>
         </nav>
     );

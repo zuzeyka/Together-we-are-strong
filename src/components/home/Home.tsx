@@ -1,7 +1,10 @@
 import React from "react";
 import TeamCard from "./TeamCard";
+import { useTranslation } from "react-i18next";
 
 const Home: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="w-full h-screen">
             <div className="relative h-screen overflow-hidden">
@@ -18,14 +21,11 @@ const Home: React.FC = () => {
 
                 <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full">
                     <h1 className="text-5xl font-extrabold">
-                        Together We Are Strong
+                        {t("hero.title")}
                     </h1>
-                    <p className="mt-4 text-xl">
-                        Empowering communities to create lasting change. Join us
-                        today.
-                    </p>
+                    <p className="mt-4 text-xl">{t("hero.subtitle")}</p>
                     <button className="mt-6 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500">
-                        Get Involved
+                        {t("hero.button")}
                     </button>
                 </div>
             </div>
