@@ -1,7 +1,20 @@
 {
-  "hero": {
-    "title": "Together We Are Strong",
-    "subtitle": "Empowering communities to create lasting change. Join us today.",
-    "button": "Get Involved"
-  }
+    "header": {
+        "title": "Together We Are Strong",
+        "nav": {
+            "campaings": "Campaigns",
+            "about": "About Us",
+            "donate": "Donate",
+            "contact": "Contact"
+        }
+    },
+    "hero": {
+        "title": "Support Our Mission",
+        "subtitle": "Together, we can make a difference.",
+        "button": "Donate Now"
+    },
+    "footer": {
+        "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",
+        "contact": "Contact us at info@charity.org"
+    }
 }
