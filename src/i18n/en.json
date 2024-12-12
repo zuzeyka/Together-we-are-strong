@@ -2,6 +2,7 @@
     "header": {
         "title": "Together We Are Strong",
         "nav": {
+            "team": "Team",
             "campaings": "Campaigns",
             "about": "About Us",
             "donate": "Donate",
