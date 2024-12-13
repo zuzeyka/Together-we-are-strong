@@ -3,7 +3,7 @@ import TeamCard from "./TeamCard";
 
 const Team: React.FC = () => {
     return (
-        <div className="bg-gray-100 py-16">
+        <section id="team" className="bg-gray-100 py-16">
             <div className="container mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-8 text-gray-800">
                     Our Team
@@ -41,7 +41,7 @@ const Team: React.FC = () => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

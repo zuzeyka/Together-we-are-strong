@@ -44,8 +44,8 @@ const Navbar: React.FC = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#campaings" className="hover:opacity-50">
-                            {t("header.nav.campaings")}
+                        <a href="#campaigns" className="hover:opacity-50">
+                            {t("header.nav.campaigns")}
                         </a>
                     </li>
                     <li>
