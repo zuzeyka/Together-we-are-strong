@@ -14,6 +14,26 @@
         "subtitle": "Together, we can make a difference.",
         "button": "Donate Now"
     },
+    "campaigns": {
+        "title": "Our Campaigns",
+        "description": "Explore our ongoing and past campaigns dedicated to making a difference.",
+        "learnMore": "Learn More",
+        "campaign1": {
+            "alt": "Campaign 1 Image",
+            "title": "Campaign Title 1",
+            "description": "Brief description of the campaign and its purpose."
+        },
+        "campaign2": {
+            "alt": "Campaign 2 Image",
+            "title": "Campaign Title 2",
+            "description": "Description of the second campaign and its goals."
+        },
+        "campaign3": {
+            "alt": "Campaign 3 Image",
+            "title": "Campaign Title 3",
+            "description": "Details about the third campaign and how to get involved."
+        }
+    },
     "about": {
         "title": "About Us",
         "description": "The TWMP Foundation strives to create a world where every individual has the opportunity to realize their potential. We focus on education, healthcare, youth empowerment, and humanitarian aid.",
@@ -34,6 +54,15 @@
             "message": "Message",
             "messagePlaceholder": "Your Message",
             "submit": "Send Message"
+        }
+    },
+    "donate": {
+        "title": "Support Our Mission",
+        "description": "Your contribution can make a difference. Join us in creating a better future.",
+        "form": {
+            "amount": "Donation Amount",
+            "amountPlaceholder": "Enter amount in USD",
+            "submit": "Donate Now"
         }
     },
     "footer": {
