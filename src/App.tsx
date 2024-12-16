@@ -1,7 +1,7 @@
 import Home from "@/components/Home";
 import Campaigns from "@/components/campaigns/Campaigns";
 import About from "@/components/about/About";
-import Contact from "@/components/contact/Contact";
+import Contacts from "@/components/contacts/Contact";
 import Donate from "@/components/donate/Donate";
 import Navbar from "@/components/Navbar";
 import "./App.css";
@@ -15,7 +15,7 @@ function App() {
             <Team />
             <Campaigns />
             <About />
-            <Contact />
+            <Contacts />
             <Donate />
         </>
     );

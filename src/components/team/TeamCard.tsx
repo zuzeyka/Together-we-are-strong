@@ -14,7 +14,7 @@ interface TeamCardProps {
 
 const TeamCard: React.FC<TeamCardProps> = (props) => {
     return (
-        <Card className="rounded-2xl">
+        <Card className="rounded-2xl bg-background text-typography font-poppins">
             <CardHeader className="p-0 rounded-2xl">
                 <img
                     className="rounded-t-2xl h-96 object-cover object-top"

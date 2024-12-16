@@ -6,13 +6,42 @@
             "campaigns": "Campaigns",
             "about": "About Us",
             "donate": "Donate",
-            "contact": "Contact"
+            "contacts": "Contacts"
         }
     },
     "hero": {
         "title": "Support Our Mission",
         "subtitle": "Together, we can make a difference.",
         "button": "Donate Now"
+    },
+    "team": {
+        "title": "Our Team",
+        "members": {
+            "karina": {
+                "name": "Karina Hrebenchukova-Rozumei",
+                "position": "Director"
+            },
+            "dmitry": {
+                "name": "Dmitry Rozumei",
+                "position": "Campaign Manager"
+            },
+            "svitlanaL": {
+                "name": "Svitlana Lievashova",
+                "position": "Volunteer"
+            },
+            "artur": {
+                "name": "Artur Karamian",
+                "position": "Volunteer"
+            },
+            "andrii": {
+                "name": "Andrii Porokhnia",
+                "position": "Volunteer"
+            },
+            "svitlanaK": {
+                "name": "Svitlana Karatsiuba",
+                "position": "Volunteer"
+            }
+        }
     },
     "campaigns": {
         "title": "Our Campaigns",
@@ -43,7 +72,7 @@
         "humanitarian": "Humanitarian Aid: Providing assistance during disasters and emergencies.",
         "footer": "The TWMP Foundation is committed to making the world a better place by empowering individuals."
     },
-    "contact": {
+    "contacts": {
         "title": "Contact Us",
         "description": "Have questions or want to get involved? Reach out to us!",
         "form": {
@@ -67,6 +96,6 @@
     },
     "footer": {
         "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",
-        "contact": "Contact us at info@charity.org"
+        "contacts": "contact us at info@charity.org"
     }
 }

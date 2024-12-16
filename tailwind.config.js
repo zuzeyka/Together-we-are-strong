@@ -17,19 +17,27 @@ module.exports = {
             },
         },
         extend: {
+            fontFamily: {
+                poppins: ["Poppins", "sans-serif"],
+                montserrat: ["Montserrat", "sans-serif"],
+            },
             colors: {
                 primary: {
-                    light: "#4A90E2", // Lighter blue for accents
-                    DEFAULT: "#0057B7", // Main blue
-                    dark: "#003F87", // Darker blue for contrast
+                    light: "#4A90E2",
+                    DEFAULT: "#0057B7",
+                    dark: "#003F87",
                 },
                 secondary: {
-                    light: "#FFE066", // Lighter yellow for accents
-                    DEFAULT: "#FFD700", // Main yellow
-                    dark: "#CCAC00", // Darker yellow for contrast
+                    light: "#FFE066",
+                    DEFAULT: "#FFD700",
+                    dark: "#CCAC00",
                 },
-                background: "#F7FAFC", // Light background for a clean look
-                foreground: "#1A202C", // Dark text color
+                typography: {
+                    DEFAULT: "#f8f9fa",
+                    secondary: "#acacac",
+                },
+                background: "#212529",
+                foreground: "#f8f9fa",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

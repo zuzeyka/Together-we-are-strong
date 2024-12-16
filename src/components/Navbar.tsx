@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav
-            className={`${lastScrollY > 0 ? "bg-white/10 backdrop-blur-md" : "bg-transparent"} text-white px-4 py-3 w-full flex fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+            className={`${lastScrollY > 100 ? "bg-white/1 backdrop-blur-md" : "bg-transparent"} text-secondary-light px-4 py-3 w-full flex fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
                 showHeader ? "translate-y-0" : "-translate-y-full"
             }`}
         >
@@ -54,8 +54,8 @@ const Navbar: React.FC = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" className="hover:opacity-50">
-                            {t("header.nav.contact")}
+                        <a href="#contacts" className="hover:opacity-50">
+                            {t("header.nav.contacts")}
                         </a>
                     </li>
                     <li>
@@ -64,8 +64,8 @@ const Navbar: React.FC = () => {
                         </a>
                     </li>
                 </ul>
-                <LanguageSwitcher />
             </div>
+            <LanguageSwitcher />
         </nav>
     );
 };

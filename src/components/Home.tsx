@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="w-full h-screen">
+        <div className="w-full h-screen font-montserrat">
             <div className="relative h-screen overflow-hidden">
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover"
