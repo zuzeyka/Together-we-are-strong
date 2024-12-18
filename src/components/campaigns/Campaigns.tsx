@@ -18,17 +18,17 @@ const Campaigns: React.FC = () => {
                     <CampaignCard
                         title={t("campaigns.campaign1.title")}
                         description={t("campaigns.campaign1.description")}
-                        image="/src/assets/DSC_4478.jpg"
+                        image="/src/assets/5Z7A0926.jpg"
                     />
                     <CampaignCard
                         title={t("campaigns.campaign2.title")}
                         description={t("campaigns.campaign2.description")}
-                        image="/src/assets/DSC_4478.jpg"
+                        image="/src/assets/DSC_3580.jpg"
                     />
                     <CampaignCard
                         title={t("campaigns.campaign3.title")}
                         description={t("campaigns.campaign3.description")}
-                        image="/src/assets/DSC_4478.jpg"
+                        image="/src/assets/DSC_5997.jpg"
                     />
                 </div>
             </div>

@@ -64,13 +64,13 @@
         }
     },
     "about": {
-        "title": "About Us",
-        "description": "The TWMP Foundation strives to create a world where every individual has the opportunity to realize their potential. We focus on education, healthcare, youth empowerment, and humanitarian aid.",
-        "education": "Education Support: Funding scholarships, creating educational centers, and supporting projects.",
-        "healthcare": "Healthcare Initiatives: Improving access to medical services and providing essential resources.",
-        "youth": "Youth Empowerment: Equipping young individuals with tools for success through leadership programs and training.",
-        "humanitarian": "Humanitarian Aid: Providing assistance during disasters and emergencies.",
-        "footer": "The TWMP Foundation is committed to making the world a better place by empowering individuals."
+        "title": "Making a Difference Together",
+        "description": "At TWMP Foundation, we strive to create a world where every individual has the tools and resources to thrive.",
+        "education": "Providing scholarships and establishing learning centers for underprivileged youth.",
+        "healthcare": "Delivering vital medical supplies and improving healthcare access.",
+        "youth": "Empowering young people with leadership programs and career support.",
+        "humanitarian": "Offering immediate relief during natural disasters and crises.",
+        "footer": "Together, we can shape a brighter future."
     },
     "contacts": {
         "title": "Contact Us",
