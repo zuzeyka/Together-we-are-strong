@@ -9,10 +9,10 @@
             "contacts": "Contacts"
         }
     },
-    "hero": {
-        "title": "Support Our Mission",
-        "subtitle": "Together, we can make a difference.",
-        "button": "Donate Now"
+    "home": {
+        "title": "Together, We Made Power",
+        "description": "Since the start of the full-scale invasion, we have supported over 10,900 internally displaced persons, sent 3,000 parcels to children without housing, and provided aid to 16 hospitals and 15 military units.",
+        "cta": "Join the Mission"
     },
     "team": {
         "title": "Our Team",
@@ -64,13 +64,13 @@
         }
     },
     "about": {
-        "title": "Making a Difference Together",
-        "description": "At TWMP Foundation, we strive to create a world where every individual has the tools and resources to thrive.",
-        "education": "Providing scholarships and establishing learning centers for underprivileged youth.",
-        "healthcare": "Delivering vital medical supplies and improving healthcare access.",
-        "youth": "Empowering young people with leadership programs and career support.",
-        "humanitarian": "Offering immediate relief during natural disasters and crises.",
-        "footer": "Together, we can shape a brighter future."
+        "title": "Empowering Communities, Changing Lives",
+        "description": "The TWMP Foundation aims to support internally displaced persons, provide resources to children and hospitals, and strengthen communities through innovative projects.",
+        "support": "Supported over 10,900 internally displaced persons with housing, food, and medical supplies.",
+        "projects": "Initiated over 100 community projects to foster growth and resilience.",
+        "partnerships": "Collaborated with 50+ organizations to amplify the impact of our efforts.",
+        "vision": "Our vision is a world where everyone has the tools and opportunities to thrive.",
+        "footer": "Together, we are building a brighter future for everyone."
     },
     "contacts": {
         "title": "Contact Us",

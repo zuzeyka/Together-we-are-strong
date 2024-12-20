@@ -9,7 +9,7 @@ const About: React.FC = () => {
             id="about"
             className="relative bg-gradient-to-r from-black via-gray-900 to-black text-white py-20 overflow-hidden"
         >
-            {/* Decorative Circle */}
+            {/* Decorative Elements */}
             <div className="absolute top-10 left-1/3 w-96 h-96 bg-green-500 rounded-full blur-3xl opacity-20"></div>
             <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500 rounded-full blur-3xl opacity-20"></div>
 
@@ -26,7 +26,7 @@ const About: React.FC = () => {
                             <span className="text-2xl font-bold">1</span>
                         </div>
                         <p className="text-lg text-gray-300">
-                            {t("about.education")}
+                            {t("about.support")}
                         </p>
                     </div>
                     <div className="flex items-center gap-6">
@@ -34,7 +34,7 @@ const About: React.FC = () => {
                             <span className="text-2xl font-bold">2</span>
                         </div>
                         <p className="text-lg text-gray-300">
-                            {t("about.healthcare")}
+                            {t("about.projects")}
                         </p>
                     </div>
                     <div className="flex items-center gap-6">
@@ -42,7 +42,7 @@ const About: React.FC = () => {
                             <span className="text-2xl font-bold">3</span>
                         </div>
                         <p className="text-lg text-gray-300">
-                            {t("about.youth")}
+                            {t("about.partnerships")}
                         </p>
                     </div>
                     <div className="flex items-center gap-6">
@@ -50,7 +50,7 @@ const About: React.FC = () => {
                             <span className="text-2xl font-bold">4</span>
                         </div>
                         <p className="text-lg text-gray-300">
-                            {t("about.humanitarian")}
+                            {t("about.vision")}
                         </p>
                     </div>
                 </div>
