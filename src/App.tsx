@@ -6,6 +6,7 @@ import Donate from "@/components/donate/Donate";
 import Navbar from "@/components/Navbar";
 import "./App.css";
 import Team from "./components/team/Team";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <About />
             <Contacts />
             <Donate />
+            <ScrollToTop />
         </>
     );
 }
