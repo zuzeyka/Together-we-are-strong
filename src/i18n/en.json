@@ -19,27 +19,19 @@
         "members": {
             "karina": {
                 "name": "Karina Hrebenchukova-Rozumei",
-                "position": "Director"
+                "position": "Head of the Foundation"
             },
             "dmitry": {
                 "name": "Dmitry Rozumei",
-                "position": "Campaign Manager"
-            },
-            "svitlanaL": {
-                "name": "Svitlana Lievashova",
-                "position": "Volunteer"
+                "position": "Deputy Chairman of the Foundation"
             },
             "artur": {
                 "name": "Artur Karamian",
-                "position": "Volunteer"
+                "position": "Campaign Manager"
             },
-            "andrii": {
-                "name": "Andrii Porokhnia",
-                "position": "Volunteer"
-            },
-            "svitlanaK": {
+            "svitlana": {
                 "name": "Svitlana Karatsiuba",
-                "position": "Volunteer"
+                "position": "Manager"
             }
         }
     },
