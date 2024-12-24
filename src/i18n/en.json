@@ -64,6 +64,26 @@
         "vision": "Our vision is a world where everyone has the tools and opportunities to thrive.",
         "footer": "Together, we are building a brighter future for everyone."
     },
+    "stats": {
+        "title": "If in Numbers",
+        "subtitle": "We have been helping since the first days of the war:",
+        "stat1": {
+            "value": "700t+",
+            "description": "Humanitarian aid was delivered to critical regions"
+        },
+        "stat2": {
+            "value": "150K",
+            "description": "100,000 civilians received help in various regions of the country"
+        },
+        "stat3": {
+            "value": "56K",
+            "description": "26 thousand portions of hot lunches were delivered to hospitals and affected cities"
+        },
+        "stat4": {
+            "value": "18",
+            "description": "Hospitals were provided with generators, medicines"
+        }
+    },
     "contacts": {
         "title": "Contact Us",
         "description": "Have questions or want to get involved? Reach out to us!",
