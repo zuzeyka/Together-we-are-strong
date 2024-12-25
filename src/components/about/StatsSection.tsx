@@ -15,7 +15,7 @@ const StatsSection: React.FC = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
                     {/* Stat 1 */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
                         <h3 className="text-4xl font-extrabold font-montserrat">
                             {t("stats.stat1.value")}
                         </h3>
@@ -24,7 +24,7 @@ const StatsSection: React.FC = () => {
                         </p>
                     </div>
                     {/* Stat 2 */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
                         <h3 className="text-4xl font-extrabold font-montserrat">
                             {t("stats.stat2.value")}
                         </h3>
@@ -33,7 +33,7 @@ const StatsSection: React.FC = () => {
                         </p>
                     </div>
                     {/* Stat 3 */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
                         <h3 className="text-4xl font-extrabold font-montserrat">
                             {t("stats.stat3.value")}
                         </h3>
@@ -42,7 +42,7 @@ const StatsSection: React.FC = () => {
                         </p>
                     </div>
                     {/* Stat 4 */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-cente hover:scale-105 backshadow">
                         <h3 className="text-4xl font-extrabold font-montserrat">
                             {t("stats.stat4.value")}
                         </h3>

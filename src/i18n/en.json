@@ -98,13 +98,16 @@
         }
     },
     "donate": {
-        "title": "Support Our Mission",
-        "description": "Your contribution can make a difference. Join us in creating a better future.",
-        "form": {
-            "amount": "Donation Amount",
-            "amountPlaceholder": "Enter amount in USD",
-            "submit": "Donate Now"
-        }
+        "donateTitle": "Donate",
+        "bankDetailsTitle": "Bank Details",
+        "personalDetailsTitle": "Personal Details",
+        "bankName": "Bank Name",
+        "recipient": "Recipient",
+        "edrpou": "EDRPOU",
+        "ibanNumber": "IBAN Number",
+        "currency": "Currency",
+        "paymentPurpose": "Payment Purpose",
+        "accountTopUp": "Account Top-Up"
     },
     "footer": {
         "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",

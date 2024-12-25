@@ -16,8 +16,8 @@ function App() {
             <Home />
             <Team />
             <Campaigns />
-            <About />
             <StatsSection />
+            <About />
             <Contacts />
             <Donate />
             <ScrollToTop />

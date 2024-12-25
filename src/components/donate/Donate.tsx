@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "../ui/button";
 
 const Donate: React.FC = () => {
     const { t } = useTranslation();
@@ -8,34 +7,49 @@ const Donate: React.FC = () => {
     return (
         <section
             id="donate"
-            className="bg-background font-poppins text-typography py-12"
+            className="relative bg-gradient-to-r from-black via-gray-900 to-black text-white py-20 overflow-hidden"
         >
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold mb-6">{t("donate.title")}</h2>
-                <p className="text-lg mb-8">{t("donate.description")}</p>
-                <form className="max-w-md mx-auto">
-                    <div className="mb-4">
-                        <label
-                            htmlFor="amount"
-                            className="block text-sm font-bold mb-2"
-                        >
-                            {t("donate.form.amount")}
-                        </label>
-                        <input
-                            type="number"
-                            id="amount"
-                            name="amount"
-                            className="w-full text-typography-secondary px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-primaryBlue"
-                            placeholder={t("donate.form.amountPlaceholder")}
-                        />
+            {/* Decorative Elements */}
+            <div className="absolute top-10 left-1/5 w-96 h-96 bg-secondary rounded-full blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 right-1/2 w-80 h-80 bg-primary rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute top-10 left-1/2 w-96 h-96 bg-secondary rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary rounded-full blur-3xl opacity-20"></div>
+
+            <div className="donate-section">
+                <h2>{t("donate.donateTitle")}</h2>
+                <div className="donate-content">
+                    {/* Bank Details Section */}
+                    <div className="bank-details">
+                        <h3>{t("donate.bankDetailsTitle")}</h3>
+                        <p>
+                            <strong>{t("donate.bankName")}:</strong> АТ
+                            "Райффайзен Банк" <br />
+                            <strong>{t("donate.recipient")}:</strong> БО "МБФ
+                            "РМС" <br />
+                            <strong>{t("donate.edrpou")}:</strong> 44749163{" "}
+                            <br />
+                            <strong>{t("donate.ibanNumber")}:</strong> UA87 3003
+                            3500 0000 0026 0047 8415 9 <br />
+                            <strong>{t("donate.currency")}:</strong> EUR
+                        </p>
                     </div>
-                    <Button
-                        type="submit"
-                        className="bg-secondary px-6 py-3 text-black font-semibold rounded-2xl hover:bg-secondary-dark transition-all"
-                    >
-                        {t("donate.form.submit")}
-                    </Button>
-                </form>
+
+                    {/* Personal Details Section */}
+                    <div className="personal-details">
+                        <h3>{t("donate.personalDetailsTitle")}</h3>
+                        <p>
+                            <strong>{t("donate.recipient")}:</strong>{" "}
+                            ГРЕБЕНЧУКОВА-РОЗУМЄЙ КАРІНА ВОЛОДИМИРІВНА <br />
+                            <strong>{t("donate.ibanNumber")}:</strong>{" "}
+                            UA313052990000026008016812384 <br />
+                            <strong>{t("donate.edrpou")}:</strong> 44749163{" "}
+                            <br />
+                            <strong>{t("donate.paymentPurpose")}:</strong>{" "}
+                            {t("donate.accountTopUp")}, ГРЕБЕНЧУКОВА-РОЗУМЄЙ
+                            КАРІНА ВОЛОДИМИРІВНА
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     );
