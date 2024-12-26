@@ -99,15 +99,15 @@
     },
     "donate": {
         "donateTitle": "Donate",
-        "bankDetailsTitle": "Bank Details",
-        "personalDetailsTitle": "Personal Details",
-        "bankName": "Bank Name",
-        "recipient": "Recipient",
-        "edrpou": "EDRPOU",
-        "ibanNumber": "IBAN Number",
-        "currency": "Currency",
-        "paymentPurpose": "Payment Purpose",
-        "accountTopUp": "Account Top-Up"
+        "bankName": "Recipient Bank: Raiffeisen Bank JSC",
+        "name": "Charity Fund: Together We Made Power ",
+        "recipient": "Recipient: GREBENCHUKOVA-ROZUMEY KARINA VOLODYMYRIVNA",
+        "edrpou": "EDRPOU code: 44749163",
+        "ibanNumber": "IBAN Number: ",
+        "currency": "Currency: ",
+        "adress": "Ukraine, 01133, Kyiv city, Lesi Ukrainky blvd., building 11, apartment 62",
+        "detailsButton": "Bank Details",
+        "donateButton": "Donate"
     },
     "footer": {
         "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",

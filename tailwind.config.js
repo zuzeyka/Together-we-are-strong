@@ -35,6 +35,7 @@ module.exports = {
                 typography: {
                     DEFAULT: "#f8f9fa",
                     secondary: "#acacac",
+                    dark: "#212529",
                 },
                 background: "#212529",
                 foreground: "#f8f9fa",
