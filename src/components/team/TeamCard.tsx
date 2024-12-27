@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "../ui/button";
 
 interface TeamCardProps {
     name: string;
     position: string;
     image: string;
+    description: string;
 }
 
 const TeamCard: React.FC<TeamCardProps> = (props) => {
@@ -32,12 +32,9 @@ const TeamCard: React.FC<TeamCardProps> = (props) => {
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-70 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center px-4">
-                    <p className="text-lg font-semibold">
-                        Passionate about making a difference.
+                    <p className="text-lg font-semibold font-poppins text-typography">
+                        {props.description}
                     </p>
-                    <Button className="mt-4 px-6 py-2 bg-secondary text-black rounded-full hover:bg-secondary-dark transition-all">
-                        Learn More
-                    </Button>
                 </div>
             </div>
         </div>

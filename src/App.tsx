@@ -1,7 +1,7 @@
 import Home from "@/components/Home";
 import Campaigns from "@/components/campaigns/Campaigns";
 import About from "@/components/about/About";
-import Contacts from "@/components/contacts/Contact";
+import Contacts from "@/components/contacts/HelpSection";
 import Donate from "@/components/donate/Donate";
 import Navbar from "@/components/Navbar";
 import "./App.css";

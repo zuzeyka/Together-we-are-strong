@@ -6,7 +6,7 @@
             "campaigns": "Campaigns",
             "about": "About Us",
             "donate": "Donate",
-            "contacts": "Contacts"
+            "help": "Help"
         }
     },
     "home": {
@@ -19,19 +19,23 @@
         "members": {
             "karina": {
                 "name": "Karina Hrebenchukova-Rozumei",
-                "position": "Head of the Foundation"
+                "position": "Head of the Foundation",
+                "description": "The head of the foundation actively works on fulfilling the organization's mission, inspiring the team, and supporting projects that change lives."
             },
             "dmitry": {
                 "name": "Dmitry Rozumei",
-                "position": "Deputy Chairman of the Foundation"
+                "position": "Deputy Chairman of the Foundation",
+                "description": "The deputy head assists in the strategic management of the foundation, supporting key initiatives and ensuring their successful implementation."
             },
             "artur": {
                 "name": "Artur Karamian",
-                "position": "Campaign Manager"
+                "position": "Campaign Manager",
+                "description": "The campaign manager coordinates fundraising and foundation initiatives, making them more effective and impactful."
             },
             "svitlana": {
                 "name": "Svitlana Karatsiuba",
-                "position": "Manager"
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
             }
         }
     },
@@ -84,18 +88,11 @@
             "description": "Hospitals were provided with generators, medicines"
         }
     },
-    "contacts": {
-        "title": "Contact Us",
-        "description": "Have questions or want to get involved? Reach out to us!",
-        "form": {
-            "name": "Name",
-            "namePlaceholder": "Your Name",
-            "email": "Email",
-            "emailPlaceholder": "Your Email",
-            "message": "Message",
-            "messagePlaceholder": "Your Message",
-            "submit": "Send Message"
-        }
+    "helpSection": {
+        "title": "Need help?",
+        "description": "Leave your application by filling out the form",
+        "helpButton": "I need help",
+        "volunteerButton": "Become a volunteer"
     },
     "donate": {
         "donateTitle": "Donate",
