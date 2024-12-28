@@ -9,7 +9,7 @@ interface CampaignCardProps {
 
 const CampaignCard: React.FC<CampaignCardProps> = (props) => {
     return (
-        <div className="relative group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300 backshadow">
+        <div className="relative group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300">
             {/* Image Section */}
             <div className="overflow-hidden rounded-t-2xl">
                 <img
@@ -21,10 +21,10 @@ const CampaignCard: React.FC<CampaignCardProps> = (props) => {
 
             {/* Content Section */}
             <div className="p-4">
-                <h3 className="text-xl font-bold text-primary-light group-hover:text-green-300">
+                <h3 className="text-xl font-bold text-primary-light group-hover:text-secondary-light">
                     {props.title}
                 </h3>
-                <p className="text-sm mt-2 text-gray-300 group-hover:text-secondary-light">
+                <p className="text-sm mt-2 text-gray-300 group-hover:text-secondary-dark">
                     {props.description}
                 </p>
             </div>

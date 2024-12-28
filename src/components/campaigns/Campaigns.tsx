@@ -1,6 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import CampaignCard from "./CampaignCard";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "../ui/carousel";
 
 const Campaigns: React.FC = () => {
     const { t } = useTranslation();
@@ -14,23 +21,39 @@ const Campaigns: React.FC = () => {
                 <p className="text-center text-lg mb-8">
                     {t("campaigns.description")}
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <CampaignCard
-                        title={t("campaigns.campaign1.title")}
-                        description={t("campaigns.campaign1.description")}
-                        image="/src/assets/5Z7A0926.jpg"
-                    />
-                    <CampaignCard
-                        title={t("campaigns.campaign2.title")}
-                        description={t("campaigns.campaign2.description")}
-                        image="/src/assets/DSC_3580.jpg"
-                    />
-                    <CampaignCard
-                        title={t("campaigns.campaign3.title")}
-                        description={t("campaigns.campaign3.description")}
-                        image="/src/assets/DSC_5997.jpg"
-                    />
-                </div>
+                <Carousel>
+                    <CarouselContent>
+                        <CarouselItem className="basis-1/3">
+                            <CampaignCard
+                                title={t("campaigns.campaign1.title")}
+                                description={t(
+                                    "campaigns.campaign1.description"
+                                )}
+                                image="/src/assets/5Z7A0926.jpg"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3">
+                            <CampaignCard
+                                title={t("campaigns.campaign2.title")}
+                                description={t(
+                                    "campaigns.campaign2.description"
+                                )}
+                                image="/src/assets/DSC_3580.jpg"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3">
+                            <CampaignCard
+                                title={t("campaigns.campaign3.title")}
+                                description={t(
+                                    "campaigns.campaign3.description"
+                                )}
+                                image="/src/assets/DSC_5997.jpg"
+                            />
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="bg-typography-dark" />
+                    <CarouselNext className="bg-typography-dark" />
+                </Carousel>
             </div>
         </section>
     );
