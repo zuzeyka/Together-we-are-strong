@@ -30,6 +30,7 @@ const Campaigns: React.FC = () => {
                                     "campaigns.campaign1.description"
                                 )}
                                 image="/src/assets/5Z7A0926.jpg"
+                                link="/campaigns/campaign1"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3">
@@ -39,6 +40,7 @@ const Campaigns: React.FC = () => {
                                     "campaigns.campaign2.description"
                                 )}
                                 image="/src/assets/DSC_3580.jpg"
+                                link="/campaigns/campaign2"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3">
@@ -48,6 +50,7 @@ const Campaigns: React.FC = () => {
                                     "campaigns.campaign3.description"
                                 )}
                                 image="/src/assets/DSC_5997.jpg"
+                                link="/campaigns/campaign3"
                             />
                         </CarouselItem>
                     </CarouselContent>

@@ -1,27 +1,19 @@
-import Home from "@/components/Home";
-import Campaigns from "@/components/campaigns/Campaigns";
-import About from "@/components/about/About";
-import Contacts from "@/components/contacts/HelpSection";
-import Donate from "@/components/donate/Donate";
-import Navbar from "@/components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Team from "./components/team/Team";
-import ScrollToTop from "./components/ScrollToTop";
-import StatsSection from "./components/about/StatsSection";
+import Home from "./components/Home";
+import CampaignPage from "./components/campaigns/CampaignPage";
 
 function App() {
     return (
-        <>
-            <Navbar />
-            <Home />
-            <Team />
-            <Campaigns />
-            <StatsSection />
-            <About />
-            <Contacts />
-            <Donate />
-            <ScrollToTop />
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route
+                    path="/campaigns/:campaignId"
+                    element={<CampaignPage />}
+                />
+            </Routes>
+        </Router>
     );
 }
 
