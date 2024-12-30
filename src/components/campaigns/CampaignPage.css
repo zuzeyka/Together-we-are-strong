@@ -1,0 +1,62 @@
+.campaign-page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: bg;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: typography;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campaign-description {
+    font-size: 1.25rem;
+    color: typography-secondary;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.campaign-section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: typography;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campaign-highlights-list,
+.campaign-effects-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.campaign-highlights-list li,
+.campaign-effects-list li {
+    font-size: 1.1rem;
+    color: typography-secondary;
+    margin-bottom: 10px;
+}
+
+.campaign-thanks {
+    font-size: 1.25rem;
+    color: typography-dark;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.campaign-cta {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-align: center;
+    margin-top: 15px;
+}

@@ -24,13 +24,13 @@ const CampaignCard: React.FC<CampaignCardProps> = (props) => {
                 <h3 className="text-xl font-bold text-primary-light group-hover:text-secondary-light">
                     {props.title}
                 </h3>
-                <p className="text-sm mt-2 text-gray-300 group-hover:text-secondary-dark">
-                    {props.description}
-                </p>
             </div>
 
             {/* Footer with Hover Effects */}
-            <div className="absolute inset-0 bg-black bg-opacity-70 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="absolute flex flex-col items-center inset-0 bg-black bg-opacity-70 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm my-2 text-typography">
+                    {props.description}
+                </p>
                 <a
                     href={props.link}
                     target="_blank"

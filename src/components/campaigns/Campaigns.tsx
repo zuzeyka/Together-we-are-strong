@@ -45,12 +45,12 @@ const Campaigns: React.FC = () => {
                         </CarouselItem>
                         <CarouselItem className="basis-1/3">
                             <CampaignCard
-                                title={t("campaigns.campaign3.title")}
+                                title={t("campaigns.Helping_people.title")}
                                 description={t(
-                                    "campaigns.campaign3.description"
+                                    "campaigns.Helping_people.description"
                                 )}
                                 image="/src/assets/DSC_5997.jpg"
-                                link="/campaigns/campaign3"
+                                link="/campaigns/Helping_people"
                             />
                         </CarouselItem>
                     </CarouselContent>

@@ -53,10 +53,25 @@
             "title": "Campaign Title 2",
             "description": "Description of the second campaign and its goals."
         },
-        "campaign3": {
+        "Helping_people": {
             "alt": "Campaign 3 Image",
-            "title": "Campaign Title 3",
-            "description": "Details about the third campaign and how to get involved."
+            "title": "Helping People",
+            "description": "Our team has already implemented assistance to more than 9000 idps. We sent more than 800 parcels to children without housing, helped 10 hospitals, 12 military units. Here`s what we are doing with the funding that we got from STELP",
+            "post-text": {
+                "stelp_event_title": "Together We Made Power: Helping People in Ukraine",
+                "stelp_event_description": "Since the first days of the full-scale invasion of Ukraine, we have tirelessly worked to provide aid to those most affected by the crisis. Thanks to STELP's funding, we have made incredible progress.",
+                "stelp_event_highlights_title": "Highlights of Our Work",
+                "stelp_event_highlight_1": "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
+                "stelp_event_highlight_2": "Delivered 500 food boxes, each containing 17 kilograms of essential supplies, to displaced families.",
+                "stelp_event_highlight_3": "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
+                "stelp_event_highlight_4": "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats.",
+                "stelp_event_effect_title": "The Impact",
+                "stelp_event_effect_1": "Supported over 1,000 children and families in need.",
+                "stelp_event_effect_2": "Brought positivity, hope, and smiles to vulnerable communities.",
+                "stelp_event_effect_3": "Created lasting memories for children during difficult times.",
+                "stelp_event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!",
+                "stelp_event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!"
+            }
         }
     },
     "about": {
