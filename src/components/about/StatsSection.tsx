@@ -42,12 +42,48 @@ const StatsSection: React.FC = () => {
                         </p>
                     </div>
                     {/* Stat 4 */}
-                    <div className="flex flex-col items-cente hover:scale-105 backshadow">
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
                         <h3 className="text-4xl font-extrabold font-montserrat">
                             {t("stats.stat4.value")}
                         </h3>
                         <p className="mt-2 text-typography-secondary text-center">
                             {t("stats.stat4.description")}
+                        </p>
+                    </div>
+                    {/* Stat 5 */}
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
+                        <h3 className="text-4xl font-extrabold font-montserrat">
+                            {t("stats.stat5.value")}
+                        </h3>
+                        <p className="mt-2 text-typography-secondary text-center">
+                            {t("stats.stat5.description")}
+                        </p>
+                    </div>
+                    {/* Stat 6 */}
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
+                        <h3 className="text-4xl font-extrabold font-montserrat">
+                            {t("stats.stat6.value")}
+                        </h3>
+                        <p className="mt-2 text-typography-secondary text-center">
+                            {t("stats.stat6.description")}
+                        </p>
+                    </div>
+                    {/* Stat 7 */}
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
+                        <h3 className="text-4xl font-extrabold font-montserrat">
+                            {t("stats.stat7.value")}
+                        </h3>
+                        <p className="mt-2 text-typography-secondary text-center">
+                            {t("stats.stat7.description")}
+                        </p>
+                    </div>
+                    {/* Stat 8 */}
+                    <div className="flex flex-col items-center hover:scale-105 backshadow">
+                        <h3 className="text-4xl font-extrabold font-montserrat">
+                            {t("stats.stat8.value")}
+                        </h3>
+                        <p className="mt-2 text-typography-secondary text-center">
+                            {t("stats.stat8.description")}
                         </p>
                     </div>
                 </div>

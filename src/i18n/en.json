@@ -84,23 +84,39 @@
         "footer": "Together, we are building a brighter future for everyone."
     },
     "stats": {
-        "title": "If in Numbers",
-        "subtitle": "We have been helping since the first days of the war:",
+        "title": "By the Numbers",
+        "subtitle": "Making a tangible impact since the first days of the full-scale invasion:",
         "stat1": {
-            "value": "700t+",
-            "description": "Humanitarian aid was delivered to critical regions"
+            "value": "10,900+",
+            "description": "Internally displaced persons supported with housing, food, and essentials."
         },
         "stat2": {
-            "value": "150K",
-            "description": "100,000 civilians received help in various regions of the country"
+            "value": "3,000+",
+            "description": "Parcels sent to children who lost their homes."
         },
         "stat3": {
-            "value": "56K",
-            "description": "26 thousand portions of hot lunches were delivered to hospitals and affected cities"
+            "value": "16",
+            "description": "Hospitals equipped with critical resources and medicines."
         },
         "stat4": {
-            "value": "18",
-            "description": "Hospitals were provided with generators, medicines"
+            "value": "15",
+            "description": "Military units supported with essential supplies and aid."
+        },
+        "stat5": {
+            "value": "500",
+            "description": "Food boxes delivered to displaced families, each weighing 17 kilograms."
+        },
+        "stat6": {
+            "value": "127",
+            "description": "Baby boxes prepared for children aged 0–5 years."
+        },
+        "stat7": {
+            "value": "80",
+            "description": "Children celebrated with warm blankets, toys, and treats during a special event."
+        },
+        "stat8": {
+            "value": "100+",
+            "description": "Community projects initiated to foster growth and resilience."
         }
     },
     "helpSection": {
