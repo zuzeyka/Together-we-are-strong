@@ -42,36 +42,44 @@
     "campaigns": {
         "title": "Our Campaigns",
         "description": "Explore our ongoing and past campaigns dedicated to making a difference.",
-        "learnMore": "Learn More",
-        "campaign1": {
-            "alt": "Campaign 1 Image",
-            "title": "Campaign Title 1",
+        "button-more": "Learn More",
+        "Grooming": {
+            "alt": "Grooming Campaign Image",
+            "title": "Grooming",
+            "image-count": "99",
             "description": "Brief description of the campaign and its purpose."
         },
-        "campaign2": {
-            "alt": "Campaign 2 Image",
-            "title": "Campaign Title 2",
+        "Bila_Tserkva": {
+            "alt": "Bila Tserkva Campaign Image",
+            "title": "Bila Tserkva",
+            "image-count": "94",
             "description": "Description of the second campaign and its goals."
         },
-        "Helping_people": {
-            "alt": "Campaign 3 Image",
-            "title": "Helping People",
+        "ALLSTARSIT": {
+            "alt": "ALLSTARSIT Campaign Image",
+            "title": "ALLSTARSIT",
+            "image-count": "171",
+            "description": "Description of the second campaign and its goals."
+        },
+        "STELP": {
+            "alt": "STELP Campaign Image",
+            "title": "STELP Event",
             "image-count": "163",
             "description": "Our team has already implemented assistance to more than 9000 idps. We sent more than 800 parcels to children without housing, helped 10 hospitals, 12 military units. Here`s what we are doing with the funding that we got from STELP",
             "post-text": {
-                "stelp_event_title": "Together We Made Power: Helping People in Ukraine",
-                "stelp_event_description": "Since the first days of the full-scale invasion of Ukraine, we have tirelessly worked to provide aid to those most affected by the crisis. Thanks to STELP's funding, we have made incredible progress.",
-                "stelp_event_highlights_title": "Highlights of Our Work",
-                "stelp_event_highlight_1": "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
-                "stelp_event_highlight_2": "Delivered 500 food boxes, each containing 17 kilograms of essential supplies, to displaced families.",
-                "stelp_event_highlight_3": "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
-                "stelp_event_highlight_4": "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats.",
-                "stelp_event_effect_title": "The Impact",
-                "stelp_event_effect_1": "Supported over 1,000 children and families in need.",
-                "stelp_event_effect_2": "Brought positivity, hope, and smiles to vulnerable communities.",
-                "stelp_event_effect_3": "Created lasting memories for children during difficult times.",
-                "stelp_event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!",
-                "stelp_event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!"
+                "event_title": "Together We Made Power: Helping People in Ukraine",
+                "event_description": "Since the first days of the full-scale invasion of Ukraine, we have tirelessly worked to provide aid to those most affected by the crisis. Thanks to STELP's funding, we have made incredible progress.",
+                "event_highlights_title": "Highlights of Our Work",
+                "event_highlight_1": "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
+                "event_highlight_2": "Delivered 500 food boxes, each containing 17 kilograms of essential supplies, to displaced families.",
+                "event_highlight_3": "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
+                "event_highlight_4": "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats.",
+                "event_effect_title": "The Impact",
+                "event_effect_1": "Supported over 1,000 children and families in need.",
+                "event_effect_2": "Brought positivity, hope, and smiles to vulnerable communities.",
+                "event_effect_3": "Created lasting memories for children during difficult times.",
+                "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!",
+                "event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!"
             }
         }
     },

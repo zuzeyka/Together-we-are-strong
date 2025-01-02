@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 
 interface CampaignCardProps {
@@ -37,7 +38,7 @@ const CampaignCard: React.FC<CampaignCardProps> = (props) => {
                     rel="noopener noreferrer"
                     className="px-6 py-3 bg-secondary text-black rounded-full hover:bg-secondary-dark transition-all"
                 >
-                    Learn More
+                    {t("campaigns.button-more")}
                 </a>
             </div>
         </div>

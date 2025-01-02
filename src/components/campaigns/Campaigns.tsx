@@ -25,32 +25,40 @@ const Campaigns: React.FC = () => {
                     <CarouselContent>
                         <CarouselItem className="basis-1/3">
                             <CampaignCard
-                                title={t("campaigns.campaign1.title")}
+                                title={t("campaigns.Grooming.title")}
                                 description={t(
-                                    "campaigns.campaign1.description"
+                                    "campaigns.Grooming.description"
                                 )}
                                 image="/src/assets/5Z7A0926.jpg"
-                                link="/campaigns/campaign1"
+                                link="/campaigns/Grooming"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3">
                             <CampaignCard
-                                title={t("campaigns.campaign2.title")}
+                                title={t("campaigns.Bila_Tserkva.title")}
                                 description={t(
-                                    "campaigns.campaign2.description"
+                                    "campaigns.Bila_Tserkva.description"
                                 )}
                                 image="/src/assets/DSC_3580.jpg"
-                                link="/campaigns/campaign2"
+                                link="/campaigns/Bila_Tserkva"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3">
                             <CampaignCard
-                                title={t("campaigns.Helping_people.title")}
-                                description={t(
-                                    "campaigns.Helping_people.description"
-                                )}
+                                title={t("campaigns.STELP.title")}
+                                description={t("campaigns.STELP.description")}
                                 image="/src/assets/DSC_5997.jpg"
-                                link="/campaigns/Helping_people"
+                                link="/campaigns/STELP"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3">
+                            <CampaignCard
+                                title={t("campaigns.ALLSTARSIT.title")}
+                                description={t(
+                                    "campaigns.ALLSTARSIT.description"
+                                )}
+                                image="/src/assets/DSC_9523.jpg"
+                                link="/campaigns/ALLSTARSIT"
                             />
                         </CarouselItem>
                     </CarouselContent>
