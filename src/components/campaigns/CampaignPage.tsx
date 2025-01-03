@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import "./CampaignPage.css";
 import {
     Carousel,
     CarouselContent,
@@ -60,9 +59,11 @@ const CampaignPage: React.FC = () => {
     };
 
     return (
-        <div className="campaign-page-container">
-            <h1 className="campaign-title">{campaignData.event_title}</h1>
-            <p className="campaign-description">
+        <div className="max-w-4xl mx-auto p-6 bg-background rounded-lg shadow-md">
+            <h1 className="text-3xl font-bold text-typography mb-4 text-center">
+                {campaignData.event_title}
+            </h1>
+            <p className="text-lg text-typography mb-6 text-justify">
                 {campaignData.event_description}
             </p>
 
@@ -70,30 +71,30 @@ const CampaignPage: React.FC = () => {
                 <img
                     src={images[activeImageIndex]}
                     alt={`${t(`campaigns.${campaignId}.stelp_event_title`)} 1`}
-                    className="object-cover object-center w-full h-72 rounded-2xl mb-6"
+                    className="w-full h-72 object-cover rounded-t-xl mb-6"
                 />
             )}
 
             <Carousel>
-                <CarouselContent>
+                <CarouselContent className="flex gap-4">
                     {preloadedImages.map((image, index) => (
                         <CarouselItem className="basis-1/3" key={index}>
                             <img
                                 src={image}
                                 alt={`${t(`campaigns.${campaignId}.stelp_event_title`)} ${index + 1}`}
-                                className="object-cover object-center w-full h-full rounded-2xl"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
                 <CarouselPrevious
-                    className="bg-typography-dark"
+                    className="bg-background text-white p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveImageIndex(activeImageIndex - 1)
                     }
                 />
                 <CarouselNext
-                    className="bg-typography-dark"
+                    className="bg-gray-800 text-white p-2 rounded-full"
                     onClickCapture={() => {
                         setActiveImageIndex(activeImageIndex + 1);
                         setPreloadedImages(
@@ -103,27 +104,31 @@ const CampaignPage: React.FC = () => {
                 />
             </Carousel>
 
-            <h2 className="campaign-section-title">
+            <h2 className="text-2xl font-bold text-typography mt-8 mb-4">
                 {campaignData.event_highlights_title}
             </h2>
-            <ul className="campaign-highlights-list">
+            <ul className="list-disc pl-5 text-typography-secondary mb-6">
                 <li>{campaignData.event_highlight_1}</li>
                 <li>{campaignData.event_highlight_2}</li>
                 <li>{campaignData.event_highlight_3}</li>
                 <li>{campaignData.event_highlight_4}</li>
             </ul>
 
-            <h2 className="campaign-section-title">
+            <h2 className="text-2xl font-bold text-typography mt-8 mb-4">
                 {campaignData.event_effect_title}
             </h2>
-            <ul className="campaign-effects-list">
+            <ul className="list-disc pl-5 text-typography-secondary mb-6">
                 <li>{campaignData.event_effect_1}</li>
                 <li>{campaignData.event_effect_2}</li>
                 <li>{campaignData.event_effect_3}</li>
             </ul>
 
-            <p className="campaign-thanks">{campaignData.event_thanks}</p>
-            <p className="campaign-cta">{campaignData.event_cta}</p>
+            <p className="text-lg font-semibold text-typography text-center mb-4">
+                {campaignData.event_thanks}
+            </p>
+            <p className="text-lg text-typography text-center">
+                {t(`campaigns.event_cta`)}
+            </p>
         </div>
     );
 };

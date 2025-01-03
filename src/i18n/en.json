@@ -43,29 +43,63 @@
         "title": "Our Campaigns",
         "description": "Explore our ongoing and past campaigns dedicated to making a difference.",
         "button-more": "Learn More",
+        "event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!",
         "Grooming": {
             "alt": "Grooming Campaign Image",
             "title": "Grooming",
             "image-count": "99",
-            "description": "Brief description of the campaign and its purpose."
+            "description": "Supporting vulnerable communities with essential grooming supplies.",
+            "post-text": {
+                "event_title": "Empowering Communities with Grooming Supplies",
+                "event_description": "This campaign provides grooming kits to vulnerable individuals, helping restore dignity and confidence.",
+                "event_highlights_title": "Highlights of Our Work",
+                "event_highlight_1": "Distributed grooming kits to 500 individuals.",
+                "event_highlight_2": "Supported 20 shelters with hygiene supplies.",
+                "event_effect_title": "The Impact",
+                "event_effect_1": "Restored dignity to individuals in crisis.",
+                "event_effect_2": "Improved hygiene for vulnerable communities.",
+                "event_thanks": "Thank you for your support in empowering communities!"
+            }
         },
         "Bila_Tserkva": {
             "alt": "Bila Tserkva Campaign Image",
             "title": "Bila Tserkva",
             "image-count": "94",
-            "description": "Description of the second campaign and its goals."
+            "description": "Supporting families and individuals in Bila Tserkva affected by the conflict.",
+            "post-text": {
+                "event_title": "Aid for Bila Tserkva",
+                "event_description": "Focused on providing food, medical supplies, and shelter to displaced families in Bila Tserkva.",
+                "event_highlights_title": "Highlights of Our Work",
+                "event_highlight_1": "Delivered 200 food packages to families.",
+                "event_highlight_2": "Supported 50 children with school supplies.",
+                "event_effect_title": "The Impact",
+                "event_effect_1": "Enhanced the living conditions of displaced families.",
+                "event_effect_2": "Supported children’s education in challenging times.",
+                "event_thanks": "Your contributions made this campaign a success!"
+            }
         },
         "ALLSTARSIT": {
             "alt": "ALLSTARSIT Campaign Image",
             "title": "ALLSTARSIT",
             "image-count": "171",
-            "description": "Description of the second campaign and its goals."
+            "description": "Partnering with ALLSTARSIT to expand humanitarian aid across Ukraine.",
+            "post-text": {
+                "event_title": "ALLSTARSIT Collaboration for Ukraine",
+                "event_description": "This partnership enabled us to extend our reach and help thousands more in need.",
+                "event_highlights_title": "Highlights of Our Work",
+                "event_highlight_1": "Provided 1,000 meals to families.",
+                "event_highlight_2": "Distributed winter clothing to 300 children.",
+                "event_effect_title": "The Impact",
+                "event_effect_1": "Expanded aid reach to remote areas.",
+                "event_effect_2": "Ensured warmth and sustenance during winter.",
+                "event_thanks": "A heartfelt thanks to ALLSTARSIT for their collaboration!"
+            }
         },
         "STELP": {
             "alt": "STELP Campaign Image",
             "title": "STELP Event",
             "image-count": "163",
-            "description": "Our team has already implemented assistance to more than 9000 idps. We sent more than 800 parcels to children without housing, helped 10 hospitals, 12 military units. Here`s what we are doing with the funding that we got from STELP",
+            "description": "Assistance for IDPs, hospitals, and military units, thanks to STELP's funding.",
             "post-text": {
                 "event_title": "Together We Made Power: Helping People in Ukraine",
                 "event_description": "Since the first days of the full-scale invasion of Ukraine, we have tirelessly worked to provide aid to those most affected by the crisis. Thanks to STELP's funding, we have made incredible progress.",
@@ -78,8 +112,7 @@
                 "event_effect_1": "Supported over 1,000 children and families in need.",
                 "event_effect_2": "Brought positivity, hope, and smiles to vulnerable communities.",
                 "event_effect_3": "Created lasting memories for children during difficult times.",
-                "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!",
-                "event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!"
+                "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!"
             }
         }
     },
