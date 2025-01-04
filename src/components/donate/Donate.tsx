@@ -46,12 +46,18 @@ const Donate: React.FC = () => {
                         </a>
                     </Button>
                     <Button className="mt-6 z-10 px-8 py-3 bg-secondary text-typography-dark font-semibold rounded-2xl hover:bg-secondary-dark">
-                        <a href="https://mobile-app.pumb.ua/u9h1mKxptXEDDRRa7">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="/bank-details"
+                        >
                             {t("donate.detailsButton")}
                         </a>
                     </Button>
                     <Button className="mt-6 z-10 px-8 py-3 bg-transparent text-typography box-border border-2 border-secondary font-semibold rounded-2xl hover:bg-secondary-dark">
-                        {t("donate.donateButton")}
+                        <a href="https://mobile-app.pumb.ua/u9h1mKxptXEDDRRa7">
+                            {t("donate.donateButton")}
+                        </a>
                     </Button>
                 </div>
                 <div className="text-left">

@@ -27,7 +27,7 @@ const Top: React.FC = () => {
                         {t("home.description")}
                     </p>
                     <Button className="mt-6 px-8 py-3 bg-secondary text-black font-semibold rounded-2xl hover:bg-secondary-dark">
-                        {t("home.cta")}
+                        <a href="#donate">{t("home.cta")}</a>
                     </Button>
                 </div>
             </div>
