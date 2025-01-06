@@ -53,11 +53,15 @@
                 "event_title": "Empowering Communities with Grooming Supplies",
                 "event_description": "This campaign provides grooming kits to vulnerable individuals, helping restore dignity and confidence.",
                 "event_highlights_title": "Highlights of Our Work",
-                "event_highlight_1": "Distributed grooming kits to 500 individuals.",
-                "event_highlight_2": "Supported 20 shelters with hygiene supplies.",
+                "event_highlights": [
+                    "Distributed grooming kits to 500 individuals.",
+                    "Supported 20 shelters with hygiene supplies."
+                ],
                 "event_effect_title": "The Impact",
-                "event_effect_1": "Restored dignity to individuals in crisis.",
-                "event_effect_2": "Improved hygiene for vulnerable communities.",
+                "event_effects": [
+                    "Restored dignity to individuals in crisis.",
+                    "Improved hygiene for vulnerable communities."
+                ],
                 "event_thanks": "Thank you for your support in empowering communities!"
             }
         },
@@ -70,11 +74,15 @@
                 "event_title": "Aid for Bila Tserkva",
                 "event_description": "Focused on providing food, medical supplies, and shelter to displaced families in Bila Tserkva.",
                 "event_highlights_title": "Highlights of Our Work",
-                "event_highlight_1": "Delivered 200 food packages to families.",
-                "event_highlight_2": "Supported 50 children with school supplies.",
+                "event_highlights": [
+                    "Delivered 200 food packages to families.",
+                    "Supported 50 children with school supplies."
+                ],
                 "event_effect_title": "The Impact",
-                "event_effect_1": "Enhanced the living conditions of displaced families.",
-                "event_effect_2": "Supported children’s education in challenging times.",
+                "event_effects": [
+                    "Enhanced the living conditions of displaced families.",
+                    "Supported children’s education in challenging times."
+                ],
                 "event_thanks": "Your contributions made this campaign a success!"
             }
         },
@@ -87,11 +95,15 @@
                 "event_title": "ALLSTARSIT Collaboration for Ukraine",
                 "event_description": "This partnership enabled us to extend our reach and help thousands more in need.",
                 "event_highlights_title": "Highlights of Our Work",
-                "event_highlight_1": "Provided 1,000 meals to families.",
-                "event_highlight_2": "Distributed winter clothing to 300 children.",
+                "event_highlights": [
+                    "Provided 1,000 meals to families.",
+                    "Distributed winter clothing to 300 children."
+                ],
                 "event_effect_title": "The Impact",
-                "event_effect_1": "Expanded aid reach to remote areas.",
-                "event_effect_2": "Ensured warmth and sustenance during winter.",
+                "event_effects": [
+                    "Expanded aid reach to remote areas.",
+                    "Ensured warmth and sustenance during winter."
+                ],
                 "event_thanks": "A heartfelt thanks to ALLSTARSIT for their collaboration!"
             }
         },
@@ -104,14 +116,18 @@
                 "event_title": "Together We Made Power: Helping People in Ukraine",
                 "event_description": "Since the first days of the full-scale invasion of Ukraine, we have tirelessly worked to provide aid to those most affected by the crisis. Thanks to STELP's funding, we have made incredible progress.",
                 "event_highlights_title": "Highlights of Our Work",
-                "event_highlight_1": "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
-                "event_highlight_2": "Delivered 500 food boxes, each containing 17 kilograms of essential supplies, to displaced families.",
-                "event_highlight_3": "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
-                "event_highlight_4": "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats.",
+                "event_highlights": [
+                    "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
+                    "Delivered 500 food boxes, each containing 17 kilograms of essential supplies.",
+                    "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
+                    "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats."
+                ],
                 "event_effect_title": "The Impact",
-                "event_effect_1": "Supported over 1,000 children and families in need.",
-                "event_effect_2": "Brought positivity, hope, and smiles to vulnerable communities.",
-                "event_effect_3": "Created lasting memories for children during difficult times.",
+                "event_effects": [
+                    "Supported over 1,000 children and families in need.",
+                    "Brought positivity, hope, and smiles to vulnerable communities.",
+                    "Created lasting memories for children during difficult times."
+                ],
                 "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!"
             }
         }

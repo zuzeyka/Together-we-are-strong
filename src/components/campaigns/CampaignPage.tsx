@@ -46,16 +46,10 @@ const CampaignPage: React.FC = () => {
         event_title: string;
         event_description: string;
         event_highlights_title: string;
-        event_highlight_1: string;
-        event_highlight_2: string;
-        event_highlight_3: string;
-        event_highlight_4: string;
+        event_highlights: string[];
         event_effect_title: string;
-        event_effect_1: string;
-        event_effect_2: string;
-        event_effect_3: string;
+        event_effects: string[];
         event_thanks: string;
-        event_cta: string;
     };
 
     return (
@@ -70,7 +64,7 @@ const CampaignPage: React.FC = () => {
             {images.length > 0 && (
                 <img
                     src={images[activeImageIndex]}
-                    alt={`${t(`campaigns.${campaignId}.stelp_event_title`)} 1`}
+                    alt={`${t(`campaigns.${campaignId}.title`)} 1`}
                     className="w-full h-72 object-cover rounded-t-xl mb-6"
                 />
             )}
@@ -81,7 +75,7 @@ const CampaignPage: React.FC = () => {
                         <CarouselItem className="basis-1/3" key={index}>
                             <img
                                 src={image}
-                                alt={`${t(`campaigns.${campaignId}.stelp_event_title`)} ${index + 1}`}
+                                alt={`${t(`campaigns.${campaignId}.title`)} ${index + 1}`}
                                 className="w-full h-full object-cover rounded-xl"
                             />
                         </CarouselItem>
@@ -90,17 +84,19 @@ const CampaignPage: React.FC = () => {
                 <CarouselPrevious
                     className="bg-background text-white p-2 rounded-full"
                     onClickCapture={() =>
-                        setActiveImageIndex(activeImageIndex - 1)
+                        setActiveImageIndex(
+                            (activeImageIndex - 1 + images.length) %
+                                images.length
+                        )
                     }
                 />
                 <CarouselNext
                     className="bg-gray-800 text-white p-2 rounded-full"
-                    onClickCapture={() => {
-                        setActiveImageIndex(activeImageIndex + 1);
-                        setPreloadedImages(
-                            images.slice(0, activeImageIndex + 5)
-                        );
-                    }}
+                    onClickCapture={() =>
+                        setActiveImageIndex(
+                            (activeImageIndex + 1) % images.length
+                        )
+                    }
                 />
             </Carousel>
 
@@ -108,26 +104,31 @@ const CampaignPage: React.FC = () => {
                 {campaignData.event_highlights_title}
             </h2>
             <ul className="list-disc pl-5 text-typography-secondary mb-6">
-                <li>{campaignData.event_highlight_1}</li>
-                <li>{campaignData.event_highlight_2}</li>
-                <li>{campaignData.event_highlight_3}</li>
-                <li>{campaignData.event_highlight_4}</li>
+                {campaignData.event_highlights.map((highlight, index) => (
+                    <li key={index}>{highlight}</li>
+                ))}
             </ul>
 
             <h2 className="text-2xl font-bold text-typography mt-8 mb-4">
                 {campaignData.event_effect_title}
             </h2>
             <ul className="list-disc pl-5 text-typography-secondary mb-6">
-                <li>{campaignData.event_effect_1}</li>
-                <li>{campaignData.event_effect_2}</li>
-                <li>{campaignData.event_effect_3}</li>
+                {campaignData.event_effects.map((effect, index) => (
+                    <li key={index}>{effect}</li>
+                ))}
             </ul>
 
-            <p className="text-lg font-semibold text-typography text-center mb-4">
+            <p className="text-lg font-semibold text-primary text-center mb-4">
                 {campaignData.event_thanks}
             </p>
-            <p className="text-lg text-typography text-center">
-                {t(`campaigns.event_cta`)}
+            <p className="text-lg text-secondary text-center">
+                <a
+                    href="https://www.instagram.com/twmp.foundation/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {t(`campaigns.event_cta`)}
+                </a>
             </p>
         </div>
     );
