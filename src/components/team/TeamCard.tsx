@@ -5,11 +5,18 @@ interface TeamCardProps {
     position: string;
     image: string;
     description: string;
+    className?: string;
 }
 
 const TeamCard: React.FC<TeamCardProps> = (props) => {
     return (
-        <div className="relative group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300 backshadow">
+        <div
+            className={
+                "relative group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300 backshadow" +
+                " " +
+                props.className
+            }
+        >
             {/* Image Section */}
             <div className="overflow-hidden rounded-t-2xl">
                 <img

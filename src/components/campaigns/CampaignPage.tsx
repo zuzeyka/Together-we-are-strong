@@ -28,7 +28,7 @@ const CampaignPage: React.FC = () => {
     useEffect(() => {
         const importImages = () => {
             const imageCount = Number(t(`campaigns.${campaignId}.image-count`));
-            const basePath = `/src/assets/campaigns/${campaignId}/`;
+            const basePath = `/campaigns/${campaignId}/`;
             const imagesArray = Array.from(
                 { length: imageCount },
                 (_, index) => `${basePath}${index}.jpg`

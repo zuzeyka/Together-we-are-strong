@@ -1,14 +1,19 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
+import useInView from "@/components/team/useInView";
 
 const Donate: React.FC = () => {
     const { t } = useTranslation();
+    const [ref, isInView] = useInView(0.2);
 
     return (
         <section
             id="donate"
-            className="relative bg-gradient-to-r from-black via-gray-900 to-black text-white p-10 overflow-hidden font-poppins"
+            ref={ref}
+            className={`relative bg-gradient-to-r from-black via-gray-900 to-black text-white p-10 overflow-hidden font-poppins ${
+                isInView ? "animate-fade-in" : "opacity-0"
+            }`}
         >
             {/* Decorative Elements */}
             <div className="absolute top-10 left-1/5 w-96 h-96 bg-secondary rounded-full blur-3xl opacity-20 z-0"></div>
@@ -17,17 +22,17 @@ const Donate: React.FC = () => {
             <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary rounded-full blur-3xl opacity-20 z-0"></div>
 
             <div className="flex flex-col md:flex-row justify-between">
-                <div className="text-left flex flex-col">
+                <div
+                    className={`flex flex-col text-left ${
+                        isInView ? "animate-slide-in-from-right" : "opacity-0"
+                    }`}
+                >
                     <div className="flex items-center">
                         <p className="font-bold text-xl font-monserrat">
                             {t("donate.name")}
                         </p>
                         <a href="/" className="hover:opacity-50">
-                            <img
-                                src="/src/assets/logo.svg"
-                                alt="Logo"
-                                className="logo"
-                            />
+                            <img src="/logo.svg" alt="Logo" className="logo" />
                         </a>
                     </div>
 
@@ -39,7 +44,9 @@ const Donate: React.FC = () => {
                         Instagram
                     </a>
                 </div>
-                <div className="flex flex-col">
+                <div
+                    className={`flex flex-col ${isInView ? "animate-slide-in-from-top" : "opacity-0"}`}
+                >
                     <Button className="mt-6 z-10 px-8 py-3 bg-primary text-typography font-semibold rounded-2xl hover:bg-primary-dark">
                         <a href="https://www.paypal.com/donate/?hosted_button_id=9ZT8X3E3V7D4S">
                             Pay Pal
@@ -55,12 +62,19 @@ const Donate: React.FC = () => {
                         </a>
                     </Button>
                     <Button className="mt-6 z-10 px-8 py-3 bg-transparent text-typography box-border border-2 border-secondary font-semibold rounded-2xl hover:bg-secondary-dark">
-                        <a href="https://mobile-app.pumb.ua/u9h1mKxptXEDDRRa7">
+                        <a
+                            target="_blank"
+                            href="https://mobile-app.pumb.ua/u9h1mKxptXEDDRRa7"
+                        >
                             {t("donate.donateButton")}
                         </a>
                     </Button>
                 </div>
-                <div className="text-left">
+                <div
+                    className={`text-left ${
+                        isInView ? "animate-slide-in-from-left" : "opacity-0"
+                    }`}
+                >
                     <p className="font-bold text-2xl font-monserrat">
                         {t("donate.name")}
                     </p>

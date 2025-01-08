@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             }`}
         >
             <a href="/" className="hover:opacity-50">
-                <img src="/src/assets/logo.svg" alt="Logo" className="logo" />
+                <img src="/logo.svg" alt="Logo" className="logo" />
             </a>
             <div className="container mx-auto flex justify-center items-center">
                 <ul className="flex space-x-4 text-3xl">

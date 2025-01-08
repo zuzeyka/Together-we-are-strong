@@ -78,10 +78,50 @@ module.exports = {
                     from: { height: "var(--radix-accordion-content-height)" },
                     to: { height: "0" },
                 },
+                fadeInDown: {
+                    "0%": { opacity: 0, transform: "translateY(-50px)" },
+                    "100%": { opacity: 1, transform: "translateY(0)" },
+                },
+                fadeInUp: {
+                    "0%": { opacity: 0, transform: "translateY(50px)" },
+                    "100%": { opacity: 1, transform: "translateY(0)" },
+                },
+                slideInFromLeft: {
+                    "0%": { opacity: 0, transform: "translateX(-50px)" },
+                    "100%": { opacity: 1, transform: "translateX(0)" },
+                },
+                slideInFromRight: {
+                    "0%": { opacity: 0, transform: "translateX(50px)" },
+                    "100%": { opacity: 1, transform: "translateX(0)" },
+                },
+                zoomIn: {
+                    "0%": { opacity: 0, transform: "scale(0.8)" },
+                    "100%": { opacity: 1, transform: "scale(1)" },
+                },
+                fadeIn: {
+                    "0%": { opacity: 0 },
+                    "100%": { opacity: 1 },
+                },
+                slideInFromTop: {
+                    "0%": { opacity: 0, transform: "translateY(-50px)" },
+                    "100%": { opacity: 1, transform: "translateY(0)" },
+                },
+                slideInFromBottom: {
+                    "0%": { opacity: 0, transform: "translateY(50px)" },
+                    "100%": { opacity: 1, transform: "translateY(0)" },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
+                "fade-in-down": "fadeInDown 1s ease-out",
+                "fade-in-up": "fadeInUp 1s ease-out",
+                "slide-in-from-left": "slideInFromLeft 0.8s ease-out",
+                "slide-in-from-right": "slideInFromRight 0.8s ease-out",
+                "zoom-in": "zoomIn 1s ease-out",
+                "fade-in": "fadeIn 1s ease-out",
+                "slide-in-from-top": "slideInFromTop 0.8s ease-out",
+                "slide-in-from-bottom": "slideInFromBottom 0.8s ease-out",
             },
         },
     },
