@@ -18,22 +18,47 @@
         "title": "Our Team",
         "members": {
             "karina": {
-                "name": "Karina Hrebenchukova-Rozumei",
+                "name": "Karina",
                 "position": "Head of the Foundation",
                 "description": "The head of the foundation actively works on fulfilling the organization's mission, inspiring the team, and supporting projects that change lives."
             },
             "dmitry": {
-                "name": "Dmitry Rozumei",
+                "name": "Dmitry",
                 "position": "Deputy Chairman of the Foundation",
                 "description": "The deputy head assists in the strategic management of the foundation, supporting key initiatives and ensuring their successful implementation."
             },
             "artur": {
-                "name": "Artur Karamian",
+                "name": "Artur",
                 "position": "Campaign Manager",
                 "description": "The campaign manager coordinates fundraising and foundation initiatives, making them more effective and impactful."
             },
             "svitlana": {
-                "name": "Svitlana Karatsiuba",
+                "name": "Svitlana",
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+            },
+            "alexandra": {
+                "name": "Alexandra",
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+            },
+            "lubov": {
+                "name": "Lubov",
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+            },
+            "volodimyr": {
+                "name": "Volodimyr",
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+            },
+            "danil": {
+                "name": "Danil",
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+            },
+            "andrey": {
+                "name": "Andrey",
                 "position": "Manager",
                 "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
             }

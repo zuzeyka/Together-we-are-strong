@@ -18,11 +18,11 @@ const Team: React.FC = () => {
                 <h2 className="text-3xl font-bold mb-8 text-typography animate-slide-in-from-top">
                     {t("team.title")}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                     <TeamCard
                         name={t("team.members.karina.name")}
                         position={t("team.members.karina.position")}
-                        image="/DSC_4478.jpg"
+                        image="/DSC_4479.jpg"
                         description={t("team.members.karina.description")}
                     />
                     <TeamCard
@@ -42,6 +42,36 @@ const Team: React.FC = () => {
                         position={t("team.members.svitlana.position")}
                         image="/DSC_4427.jpg"
                         description={t("team.members.svitlana.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.alexandra.name")}
+                        position={t("team.members.alexandra.position")}
+                        image="/DSC_4427.jpg"
+                        description={t("team.members.alexandra.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.lubov.name")}
+                        position={t("team.members.lubov.position")}
+                        image="/DSC_4427.jpg"
+                        description={t("team.members.lubov.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.volodimyr.name")}
+                        position={t("team.members.volodimyr.position")}
+                        image="/DSC_4427.jpg"
+                        description={t("team.members.volodimyr.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.danil.name")}
+                        position={t("team.members.danil.position")}
+                        image="/DSC_4427.jpg"
+                        description={t("team.members.danil.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.andrey.name")}
+                        position={t("team.members.andrey.position")}
+                        image="/DSC_4427.jpg"
+                        description={t("team.members.andrey.description")}
                     />
                 </div>
             </div>
