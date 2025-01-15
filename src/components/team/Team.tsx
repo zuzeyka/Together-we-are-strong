@@ -46,31 +46,31 @@ const Team: React.FC = () => {
                     <TeamCard
                         name={t("team.members.alexandra.name")}
                         position={t("team.members.alexandra.position")}
-                        image="/DSC_4427.jpg"
+                        image="/5Z7A1014.jpg"
                         description={t("team.members.alexandra.description")}
                     />
                     <TeamCard
                         name={t("team.members.lubov.name")}
                         position={t("team.members.lubov.position")}
-                        image="/DSC_4427.jpg"
+                        image="/DSC_3033.jpg"
                         description={t("team.members.lubov.description")}
                     />
                     <TeamCard
                         name={t("team.members.volodimyr.name")}
                         position={t("team.members.volodimyr.position")}
-                        image="/DSC_4427.jpg"
+                        image="/DSC_4400.jpg"
                         description={t("team.members.volodimyr.description")}
                     />
                     <TeamCard
                         name={t("team.members.danil.name")}
                         position={t("team.members.danil.position")}
-                        image="/DSC_4427.jpg"
+                        image="/DSC_2244.jpg"
                         description={t("team.members.danil.description")}
                     />
                     <TeamCard
                         name={t("team.members.andrey.name")}
                         position={t("team.members.andrey.position")}
-                        image="/DSC_4427.jpg"
+                        image="/DSC_4463.jpg"
                         description={t("team.members.andrey.description")}
                     />
                 </div>

@@ -36,7 +36,6 @@ const Donate: React.FC = () => {
                         </a>
                     </div>
 
-                    <p className="text-sm">{t("donate.adress")}</p>
                     <a
                         href="https://www.instagram.com/twmp.foundation/"
                         className="hover:opacity-50 z-10"
