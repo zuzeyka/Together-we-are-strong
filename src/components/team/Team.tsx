@@ -22,13 +22,13 @@ const Team: React.FC = () => {
                     <TeamCard
                         name={t("team.members.karina.name")}
                         position={t("team.members.karina.position")}
-                        image="/DSC_4479.jpg"
+                        image="/IMG_3276.jpg"
                         description={t("team.members.karina.description")}
                     />
                     <TeamCard
                         name={t("team.members.dmitry.name")}
                         position={t("team.members.dmitry.position")}
-                        image="/DSC_4443.jpg"
+                        image="/IMG_3384.jpg"
                         description={t("team.members.dmitry.description")}
                     />
                     <TeamCard

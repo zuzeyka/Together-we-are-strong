@@ -8,6 +8,7 @@ import About from "./about/About";
 import HelpSection from "./help/HelpSection";
 import Donate from "./donate/Donate";
 import ScrollToTop from "./ScrollToTop";
+import Partners from "./about/Partners";
 
 const Home: React.FC = () => {
     return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
             <Campaigns />
             <StatsSection />
             <About />
+            <Partners />
             <HelpSection />
             <Donate />
             <ScrollToTop />
