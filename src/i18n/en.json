@@ -209,12 +209,20 @@
         "volunteerButton": "Become a volunteer",
         "partnersTitle": "Partners",
         "logos": [
+            "/partners/STELP.webp",
             "/partners/AllStarsIT.svg",
-            "/partners/CGU.png",
-            "/partners/KIWI-PARTY.png",
             "/partners/luxgroups.webp",
             "/partners/masha.jpg",
-            "/partners/STELP.webp"
+            "/partners/KIWI-PARTY.png",
+            "/partners/CGU.png"
+        ],
+        "links": [
+            "https://stelp.eu/en/",
+            "https://allstarsit.com/",
+            "https://www.luxgroups.ua/ua/",
+            "https://www.instagram.com/masha.foundation/?hl=ru",
+            "https://kiwiparty.com.ua/",
+            "https://cossackguardofukraine.org/"
         ]
     },
     "donate": {

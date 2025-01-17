@@ -10,6 +10,10 @@ const Partners: React.FC = () => {
         returnObjects: true,
     }) as string[];
 
+    const links = t("helpSection.links", {
+        returnObjects: true,
+    }) as string[];
+
     return (
         <section
             id="partners"
@@ -32,13 +36,20 @@ const Partners: React.FC = () => {
                         animation: `scrolling 20s linear infinite`,
                     }}
                 >
-                    {logos.concat(logos).map((logo, index) => (
-                        <img
+                    {logos.map((logo, index) => (
+                        <a
                             key={index}
-                            src={logo}
-                            alt={`Partner ${index + 1}`}
-                            className="h-20 object-contain"
-                        />
+                            href={links[index]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-75"
+                        >
+                            <img
+                                src={logo}
+                                alt={`Partner ${index + 1}`}
+                                className="h-20 object-contain"
+                            />
+                        </a>
                     ))}
                 </div>
             </div>
