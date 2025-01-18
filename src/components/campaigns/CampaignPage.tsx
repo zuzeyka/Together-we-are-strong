@@ -14,27 +14,18 @@ const CampaignPage: React.FC = () => {
     const { t } = useTranslation();
 
     const [images, setImages] = useState<string[]>([]);
-    const [preloadedImages, setPreloadedImages] = useState<string[]>([]);
     const [activeImageIndex, setActiveImageIndex] = useState(0);
-
-    const shuffleArray = (array: string[]) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    };
 
     useEffect(() => {
         const importImages = () => {
             const imageCount = Number(t(`campaigns.${campaignId}.image-count`));
             const basePath = `/campaigns/${campaignId}/`;
+            console.log(imageCount);
             const imagesArray = Array.from(
                 { length: imageCount },
                 (_, index) => `${basePath}${index}.jpg`
             );
-            setImages(shuffleArray(imagesArray));
-            setPreloadedImages(imagesArray.slice(0, 5));
+            setImages(imagesArray);
         };
 
         importImages();
@@ -71,7 +62,7 @@ const CampaignPage: React.FC = () => {
 
             <Carousel>
                 <CarouselContent className="flex gap-4">
-                    {preloadedImages.map((image, index) => (
+                    {images.map((image, index) => (
                         <CarouselItem className="basis-1/3" key={index}>
                             <img
                                 src={image}

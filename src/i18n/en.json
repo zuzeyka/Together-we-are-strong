@@ -11,7 +11,7 @@
     },
     "home": {
         "title": "Together, We Made Power",
-        "description": "Since the start of the full-scale invasion, we have supported over 10,900 internally displaced persons, sent 3,000 parcels to children without housing, and provided aid to 16 hospitals and 15 military units.",
+        "description": "We are a team of caring individuals united by a common goal – supporting the Ukrainian people, especially during this difficult time for our country. Our mission is to unite resources and efforts of people from all over the world to effectively counter the challenges of war in various areas. While our defenders are fighting for their homeland on the front lines, we are building a strong and reliable rear for our people, providing the necessary assistance and support.",
         "cta": "Join the Mission"
     },
     "team": {
@@ -93,49 +93,58 @@
         "Bila_Tserkva": {
             "alt": "Bila Tserkva Campaign Image",
             "title": "Bila Tserkva",
-            "image-count": "94",
+            "image-count": "33",
             "description": "Supporting families and individuals in Bila Tserkva affected by the conflict.",
             "post-text": {
                 "event_title": "Aid for Bila Tserkva",
                 "event_description": "Focused on providing food, medical supplies, and shelter to displaced families in Bila Tserkva.",
                 "event_highlights_title": "Highlights of Our Work",
                 "event_highlights": [
-                    "Delivered 200 food packages to families.",
-                    "Supported 50 children with school supplies."
+                    "Organized trips to temporary housing for ≈250 displaced individuals, including ≈50 children.",
+                    "Provided assistance in the form of food, hygiene products, clothing, medicine, children's toys, furniture, and strollers.",
+                    "Organized trips to temporary housing for ≈1000 displaced individuals, including ≈200 children."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
-                    "Enhanced the living conditions of displaced families.",
-                    "Supported children’s education in challenging times."
+                    "Enhanced living conditions for displaced families.",
+                    "Provided essential support for children and families from conflict zones.",
+                    "Strengthened community resilience through collective efforts."
                 ],
-                "event_thanks": "Your contributions made this campaign a success!"
+                "event_thanks": "We extend our gratitude to the following organizations and individuals: @hfuainfo, @lady_boss_club, @masha.foundation, @grebenchukova, @irishka_vanilka, @r_giulia7, @nityagina_, @cherevach.i, @anastasia_gordaya, @tina_colada_1, @alisa_kelis, @massinita, @ua_daria, @al_vslvskaya, @hooligan_r6, and our dedicated team."
             }
         },
         "ALLSTARSIT": {
             "alt": "ALLSTARSIT Campaign Image",
             "title": "ALLSTARSIT",
-            "image-count": "171",
+            "image-count": "19",
             "description": "Partnering with ALLSTARSIT to expand humanitarian aid across Ukraine.",
             "post-text": {
                 "event_title": "ALLSTARSIT Collaboration for Ukraine",
-                "event_description": "This partnership enabled us to extend our reach and help thousands more in need.",
+                "event_description": "This partnership enabled us to extend our reach and help thousands more in need. Together, we organized a charity event, 'Gift a Holiday to Children,' to support orphans, displaced children, and those who lost parents during the war.",
                 "event_highlights_title": "Highlights of Our Work",
                 "event_highlights": [
-                    "Provided 1,000 meals to families.",
-                    "Distributed winter clothing to 300 children."
+                    "Hosted a master class 'Plaster Figurine Painting.'",
+                    "Conducted a 'String Art' workshop.",
+                    "Featured performances by Ukrainian boy band D-side Band and Amador Lopez, a singer and choreographer from 'Rumbero’s.'",
+                    "Organized a puppet show 'Paw Patrol.'",
+                    "Set up beauty bars, giant designer coloring books, and fun photobooths.",
+                    "Provided children with gifts such as plush toys, pillows, blankets, and gingerbread cookies.",
+                    "Offered sweet treats like cotton candy, hot dogs, juices, and doughnuts from GastroFamily Market.",
+                    "Ensured access to free sparkling and still water courtesy of Morshynska."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
-                    "Expanded aid reach to remote areas.",
-                    "Ensured warmth and sustenance during winter."
+                    "Brought joy to children affected by war, offering a safe space for creativity and celebration.",
+                    "Distributed essential items to over 300 children, including orphans and displaced kids.",
+                    "Made a lasting positive impact on families in need."
                 ],
-                "event_thanks": "A heartfelt thanks to ALLSTARSIT for their collaboration!"
+                "event_thanks": "A heartfelt thanks to ALLSTARSIT for their collaboration and to our partners Morshynska, GastroFamily Market, Kiwi Party, and the Kyiv Police for helping us bring this event to life. Together, we are strong!"
             }
         },
         "STELP": {
             "alt": "STELP Campaign Image",
             "title": "STELP Event",
-            "image-count": "163",
+            "image-count": "51",
             "description": "Assistance for IDPs, hospitals, and military units, thanks to STELP's funding.",
             "post-text": {
                 "event_title": "Together We Made Power: Helping People in Ukraine",
@@ -145,7 +154,8 @@
                     "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
                     "Delivered 500 food boxes, each containing 17 kilograms of essential supplies.",
                     "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
-                    "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats."
+                    "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats.",
+                    "Hosted a holiday celebration where children participated in drawing, singing, and contests with animators from @kiwi_party_."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
@@ -153,7 +163,7 @@
                     "Brought positivity, hope, and smiles to vulnerable communities.",
                     "Created lasting memories for children during difficult times."
                 ],
-                "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration. Together, we are making a difference!"
+                "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration, as well as to our partners @kiwi_party_, @gfmarket.ukraine, @avtosojuz, and @cossack.nation.ua for their contributions. Together, we are making a difference!"
             }
         }
     },
