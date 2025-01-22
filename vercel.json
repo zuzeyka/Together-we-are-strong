@@ -1,25 +1,9 @@
 {
+    "version": 2,
     "rewrites": [
         {
-            "source": "/campaigns/:campaignId",
-            "destination": "/"
-        },
-        {
-            "source": "/:path*",
-            "destination": "/"
-        },
-        { "source": "/(.*)", "destination": "/index.html" }
-    ],
-    "builds": [
-        {
-            "src": "index.html",
-            "use": "@vercel/static-build"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "index.html"
+            "source": "/campaigns/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
