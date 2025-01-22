@@ -1,20 +1,16 @@
 {
-    "version": 2,
-    "rewrites": [
+    "routes": [
         {
-            "source": "/campaigns/(.*)",
-            "destination": "/index.html"
-        }
-    ],
-    "headers": [
+            "src": "/",
+            "dest": "/"
+        },
         {
-            "source": "/(.*)\\.js",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript"
-                }
-            ]
+            "src": "/campaigns/:campaignId",
+            "dest": "/campaigns/:campaignId"
+        },
+        {
+            "src": "/bank-details",
+            "dest": "/bank-details"
         }
     ]
 }
