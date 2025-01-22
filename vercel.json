@@ -1,16 +1,3 @@
 {
-    "routes": [
-        {
-            "src": "/",
-            "dest": "/"
-        },
-        {
-            "src": "/campaigns/:campaignId",
-            "dest": "/campaigns/:campaignId"
-        },
-        {
-            "src": "/bank-details",
-            "dest": "/bank-details"
-        }
-    ]
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
