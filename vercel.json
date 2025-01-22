@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/campaigns/:campaignId",
+            "destination": "/"
+        },
+        {
+            "source": "/:path*",
+            "destination": "/"
+        }
+    ]
+}
