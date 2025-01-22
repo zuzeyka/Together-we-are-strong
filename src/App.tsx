@@ -6,13 +6,10 @@ import BankDetails from "./components/donate/BankDetails";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/">
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route
-                    path="/campaigns/:campaignId"
-                    element={<CampaignPage />}
-                />
+                <Route path="/:campaignId" element={<CampaignPage />} />
                 <Route path="/bank-details" element={<BankDetails />} />
             </Routes>
         </Router>

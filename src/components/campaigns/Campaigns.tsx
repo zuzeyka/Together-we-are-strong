@@ -37,7 +37,7 @@ const Campaigns: React.FC = () => {
                                     "campaigns.Grooming.description"
                                 )}
                                 image="/5Z7A0926.jpg"
-                                link="/campaigns/Grooming"
+                                link="/Grooming"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
@@ -47,7 +47,7 @@ const Campaigns: React.FC = () => {
                                     "campaigns.Bila_Tserkva.description"
                                 )}
                                 image="/DSC_3580.jpg"
-                                link="/campaigns/Bila_Tserkva"
+                                link="/Bila_Tserkva"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
@@ -55,7 +55,7 @@ const Campaigns: React.FC = () => {
                                 title={t("campaigns.STELP.title")}
                                 description={t("campaigns.STELP.description")}
                                 image="/DSC_5997.jpg"
-                                link="/campaigns/STELP"
+                                link="/STELP"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
@@ -65,7 +65,7 @@ const Campaigns: React.FC = () => {
                                     "campaigns.ALLSTARSIT.description"
                                 )}
                                 image="/DSC_9523.jpg"
-                                link="/campaigns/ALLSTARSIT"
+                                link="/ALLSTARSIT"
                             />
                         </CarouselItem>
                     </CarouselContent>
