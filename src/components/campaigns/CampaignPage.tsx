@@ -67,23 +67,28 @@ const CampaignPage: React.FC = () => {
                         <video
                             src={media[activeIndex]}
                             controls
-                            className="w-full object-cover rounded-xl mb-6"
+                            className="w-full h-96 object-cover rounded-xl mb-6"
                         />
                     ) : (
                         <img
                             src={media[activeIndex]}
                             alt={`Media ${activeIndex + 1}`}
-                            className="w-full object-cover rounded-xl mb-6"
+                            className="w-full h-96 object-cover rounded-xl mb-6"
                         />
                     )}
                 </>
             )}
 
-            <Carousel>
+            <Carousel
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+            >
                 <CarouselContent className="flex">
                     {media.map((item, index) => (
                         <CarouselItem className="basis-1/3" key={index}>
-                            {item.endsWith(".mp4") ? (
+                            {item.endsWith(".mov") ? (
                                 <video
                                     src={item}
                                     className="w-full h-full object-cover rounded-xl"

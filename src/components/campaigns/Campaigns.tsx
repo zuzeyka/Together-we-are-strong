@@ -42,12 +42,32 @@ const Campaigns: React.FC = () => {
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
                             <CampaignCard
-                                title={t("campaigns.Bila_Tserkva.title")}
+                                title={t("campaigns.LargeRelocationAid.title")}
                                 description={t(
-                                    "campaigns.Bila_Tserkva.description"
+                                    "campaigns.LargeRelocationAid.description"
                                 )}
                                 image="/DSC_3580.jpg"
-                                link="/Bila_Tserkva"
+                                link="/LargeRelocationAid"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.RelocationAid.title")}
+                                description={t(
+                                    "campaigns.RelocationAid.description"
+                                )}
+                                image="/DSC_3581.jpg"
+                                link="/RelocationAid"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.MaternityAid.title")}
+                                description={t(
+                                    "campaigns.MaternityAid.description"
+                                )}
+                                image="/DSC_3582.jpg"
+                                link="/MaternityAid"
                             />
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
@@ -66,6 +86,16 @@ const Campaigns: React.FC = () => {
                                 )}
                                 image="/DSC_9523.jpg"
                                 link="/ALLSTARSIT"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.WCKitchen.title")}
+                                description={t(
+                                    "campaigns.WCKitchen.description"
+                                )}
+                                image="/DSC_9524.jpg"
+                                link="/WCKitchen"
                             />
                         </CarouselItem>
                     </CarouselContent>

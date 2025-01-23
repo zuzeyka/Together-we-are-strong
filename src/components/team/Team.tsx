@@ -73,6 +73,12 @@ const Team: React.FC = () => {
                         image="/DSC_4463.jpg"
                         description={t("team.members.andrey.description")}
                     />
+                    <TeamCard
+                        name={t("team.members.alevtyna.name")}
+                        position={t("team.members.alevtyna.position")}
+                        image="/IMG_3468.jpg"
+                        description={t("team.members.alevtyna.description")}
+                    />
                 </div>
             </div>
         </section>

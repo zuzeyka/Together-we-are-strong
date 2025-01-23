@@ -61,6 +61,11 @@
                 "name": "Andrey",
                 "position": "Manager",
                 "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+            },
+            "alevtyna": {
+                "name": "Alevtyna",
+                "position": "Manager",
+                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
             }
         }
     },
@@ -90,27 +95,77 @@
                 "event_thanks": "Thank you for your support in empowering communities!"
             }
         },
-        "Bila_Tserkva": {
-            "alt": "Bila Tserkva Campaign Image",
-            "title": "Bila Tserkva",
-            "image-count": "33",
-            "description": "Supporting families and individuals in Bila Tserkva affected by the conflict.",
+        "MaternityAid": {
+            "alt": "Maternity Aid Campaign Image",
+            "title": "Aid for Mothers and Children in the Kyiv Region",
+            "image-count": "11",
+            "description": "Support for pregnant women and children in the Kyiv region.",
             "post-text": {
-                "event_title": "Aid for Bila Tserkva",
-                "event_description": "Focused on providing food, medical supplies, and shelter to displaced families in Bila Tserkva.",
-                "event_highlights_title": "Highlights of Our Work",
+                "event_title": "Humanitarian Aid for Mothers and Children",
+                "event_description": "We organized the provision of diapers and baby food for pregnant women and their children in the Kyiv region.",
+                "event_highlights_title": "Highlights of Our Assistance",
                 "event_highlights": [
-                    "Organized trips to temporary housing for ≈250 displaced individuals, including ≈50 children.",
-                    "Provided assistance in the form of food, hygiene products, clothing, medicine, children's toys, furniture, and strollers.",
-                    "Organized trips to temporary housing for ≈1000 displaced individuals, including ≈200 children."
+                    "Distributed diapers to families with young children.",
+                    "Provided baby food for pregnant women and infants."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
-                    "Enhanced living conditions for displaced families.",
-                    "Provided essential support for children and families from conflict zones.",
-                    "Strengthened community resilience through collective efforts."
+                    "Supported families with children in crisis situations.",
+                    "Improved the quality of life for young mothers."
                 ],
-                "event_thanks": "We extend our gratitude to the following organizations and individuals: @hfuainfo, @lady_boss_club, @masha.foundation, @grebenchukova, @irishka_vanilka, @r_giulia7, @nityagina_, @cherevach.i, @anastasia_gordaya, @tina_colada_1, @alisa_kelis, @massinita, @ua_daria, @al_vslvskaya, @hooligan_r6, and our dedicated team."
+                "event_thanks": "Thank you to everyone who contributed to this initiative. Together, we are strong!"
+            }
+        },
+        "RelocationAid": {
+            "alt": "Relocation Aid Campaign Image",
+            "title": "Help with new clothes/shoes for 1000 displaced people who lost their homes. Aid for Displaced Persons",
+            "image-count": "12",
+            "description": "Providing humanitarian assistance to ≈250 displaced persons, including ≈50 children, who lost their homes.",
+            "post-text": {
+                "event_title": "Supporting Displaced Persons in Temporary Housing",
+                "event_description": "We organized a trip to a temporary housing area for ≈250 displaced persons from various hotspots who lost their homes. Among them were ≈50 children. We provided essential aid to improve their living conditions.",
+                "event_highlights_title": "Highlights of Our Assistance",
+                "event_highlights": [
+                    "Provided food for all displaced persons.",
+                    "Supplied personal hygiene items.",
+                    "Delivered clothing for children and adults.",
+                    "Ensured access to necessary medications.",
+                    "Gifted toys to bring joy to children.",
+                    "Provided children’s furniture and strollers to enhance living conditions."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Improved living conditions for ≈250 displaced persons.",
+                    "Brought support and care to ≈50 children.",
+                    "Supported communities in crisis."
+                ],
+                "event_thanks": "We extend our gratitude to everyone who supported our efforts and all partners who made this project possible. Together, we are strong!"
+            }
+        },
+        "LargeRelocationAid": {
+            "alt": "Large Relocation Aid Campaign Image",
+            "title": "Distribution of products in Skvira where 1500 adults, 300 of them children, all lost their homes. Aid for Displaced Persons",
+            "image-count": "10",
+            "description": "Providing humanitarian assistance to ≈1000 displaced persons, including ≈200 children, who lost their homes.",
+            "post-text": {
+                "event_title": "Supporting Displaced Persons in Temporary Housing",
+                "event_description": "We organized a trip to a temporary housing area for ≈1000 displaced persons from various hotspots who lost their homes. Among them were ≈200 children. We provided essential aid to improve their living conditions.",
+                "event_highlights_title": "Highlights of Our Assistance",
+                "event_highlights": [
+                    "Provided food for all displaced persons.",
+                    "Supplied personal hygiene items.",
+                    "Delivered clothing for children and adults.",
+                    "Ensured access to necessary medications.",
+                    "Gifted toys to bring joy to children.",
+                    "Provided children’s furniture and strollers to enhance living conditions."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Improved living conditions for ≈1000 displaced persons.",
+                    "Brought support and care to ≈200 children.",
+                    "Delivered large-scale humanitarian aid effectively."
+                ],
+                "event_thanks": "We extend our gratitude to everyone who supported this project and helped make it a reality. Together, we are strong!"
             }
         },
         "ALLSTARSIT": {
@@ -164,6 +219,29 @@
                     "Created lasting memories for children during difficult times."
                 ],
                 "event_thanks": "We extend our heartfelt thanks to STELP for their continued support and collaboration, as well as to our partners @kiwi_party_, @gfmarket.ukraine, @avtosojuz, and @cossack.nation.ua for their contributions. Together, we are making a difference!"
+            }
+        },
+        "WCKitchen": {
+            "alt": "WCKitchen Campaign Image",
+            "title": "Partnership with WCKitchen",
+            "image-count": "8",
+            "description": "Providing aid to internally displaced persons through food packages from our partners at WCKitchen.",
+            "post-text": {
+                "event_title": "Together We Are Strong: Helping IDPs with WCKitchen",
+                "event_description": "Volunteer work is hard labor, driven by the initiative of volunteers, a shared spirit of victory, and the sincere gratitude of the people we help. Thanks to our partnership with WCKitchen, we established a food package distribution point for IDPs.",
+                "event_highlights_title": "Highlights of Our Work",
+                "event_highlights": [
+                    "Distributed 12 tons of humanitarian aid in 8 days.",
+                    "Provided 1,100 food packages to IDPs, each weighing 11 kg.",
+                    "Organized a temporary offline hub in Kyiv to facilitate distribution."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Delivered food packages to over 1,100 displaced persons.",
+                    "Supported those in greatest need.",
+                    "Fostered a spirit of volunteerism within the community."
+                ],
+                "event_thanks": "Special thanks to our partners: WCKitchen for the food packages and @grp.help for organizational and media support. Together, we are strong!"
             }
         }
     },
