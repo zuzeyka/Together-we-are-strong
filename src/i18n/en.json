@@ -168,6 +168,98 @@
                 "event_thanks": "We extend our gratitude to everyone who supported this project and helped make it a reality. Together, we are strong!"
             }
         },
+        "GastroFamilyAid": {
+            "alt": "Gastro Family Aid Campaign Image",
+            "title": "Support from Gastro Family",
+            "image-count": "9",
+            "description": "The incredible Gastro Family restaurant network has been aiding hospitals, the military, and civilians since the early days of the war.",
+            "post-text": {
+                "event_title": "Delicious Meals Made with Love by Gastro Family",
+                "event_description": "Since the third day of the war, the Gastro Family restaurant network has been providing hospitals and the military with fresh, hot meals and sweet drinks daily. They also prepared meals for civilians and children, bringing joy and support.",
+                "event_highlights_title": "Highlights of Our Collaboration",
+                "event_highlights": [
+                    "Daily provision of hot meals for hospitals and the military.",
+                    "Preparation of meals and desserts for civilians and children.",
+                    "Care and love in every dish."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Supported hospitals and the military with hot meals during difficult times.",
+                    "Brought joy to children through delicious meals and desserts.",
+                    "Strengthened community spirit through care and collaboration."
+                ],
+                "event_thanks": "We extend heartfelt thanks to @dmytro_borisov @lena_borysova and their professional team for their humanity, support, and trust. Together, we are strong!"
+            }
+        },
+        "MedicalAid": {
+            "alt": "Medical Equipment Aid Campaign Image",
+            "title": "Aid for Medical Equipment",
+            "image-count": "10",
+            "description": "Fundraising for the purchase of an Evroklav23VS+ sterilizer for children with oncology.",
+            "post-text": {
+                "event_title": "United Support for Medical Assistance",
+                "event_description": "Thanks to joint efforts, we raised 19,000 UAH, which were transferred to our partner, the Keren for Our Child Foundation, for purchasing an Evroklav23VS+ sterilizer worth 130,000 UAH. This is an important step in supporting children with oncology.",
+                "event_highlights_title": "Highlights of Our Efforts",
+                "event_highlights": [
+                    "Raised 19,000 UAH for medical equipment.",
+                    "Collaborated with @endorphin__music and raised 50% of ticket sales.",
+                    "Received 20% of profits from @estetikakyiv for supporting children."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Supported the purchase of equipment for treating children with oncology.",
+                    "Engaged partners in charitable activities.",
+                    "United the community around a common goal."
+                ],
+                "event_thanks": "A heartfelt thanks to partners @endorphin__music, @estetikakyiv, and all participants who joined this charitable initiative. Together, we are strong!"
+            }
+        },
+        "MilitarySupport": {
+            "alt": "Military Support Campaign Image",
+            "title": "Support for the Military",
+            "image-count": "6",
+            "description": "Financial support for the military through partners and friends.",
+            "post-text": {
+                "event_title": "111,600 UAH for Military Support",
+                "event_description": "Thanks to the financial support of IT company @allstarsitcom, we raised 111,600 UAH to provide Ukrainian military personnel with essential equipment and clothing.",
+                "event_highlights_title": "Highlights of Our Assistance",
+                "event_highlights": [
+                    "Delivered 10 wood-burning stoves to the military.",
+                    "Purchased 4 backup battery units.",
+                    "Provided 25 winter jackets for defenders."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Improved conditions for soldiers during the winter period.",
+                    "Equipped the military with warm clothing and essential gear.",
+                    "Strengthened support through collaborative partnerships."
+                ],
+                "event_thanks": "Heartfelt thanks to @allstarsitcom for their financial aid and @nezalezhna.foundation for organizing the delivery of support. Together, we are strong!"
+            }
+        },
+        "AnimalShelterSupport": {
+            "alt": "Animal Shelter Support Campaign Image",
+            "title": "Support for Animal Shelters",
+            "image-count": "6",
+            "description": "Providing shelters with food, canned goods, and essential resources for cats and dogs.",
+            "post-text": {
+                "event_title": "Supporting Animal Shelters",
+                "event_description": "Our foundation actively supports animal shelters by providing them with food, canned goods, and other essential resources. Through collaboration with @dtp.kiev.ua, we identified shelters in need and delivered support directly to them.",
+                "event_highlights_title": "Highlights of Our Efforts",
+                "event_highlights": [
+                    "Assisted more than 10 animal shelters.",
+                    "Supported shelters like @sirius.shelter, @zveropolis.kiev, @rudiy_kit, @happy_animals_city, and others.",
+                    "Delivered food, canned goods, and other necessary supplies."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Improved living conditions for animals in shelters.",
+                    "Provided essential resources for animal care.",
+                    "Engaged the community to support our furry friends."
+                ],
+                "event_thanks": "Heartfelt thanks to @dtp.kiev.ua for assisting in identifying shelters and organizing aid delivery. Together, we are strong!"
+            }
+        },
         "ALLSTARSIT": {
             "alt": "ALLSTARSIT Campaign Image",
             "title": "ALLSTARSIT",
@@ -302,6 +394,7 @@
             "/partners/luxgroups.webp",
             "/partners/masha.jpg",
             "/partners/KIWI-PARTY.png",
+            "/partners/gastroFamily.png",
             "/partners/CGU.png"
         ],
         "links": [
@@ -310,6 +403,7 @@
             "https://www.luxgroups.ua/ua/",
             "https://www.instagram.com/masha.foundation/?hl=ru",
             "https://kiwiparty.com.ua/",
+            "https://gfm.com.ua/",
             "https://cossackguardofukraine.org/"
         ]
     },

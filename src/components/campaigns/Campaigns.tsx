@@ -72,6 +72,48 @@ const Campaigns: React.FC = () => {
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
                             <CampaignCard
+                                title={t("campaigns.GastroFamilyAid.title")}
+                                description={t(
+                                    "campaigns.GastroFamilyAid.description"
+                                )}
+                                image="/DSC_5998.jpg"
+                                link="/GastroFamilyAid"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.MedicalAid.title")}
+                                description={t(
+                                    "campaigns.MedicalAid.description"
+                                )}
+                                image="/DSC_5999.jpg"
+                                link="/MedicalAid"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.MilitarySupport.title")}
+                                description={t(
+                                    "campaigns.MilitarySupport.description"
+                                )}
+                                image="/DSC_5996.jpg"
+                                link="/MilitarySupport"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t(
+                                    "campaigns.AnimalShelterSupport.title"
+                                )}
+                                description={t(
+                                    "campaigns.AnimalShelterSupport.description"
+                                )}
+                                image="/DSC_5995.jpg"
+                                link="/AnimalShelterSupport"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
                                 title={t("campaigns.STELP.title")}
                                 description={t("campaigns.STELP.description")}
                                 image="/DSC_5997.jpg"
