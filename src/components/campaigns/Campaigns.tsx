@@ -114,6 +114,36 @@ const Campaigns: React.FC = () => {
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
                             <CampaignCard
+                                title={t("campaigns.SupportForChildren.title")}
+                                description={t(
+                                    "campaigns.SupportForChildren.description"
+                                )}
+                                image="/DSC_5994.jpg"
+                                link="/SupportForChildren"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.GiftCampaign.title")}
+                                description={t(
+                                    "campaigns.GiftCampaign.description"
+                                )}
+                                image="/DSC_5993.jpg"
+                                link="/GiftCampaign"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.InternatSupport.title")}
+                                description={t(
+                                    "campaigns.InternatSupport.description"
+                                )}
+                                image="/DSC_5992.jpg"
+                                link="/InternatSupport"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
                                 title={t("campaigns.STELP.title")}
                                 description={t("campaigns.STELP.description")}
                                 image="/DSC_5997.jpg"

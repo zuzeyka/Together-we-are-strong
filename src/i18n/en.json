@@ -260,6 +260,85 @@
                 "event_thanks": "Heartfelt thanks to @dtp.kiev.ua for assisting in identifying shelters and organizing aid delivery. Together, we are strong!"
             }
         },
+        "SupportForChildren": {
+            "alt": "Support for Children Campaign Image",
+            "title": "Support for Children with Disabilities and Orphans",
+            "image-count": "7",
+            "description": "Providing assistance to children with disabilities and orphans under 18.",
+            "post-text": {
+                "event_title": "Support for Children with Disabilities and Orphans",
+                "event_description": "Our foundation provides support to children under 18 with disabilities and orphans. We are committed to ensuring they receive the help they need.",
+                "event_highlights_title": "Highlights of Assistance",
+                "event_highlights": [
+                    "Provided assistance to children with disabilities.",
+                    "Supported orphans under 18 years old.",
+                    "Fast delivery of humanitarian aid thanks to @novaposhta_humanitarian."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Families with children were supplied with essential items.",
+                    "Provided support to the most vulnerable groups.",
+                    "Improved the quality of life for orphans and children with disabilities."
+                ],
+                "event_thanks": "Heartfelt thanks to @novaposhta_humanitarian for their swift delivery of supplies. Together, we are strong!"
+            }
+        },
+        "GiftCampaign": {
+            "alt": "Children's Gift Campaign Image",
+            "title": "Gifts for Children",
+            "image-count": "13",
+            "description": "Gift packages for children provided by our partners.",
+            "post-text": {
+                "event_title": "Heartfelt Gifts for Children",
+                "event_description": "We organized gifts for children to bring them happiness and joy during challenging times. The gifts were made possible thanks to the support of our partners.",
+                "event_highlights_title": "What Was in the Gift?",
+                "event_highlights": [
+                    "Ball by @lux_groups_ua.",
+                    "Badminton set by @lux_groups_ua.",
+                    "Catchball by @lux_groups_ua.",
+                    "Mortal Combat toy by @kiwi_party_.",
+                    "Waffles by @kyivbkk.",
+                    "Kinder chocolate by @auchanukraine.",
+                    "Sweet gingerbread by @lux_groups_ua.",
+                    "Drawing album by @lux_groups_ua.",
+                    "Nike banana bag by @charityfoundation_ua.",
+                    "Markers by @lux_groups_ua.",
+                    "Cookies by @lux_groups_ua.",
+                    "Sticker packet by @lux_groups_ua."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Over 100 gift sets distributed to children.",
+                    "Brought joy and smiles to children.",
+                    "Engaged partners to support the campaign."
+                ],
+                "event_thanks": "Heartfelt thanks to our partners: @lux_groups_ua, @kiwi_party_, @kyivbkk, @auchanukraine, @charityfoundation_ua. Together, we are strong! 💛💙"
+            }
+        },
+        "InternatSupport": {
+            "alt": "Internat Support Campaign Image",
+            "title": "Support for a Children's Internat",
+            "image-count": "5",
+            "description": "Assistance for children with special needs, orphans, and those affected by war.",
+            "post-text": {
+                "event_title": "Support for a Children's Internat in Difficult Times",
+                "event_description": "In January, our team visited a children's internat housing children with special needs, orphans, and those affected by war. We delivered essential aid and brought joy to the children.",
+                "event_highlights_title": "Highlights of Assistance",
+                "event_highlights": [
+                    "Provided a generator for heat and electricity.",
+                    "Delivered warm children's costumes and footwear.",
+                    "Donated blankets for comfort.",
+                    "Prepared and distributed treats for the children."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Improved living conditions in the children's internat.",
+                    "Brought joy and support to children during difficult times.",
+                    "Raised awareness about the needs of internats in Ukraine."
+                ],
+                "event_thanks": "Heartfelt thanks to our sponsor @stelp_supporter_on_site for their assistance and trust in our foundation. Together, we are strong! 💙💛"
+            }
+        },
         "ALLSTARSIT": {
             "alt": "ALLSTARSIT Campaign Image",
             "title": "ALLSTARSIT",
