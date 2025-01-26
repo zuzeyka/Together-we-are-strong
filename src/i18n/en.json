@@ -339,6 +339,52 @@
                 "event_thanks": "Heartfelt thanks to our sponsor @stelp_supporter_on_site for their assistance and trust in our foundation. Together, we are strong! 💙💛"
             }
         },
+        "CharityBrunch": {
+            "alt": "Charity Brunch Image",
+            "title": "Charity Brunch",
+            "image-count": "4",
+            "description": "Funds raised to support families with infants who lost their homes.",
+            "post-text": {
+                "event_title": "Charity Brunch to Support Families",
+                "event_description": "We are grateful to the brunch organizers for their initiative, which raised 10,000 UAH to support three families with infants who lost their homes in Kharkiv, Mariupol, and Severodonetsk.",
+                "event_highlights_title": "Highlights",
+                "event_highlights": [
+                    "Raised 10,000 UAH for charity.",
+                    "Provided aid to three families with infants.",
+                    "Gifted baby kits to families in Kharkiv, Mariupol, and Severodonetsk."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Provided essential support to children and their families.",
+                    "United efforts for greater charity effectiveness.",
+                    "Built trust and made a positive impact on charitable initiatives."
+                ],
+                "event_thanks": "Heartfelt thanks to @iryna__kholodova, @viktoriya_yanochkina for organizing the brunch and to every participant for their contribution. Together, we are strong! 💙💛"
+            }
+        },
+        "HospitalSupport": {
+            "alt": "Hospital Support Campaign Image",
+            "title": "Hospital Support",
+            "image-count": "11",
+            "description": "Supporting over 15 medical institutions across Ukraine.",
+            "post-text": {
+                "event_title": "Supporting Medical Institutions in Ukraine",
+                "event_description": "Our foundation provides assistance to hospitals, ensuring they have the essential supplies for functioning. More than 15 medical institutions across Ukraine have already received our support.",
+                "event_highlights_title": "Highlights",
+                "event_highlights": [
+                    "Provided diapers, swaddles, and other hygiene supplies.",
+                    "Delivered medicines and vitamins to hospitals.",
+                    "Supplied necessary medical equipment for healthcare institutions."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Improved patient care conditions in hospitals.",
+                    "Ensured stable operation of medical facilities.",
+                    "Raised awareness of medical support needs during the war."
+                ],
+                "event_thanks": "Heartfelt thanks to @stelp_supporter_on_site for aiding in supporting hospitals. Together, we are strong! 💙💛"
+            }
+        },
         "ALLSTARSIT": {
             "alt": "ALLSTARSIT Campaign Image",
             "title": "ALLSTARSIT",
