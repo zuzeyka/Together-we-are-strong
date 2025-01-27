@@ -164,6 +164,26 @@ const Campaigns: React.FC = () => {
                         </CarouselItem>
                         <CarouselItem className="basis-1/3 animate-zoom-in">
                             <CampaignCard
+                                title={t("campaigns.AnimalSupport.title")}
+                                description={t(
+                                    "campaigns.AnimalSupport.description"
+                                )}
+                                image="/DSC_5989.jpg"
+                                link="/AnimalSupport"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
+                                title={t("campaigns.MutualAidProject.title")}
+                                description={t(
+                                    "campaigns.MutualAidProject.description"
+                                )}
+                                image="/DSC_5988.jpg"
+                                link="/MutualAidProject"
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-1/3 animate-zoom-in">
+                            <CampaignCard
                                 title={t("campaigns.STELP.title")}
                                 description={t("campaigns.STELP.description")}
                                 image="/DSC_5997.jpg"

@@ -385,6 +385,52 @@
                 "event_thanks": "Heartfelt thanks to @stelp_supporter_on_site for aiding in supporting hospitals. Together, we are strong! 💙💛"
             }
         },
+        "AnimalSupport": {
+            "alt": "Animal Support Image",
+            "title": "Animal Support",
+            "image-count": "5",
+            "description": "Supporting Sirius shelter, home to over 3000 dogs.",
+            "post-text": {
+                "event_title": "Supporting Sirius Animal Shelter",
+                "event_description": "Our team continues to support animals. This time, we delivered 700 kg of meat to the Sirius shelter, which houses over 3000 stray dogs.",
+                "event_highlights_title": "Highlights",
+                "event_highlights": [
+                    "Delivered 700 kg of meat for the animals.",
+                    "Supported over 3000 dogs residing in the Sirius shelter.",
+                    "Improved food conditions for animals at the shelter."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Enhanced nutrition for animals in Ukraine's largest shelter.",
+                    "Continued systematic support for animal shelters.",
+                    "Raised awareness about the importance of helping stray animals."
+                ],
+                "event_thanks": "Heartfelt thanks to everyone who supports our furry friends. Together, we are strong! 💙💛"
+            }
+        },
+        "MutualAidProject": {
+            "alt": "Mutual Aid Project Image",
+            "title": "Mutual Aid Project",
+            "image-count": "9",
+            "description": "Supporting the Armed Forces special unit and self-defense training for volunteers.",
+            "post-text": {
+                "event_title": "Mutual Aid Project with the Armed Forces",
+                "event_description": "As part of the mutual aid project, we provided the Armed Forces special unit with essentials such as food, blankets, power banks, and more. In return, they conducted a self-defense course for our volunteers.",
+                "event_highlights_title": "Highlights",
+                "event_highlights": [
+                    "Delivered food, blankets, power banks, and other necessities to the special unit.",
+                    "Hosted a professional self-defense course for the foundation's volunteers.",
+                    "Fostered collaboration between volunteers and the military for a common cause."
+                ],
+                "event_effect_title": "The Impact",
+                "event_effects": [
+                    "Enhanced support for the Armed Forces special unit with essential resources.",
+                    "Improved safety and awareness among volunteers.",
+                    "Established a unique mutual aid format uniting military and civilian initiatives."
+                ],
+                "event_thanks": "Thank you to our defenders for their help and collaboration! Together, we are strong! 💙💛"
+            }
+        },
         "ALLSTARSIT": {
             "alt": "ALLSTARSIT Campaign Image",
             "title": "ALLSTARSIT",
