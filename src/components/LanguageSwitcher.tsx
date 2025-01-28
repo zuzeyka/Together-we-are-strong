@@ -10,19 +10,21 @@ const LanguageSwitcher: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col justify-evenly">
-            <Button
-                onClick={() => changeLanguage("en")}
-                className={`${i18n.language === "en" ? "bg-primary" : "bg-secondary"} px-3 py-1 text-white rounded mr-2`}
-            >
-                EN
-            </Button>
-            <Button
-                onClick={() => changeLanguage("uk")}
-                className={`${i18n.language === "uk" ? "bg-primary" : "bg-secondary"} px-3 py-1 text-white rounded mr-2`}
-            >
-                УК
-            </Button>
+        <div className="lg:mr-4 lg:mt-0 my-auto lg:my-0">
+            <div className="lg:flex lg:flex-col justify-center h-full w-full items-center">
+                <Button
+                    onClick={() => changeLanguage("en")}
+                    className={`${i18n.language === "en" ? "bg-primary" : "bg-secondary"} px-3 py-1 text-typography rounded text-sm sm:text-base lg:h-full lg:w-full lg:mb-2 mr-2 lg:mr-0`}
+                >
+                    EN
+                </Button>
+                <Button
+                    onClick={() => changeLanguage("uk")}
+                    className={`${i18n.language === "uk" ? "bg-primary" : "bg-secondary"} px-3 py-1 text-typography rounded text-sm sm:text-base lg:h-full lg:w-full`}
+                >
+                    УК
+                </Button>
+            </div>
         </div>
     );
 };
