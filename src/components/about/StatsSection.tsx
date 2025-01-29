@@ -10,7 +10,7 @@ const StatsSection: React.FC = () => {
         <section className="bg-background py-12 animate-fade-in">
             <div
                 ref={ref}
-                className="max-w-6xl mx-auto text-center text-typography font-poppins"
+                className="max-w-6xl lg:px-0 px-4 mx-auto text-center text-typography font-poppins"
             >
                 <h2
                     className={`text-4xl font-bold sm:text-8xl font-montserrat ${isInView ? "animate-slide-in-from-top" : "opacity-0"}`}

@@ -10,8 +10,7 @@ interface CampaignCardProps {
 
 const CampaignCard: React.FC<CampaignCardProps> = (props) => {
     return (
-        <div className="relative group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300">
-            {/* Image Section */}
+        <div className="relative backshadow my-12 group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="overflow-hidden rounded-t-2xl">
                 <img
                     src={props.image}
@@ -20,23 +19,21 @@ const CampaignCard: React.FC<CampaignCardProps> = (props) => {
                 />
             </div>
 
-            {/* Content Section */}
-            <div className="p-4">
-                <h3 className="text-xl font-bold text-primary-light group-hover:text-secondary-light">
+            <div className="lg:p-4 h-36 flex flex-col justify-center">
+                <h3 className="lg:text-lg text-sm font-bold text-primary-light group-hover:text-secondary-light">
                     {props.title}
                 </h3>
             </div>
 
-            {/* Footer with Hover Effects */}
             <div className="absolute flex flex-col items-center inset-0 bg-black bg-opacity-70 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm my-2 text-typography">
+                <p className="lg:text-sm text-xs break-words my-2 text-typography px-4">
                     {props.description}
                 </p>
                 <a
                     href={props.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 bg-secondary text-black rounded-full hover:bg-secondary-dark transition-all"
+                    className="lg:px-6 px-1 lg:py-3 py-1 lg:text-sm text-xs bg-secondary text-black rounded-full hover:bg-secondary-dark transition-all"
                 >
                     {t("campaigns.button-more")}
                 </a>

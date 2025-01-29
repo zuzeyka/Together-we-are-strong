@@ -29,7 +29,7 @@ const Partners: React.FC = () => {
             >
                 {t("helpSection.partnersTitle")}
             </h2>
-            <div className="relative w-full overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden">
                 <div
                     className="flex animate-scroll gap-8"
                     style={{
@@ -47,7 +47,7 @@ const Partners: React.FC = () => {
                             <img
                                 src={logo}
                                 alt={`Partner ${index + 1}`}
-                                className="h-20 object-contain"
+                                className="lg:h-32 object-contain"
                             />
                         </a>
                     ))}

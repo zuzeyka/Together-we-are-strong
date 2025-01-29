@@ -211,8 +211,6 @@ const Campaigns: React.FC = () => {
                             />
                         </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious className="bg-typography-dark" />
-                    <CarouselNext className="bg-typography-dark" />
                 </Carousel>
             </div>
         </section>

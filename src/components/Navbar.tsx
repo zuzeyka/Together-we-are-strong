@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
-import { Menu, X } from "lucide-react"; // Hamburger and close icons
+import { Menu, X } from "lucide-react";
 
 const Navbar: React.FC = () => {
     const { t } = useTranslation();

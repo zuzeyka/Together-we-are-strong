@@ -118,7 +118,7 @@
         },
         "RelocationAid": {
             "alt": "Relocation Aid Campaign Image",
-            "title": "Help with new clothes/shoes for 1000 displaced people who lost their homes. Aid for Displaced Persons",
+            "title": "Help with new clothes/shoes. Aid for Displaced Persons",
             "image-count": "12",
             "description": "Providing humanitarian assistance to ≈250 displaced persons, including ≈50 children, who lost their homes.",
             "post-text": {
@@ -144,7 +144,7 @@
         },
         "LargeRelocationAid": {
             "alt": "Large Relocation Aid Campaign Image",
-            "title": "Distribution of products in Skvira where 1500 adults, 300 of them children, all lost their homes. Aid for Displaced Persons",
+            "title": "Distribution of products in Skvira. Aid for Displaced Persons",
             "image-count": "10",
             "description": "Providing humanitarian assistance to ≈1000 displaced persons, including ≈200 children, who lost their homes.",
             "post-text": {
@@ -561,11 +561,11 @@
         "partnersTitle": "Partners",
         "logos": [
             "/partners/STELP.webp",
-            "/partners/AllStarsIT.svg",
+            "/partners/AllStarsIT.webp",
             "/partners/luxgroups.webp",
             "/partners/masha.jpg",
             "/partners/KIWI-PARTY.png",
-            "/partners/gastroFamily.png",
+            "/partners/gastroFamily.webp",
             "/partners/CGU.png"
         ],
         "links": [

@@ -14,16 +14,16 @@ const About: React.FC = () => {
                 isInView ? "animate-fade-in" : "opacity-0"
             }`}
         >
-            <div className="container mx-auto px-6 lg:px-20">
+            <div className="container mx-auto flex flex-col items-center">
                 <h2
-                    className={`text-5xl lg:text-6xl font-extrabold text-center mb-12 leading-tight ${
+                    className={`text-4xl lg:text-6xl text-right font-extrabold text-center mb-12 leading-tight ${
                         isInView ? "animate-slide-in-from-top" : "opacity-0"
                     }`}
                 >
                     {t("about.title")}
                 </h2>
                 <p
-                    className={`text-xl text-typography-primary text-center max-w-3xl mx-auto mb-12 ${
+                    className={`lg:text-2xl text-base text-right text-typography-primary text-center max-w-3xl mx-auto mb-12 ${
                         isInView ? "animate-slide-in-from-bottom" : "opacity-0"
                     }`}
                 >
@@ -37,7 +37,7 @@ const About: React.FC = () => {
                     {Array.from({ length: 4 }).map((_, index) => (
                         <div
                             key={index}
-                            className={`flex items-center gap-6 ${
+                            className={`flex items-right gap-6 ${
                                 isInView
                                     ? index === 0 || index === 2
                                         ? "animate-slide-in-from-left"
@@ -45,12 +45,12 @@ const About: React.FC = () => {
                                     : "opacity-0"
                             }`}
                         >
-                            <div className="w-16 flex items-center justify-center bg-secondary rounded-full">
+                            <div className="w-16 flex items-center justify-center text-secondary">
                                 <span className="text-2xl font-bold">
                                     {index + 1}
                                 </span>
                             </div>
-                            <p className="text-lg text-typography-secondary">
+                            <p className="lg:text-lg text-base text-right text-typography-secondary">
                                 {t(
                                     `about.${["support", "projects", "partnerships", "vision"][index]}`
                                 )}

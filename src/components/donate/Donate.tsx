@@ -44,7 +44,7 @@ const Donate: React.FC = () => {
                     </a>
                 </div>
                 <div
-                    className={`flex flex-col ${isInView ? "animate-slide-in-from-top" : "opacity-0"}`}
+                    className={`flex flex-col mb-4 ${isInView ? "animate-slide-in-from-top" : "opacity-0"}`}
                 >
                     <Button className="mt-6 z-10 px-8 py-3 bg-primary text-typography font-semibold rounded-2xl hover:bg-primary-dark">
                         <a href="https://www.paypal.com/donate/?hosted_button_id=9ZT8X3E3V7D4S">
