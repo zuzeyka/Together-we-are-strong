@@ -1,13 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import CampaignCard from "./CampaignCard";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "../ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import useInView from "@/components/team/useInView";
 
 const Campaigns: React.FC = () => {
