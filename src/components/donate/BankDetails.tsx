@@ -6,7 +6,7 @@ const BankDetails: React.FC = () => {
 
     return (
         <div className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white p-10 rounded-lg shadow-lg w-full text-4xl flex flex-col items-center space-y-8">
-            <h2 className="text-8xl sm:text-12xl font-extrabold mb-6 text-center tracking-wide animate-fade-in-down">
+            <h2 className="lg:text-8xl text-5xl sm:text-12xl font-extrabold mb-6 text-center tracking-wide animate-fade-in-down">
                 {t("donate.donateTitle")}
             </h2>
             <div className="text-left space-y-6 animate-fade-in-up">

@@ -53,11 +53,11 @@ const CampaignPage: React.FC = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6 bg-background rounded-lg shadow-md">
-            <h1 className="text-3xl font-bold text-typography mb-4 text-center">
+        <div className="max-w-4xl mx-auto p-4 md:p-6 bg-background rounded-lg shadow-md">
+            <h1 className="text-2xl md:text-3xl font-bold text-typography mb-4 text-center">
                 {campaignData.event_title}
             </h1>
-            <p className="text-lg text-typography mb-6 text-justify">
+            <p className="text-base md:text-lg text-typography mb-6 text-justify">
                 {campaignData.event_description}
             </p>
 
@@ -67,13 +67,13 @@ const CampaignPage: React.FC = () => {
                         <video
                             src={media[activeIndex]}
                             controls
-                            className="w-full h-96 object-cover rounded-xl mb-6"
+                            className="w-full h-auto object-cover rounded-xl mb-6"
                         />
                     ) : (
                         <img
                             src={media[activeIndex]}
                             alt={`Media ${activeIndex + 1}`}
-                            className="w-full h-96 object-cover rounded-xl mb-6"
+                            className="w-full h-auto object-cover rounded-xl mb-6"
                         />
                     )}
                 </>
@@ -87,7 +87,10 @@ const CampaignPage: React.FC = () => {
             >
                 <CarouselContent className="flex">
                     {media.map((item, index) => (
-                        <CarouselItem className="basis-1/3" key={index}>
+                        <CarouselItem
+                            className="basis-1/2 sm:basis-1/3 p-2"
+                            key={index}
+                        >
                             {item.endsWith(".mov") ? (
                                 <video
                                     src={item}
@@ -106,7 +109,7 @@ const CampaignPage: React.FC = () => {
                     ))}
                 </CarouselContent>
                 <CarouselPrevious
-                    className="bg-background text-white p-2 rounded-full"
+                    className="bg-gray-800 text-white left-0 p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveIndex(
                             (activeIndex - 1 + media.length) % media.length
@@ -114,14 +117,14 @@ const CampaignPage: React.FC = () => {
                     }
                 />
                 <CarouselNext
-                    className="bg-gray-800 text-white p-2 rounded-full"
+                    className="bg-gray-800 text-white right-2 p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveIndex((activeIndex + 1) % media.length)
                     }
                 />
             </Carousel>
 
-            <h2 className="text-2xl font-bold text-typography mt-8 mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-typography mt-8 mb-4">
                 {campaignData.event_highlights_title}
             </h2>
             <ul className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -130,17 +133,17 @@ const CampaignPage: React.FC = () => {
                         key={index}
                         className="flex items-center gap-4 bg-primary bg-opacity-10 p-4 rounded-lg shadow-lg"
                     >
-                        <span className="text-typography font-bold rounded-full w-10 h-10 flex items-center justify-center">
+                        <span className="text-typography font-bold rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
                             {index + 1}
                         </span>
-                        <p className="text-lg text-typography-secondary">
+                        <p className="text-sm md:text-lg text-typography-secondary">
                             {highlight}
                         </p>
                     </li>
                 ))}
             </ul>
 
-            <h2 className="text-2xl font-bold text-typography mt-8 mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-typography mt-8 mb-4">
                 {campaignData.event_effect_title}
             </h2>
             <ul className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -149,10 +152,10 @@ const CampaignPage: React.FC = () => {
                         key={index}
                         className="flex items-center gap-4 bg-secondary bg-opacity-10 p-4 rounded-lg shadow-lg"
                     >
-                        <span className="text-typography font-bold rounded-full w-10 h-10 flex items-center justify-center">
+                        <span className="text-typography font-bold rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
                             {index + 1}
                         </span>
-                        <p className="text-lg text-typography-secondary">
+                        <p className="text-sm md:text-lg text-typography-secondary">
                             {effect}
                         </p>
                     </li>
@@ -160,23 +163,20 @@ const CampaignPage: React.FC = () => {
             </ul>
 
             <div className="flex flex-col items-center">
-                <div>
-                    <p className="text-lg font-semibold text-primary text-center mb-4">
-                        {campaignData.event_thanks}
-                    </p>
-                    <p className="text-lg text-secondary text-center">
-                        <a
-                            href="https://www.instagram.com/twmp.foundation/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {t(`campaigns.event_cta`)}
-                        </a>
-                    </p>
-                </div>
-
-                <a href="/" className="hover:opacity-50">
-                    <img src="/logo.svg" alt="Logo" className="logo" />
+                <p className="text-base md:text-lg font-semibold text-primary text-center mb-4">
+                    {campaignData.event_thanks}
+                </p>
+                <p className="text-sm md:text-lg text-secondary text-center">
+                    <a
+                        href="https://www.instagram.com/twmp.foundation/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {t(`campaigns.event_cta`)}
+                    </a>
+                </p>
+                <a href="/" className="hover:opacity-50 mt-4">
+                    <img src="/logo.svg" alt="Logo" className="w-20 md:w-32" />
                 </a>
             </div>
         </div>

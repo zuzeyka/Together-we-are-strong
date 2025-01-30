@@ -16,14 +16,14 @@ const About: React.FC = () => {
         >
             <div className="container mx-auto flex flex-col items-center">
                 <h2
-                    className={`text-4xl lg:text-6xl text-right font-extrabold text-center mb-12 leading-tight ${
+                    className={`text-4xl lg:text-6xl font-extrabold text-center mb-12 leading-tight ${
                         isInView ? "animate-slide-in-from-top" : "opacity-0"
                     }`}
                 >
                     {t("about.title")}
                 </h2>
                 <p
-                    className={`lg:text-2xl text-base text-right text-typography-primary text-center max-w-3xl mx-auto mb-12 ${
+                    className={`lg:text-2xl text-base text-typography-primary text-center max-w-3xl mx-auto mb-12 ${
                         isInView ? "animate-slide-in-from-bottom" : "opacity-0"
                     }`}
                 >
