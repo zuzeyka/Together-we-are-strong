@@ -10,7 +10,7 @@ const About: React.FC = () => {
         <section
             id="about"
             ref={ref}
-            className={`relative text-white py-20 overflow-hidden ${
+            className={`relative text-white py-20 mb-12 overflow-hidden ${
                 isInView ? "animate-fade-in" : "opacity-0"
             }`}
         >

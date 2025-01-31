@@ -7,7 +7,7 @@ const StatsSection: React.FC = () => {
     const [ref, isInView] = useInView(0.2);
 
     return (
-        <section className="bg-background py-12 animate-fade-in">
+        <section className="bg-background py-12 mb-12 animate-fade-in">
             <div
                 ref={ref}
                 className="max-w-6xl lg:px-0 px-4 mx-auto text-center text-typography font-poppins"
