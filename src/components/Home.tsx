@@ -2,7 +2,7 @@ import React from "react";
 import Top from "./about/Top";
 import Navbar from "./Navbar";
 import Team from "./team/Team";
-import Campaigns from "./campaigns/Campaigns";
+import Projects from "./projects/Projects";
 import StatsSection from "./about/StatsSection";
 import About from "./about/About";
 import HelpSection from "./help/HelpSection";
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
             <Navbar />
             <Top />
             <Team />
-            <Campaigns />
+            <Projects />
             <StatsSection />
             <About />
             <Partners />

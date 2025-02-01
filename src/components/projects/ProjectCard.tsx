@@ -35,7 +35,7 @@ const CampaignCard: React.FC<CampaignCardProps> = (props) => {
                     rel="noopener noreferrer"
                     className="lg:px-6 px-1 lg:py-3 py-1 lg:text-sm text-xs bg-secondary text-black rounded-full hover:bg-secondary-dark transition-all"
                 >
-                    {t("campaigns.button-more")}
+                    {t("projects.button-more")}
                 </a>
             </div>
         </div>

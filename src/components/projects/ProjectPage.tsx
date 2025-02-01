@@ -18,12 +18,12 @@ const CampaignPage: React.FC = () => {
 
     useEffect(() => {
         const importMedia = () => {
-            const imageCount = Number(t(`campaigns.${campaignId}.image-count`));
+            const imageCount = Number(t(`projects.${campaignId}.image-count`));
             const videoCount = Number(
-                t(`campaigns.${campaignId}.video-count`, { defaultValue: 0 })
+                t(`projects.${campaignId}.video-count`, { defaultValue: 0 })
             );
 
-            const basePath = `/campaigns/${campaignId}/`;
+            const basePath = `/projects/${campaignId}/`;
             const imagesArray = Array.from(
                 { length: imageCount },
                 (_, index) => `${basePath}${index}.jpg`
@@ -40,7 +40,7 @@ const CampaignPage: React.FC = () => {
         importMedia();
     }, [campaignId]);
 
-    const campaignData = t(`campaigns.${campaignId}.post-text`, {
+    const campaignData = t(`projects.${campaignId}.post-text`, {
         returnObjects: true,
     }) as {
         event_title: string;
@@ -172,7 +172,7 @@ const CampaignPage: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {t(`campaigns.event_cta`)}
+                        {t(`projects.event_cta`)}
                     </a>
                 </p>
                 <a href="/" className="hover:opacity-50 mt-4">

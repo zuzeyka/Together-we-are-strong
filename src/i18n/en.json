@@ -3,7 +3,7 @@
         "title": "Together We Are Strong",
         "nav": {
             "team": "Team",
-            "campaigns": "Campaigns",
+            "projects": "projects",
             "about": "About Us",
             "donate": "Donate",
             "help": "Help"
@@ -29,8 +29,8 @@
             },
             "artur": {
                 "name": "Artur",
-                "position": "Campaign Manager",
-                "description": "The campaign manager coordinates fundraising and foundation initiatives, making them more effective and impactful."
+                "position": "Project Manager",
+                "description": "The project manager coordinates fundraising and foundation initiatives, making them more effective and impactful."
             },
             "svitlana": {
                 "name": "Svitlana",
@@ -39,39 +39,39 @@
             },
             "alexandra": {
                 "name": "Alexandra",
-                "position": "Manager",
-                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+                "position": "Project Coordinator",
+                "description": "Oversees and coordinates all charity initiatives, ensuring smooth execution and alignment with the foundation’s mission."
             },
             "lubov": {
                 "name": "Lubov",
-                "position": "Manager",
-                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+                "position": "Volunteer Coordinator",
+                "description": "Manages volunteer activities, recruits new members, and ensures everyone is engaged in meaningful work."
             },
             "volodimyr": {
                 "name": "Volodimyr",
-                "position": "Manager",
-                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+                "position": "Logistics Manager",
+                "description": "Organizes transportation and distribution of aid, ensuring supplies reach those in need efficiently."
             },
             "danil": {
                 "name": "Danil",
-                "position": "Manager",
-                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+                "position": "Fundraising Specialist",
+                "description": "Develops and implements fundraising strategies to secure financial support for the foundation’s projects."
             },
             "andrey": {
                 "name": "Andrey",
-                "position": "Manager",
-                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+                "position": "Media & Communications Lead",
+                "description": "Manages public relations, social media, and outreach efforts to raise awareness and support for the foundation."
             },
             "alevtyna": {
                 "name": "Alevtyna",
-                "position": "Manager",
-                "description": "The foundation manager organizes workflows to ensure every task is completed efficiently and on time."
+                "position": "Community Engagement Officer",
+                "description": "Builds relationships with local communities, ensuring their needs are met and fostering strong support networks."
             }
         }
     },
-    "campaigns": {
-        "title": "Our Campaigns",
-        "description": "Explore our ongoing and past campaigns dedicated to making a difference.",
+    "projects": {
+        "title": "Our projects",
+        "description": "Explore our ongoing and past projects dedicated to making a difference.",
         "button-more": "Learn More",
         "event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!",
         "Grooming": {
