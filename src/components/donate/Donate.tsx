@@ -27,31 +27,44 @@ const Donate: React.FC = () => {
                         isInView ? "animate-slide-in-from-right" : "opacity-0"
                     }`}
                 >
-                    <div className="flex items-center">
-                        <p className="font-bold text-xl font-monserrat">
-                            {t("donate.name")}
-                        </p>
-                        <a href="/" className="hover:opacity-50">
-                            <img src="/logo.svg" alt="Logo" className="logo" />
+                    <div className="flex flex-col">
+                        <div className="flex items-center">
+                            <p className="font-bold text-xl font-monserrat">
+                                {t("donate.name")}
+                            </p>
+                            <a
+                                href="/"
+                                className="hover:opacity-50 h-full w-full"
+                            >
+                                <img
+                                    src="/logo.svg"
+                                    alt="Logo"
+                                    className="logo"
+                                />
+                            </a>
+                        </div>
+
+                        <a
+                            href="https://www.instagram.com/twmp.foundation/"
+                            className="hover:opacity-50 z-10"
+                        >
+                            <img
+                                src="/instagram.jpg"
+                                alt="QR Code"
+                                className="mt-4 h-96 w-full animate-zoom-in object-cover rounded-3xl"
+                            />
                         </a>
                     </div>
-
-                    <a
-                        href="https://www.instagram.com/twmp.foundation/"
-                        className="hover:opacity-50 z-10"
-                    >
-                        Instagram
-                    </a>
                 </div>
                 <div
-                    className={`flex flex-col mb-4 ${isInView ? "animate-slide-in-from-top" : "opacity-0"}`}
+                    className={`flex flex-col lg:space-y-40 space-y-4 lg:my-0 my-4 h-full ${isInView ? "animate-slide-in-from-top" : "opacity-0"}`}
                 >
-                    <Button className="mt-6 z-10 px-8 py-3 bg-primary text-typography font-semibold rounded-2xl hover:bg-primary-dark">
+                    <Button className=" lg:h-24 z-10 mt-1 px-8 py-3 bg-primary text-typography font-semibold rounded-2xl hover:bg-primary-dark">
                         <a href="https://www.paypal.com/donate/?hosted_button_id=9ZT8X3E3V7D4S">
                             Pay Pal
                         </a>
                     </Button>
-                    <Button className="mt-6 z-10 px-8 py-3 bg-secondary text-typography-dark font-semibold rounded-2xl hover:bg-secondary-dark">
+                    <Button className="lg:h-24 z-10 px-8 py-3 bg-secondary text-typography-dark font-semibold rounded-2xl hover:bg-secondary-dark">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -60,7 +73,7 @@ const Donate: React.FC = () => {
                             {t("donate.detailsButton")}
                         </a>
                     </Button>
-                    <Button className="mt-6 z-10 px-8 py-3 bg-transparent text-typography box-border border-2 border-secondary font-semibold rounded-2xl hover:bg-secondary-dark">
+                    <Button className="lg:h-24 z-10 px-8 py-3 bg-transparent text-typography box-border border-2 border-secondary font-semibold rounded-2xl hover:bg-secondary-dark">
                         <a
                             target="_blank"
                             href="https://mobile-app.pumb.ua/u9h1mKxptXEDDRRa7"
@@ -70,7 +83,7 @@ const Donate: React.FC = () => {
                     </Button>
                 </div>
                 <div
-                    className={`text-left ${
+                    className={`flex flex-col justify-between text-left ${
                         isInView ? "animate-slide-in-from-left" : "opacity-0"
                     }`}
                 >

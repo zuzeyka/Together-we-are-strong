@@ -1,14 +1,14 @@
 import { t } from "i18next";
 import React from "react";
 
-interface CampaignCardProps {
+interface ProjectCardProps {
     title: string;
     description: string;
     image: string;
     link?: string;
 }
 
-const CampaignCard: React.FC<CampaignCardProps> = (props) => {
+const ProjectCard: React.FC<ProjectCardProps> = (props) => {
     return (
         <div className="relative backshadow my-12 group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="overflow-hidden rounded-t-2xl">
@@ -42,4 +42,4 @@ const CampaignCard: React.FC<CampaignCardProps> = (props) => {
     );
 };
 
-export default CampaignCard;
+export default ProjectCard;
