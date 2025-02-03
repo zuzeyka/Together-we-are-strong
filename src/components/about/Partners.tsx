@@ -6,13 +6,8 @@ const Partners: React.FC = () => {
     const { t } = useTranslation();
     const [ref, isInView] = useInView(0.2);
 
-    const logos = t("helpSection.logos", {
-        returnObjects: true,
-    }) as string[];
-
-    const links = t("helpSection.links", {
-        returnObjects: true,
-    }) as string[];
+    const logos = t("helpSection.logos", { returnObjects: true }) as string[];
+    const links = t("helpSection.links", { returnObjects: true }) as string[];
 
     return (
         <section
@@ -42,12 +37,12 @@ const Partners: React.FC = () => {
                             href={links[index]}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:opacity-75"
+                            className="flex-shrink-0 hover:opacity-75"
                         >
                             <img
                                 src={logo}
                                 alt={`Partner ${index + 1}`}
-                                className="lg:h-32 object-contain"
+                                className="h-16 lg:h-32 object-contain"
                             />
                         </a>
                     ))}
