@@ -241,6 +241,7 @@
             "alt": "Animal Shelter Support Campaign Image",
             "title": "Support for Animal Shelters",
             "image-count": "6",
+            "video-count": "1",
             "description": "Providing shelters with food, canned goods, and essential resources for cats and dogs.",
             "post-text": {
                 "event_title": "Supporting Animal Shelters",
@@ -319,6 +320,7 @@
             "alt": "Internat Support Campaign Image",
             "title": "Support for a Children's Internat",
             "image-count": "5",
+            "video-count": "5",
             "description": "Assistance for children with special needs, orphans, and those affected by war.",
             "post-text": {
                 "event_title": "Support for a Children's Internat in Difficult Times",
@@ -389,6 +391,7 @@
             "alt": "Animal Support Image",
             "title": "Animal Support",
             "image-count": "5",
+            "video-count": "7",
             "description": "Supporting Sirius shelter, home to over 3000 dogs.",
             "post-text": {
                 "event_title": "Supporting Sirius Animal Shelter",
@@ -412,6 +415,7 @@
             "alt": "Mutual Aid Project Image",
             "title": "Mutual Aid Project",
             "image-count": "9",
+            "video-count": "3",
             "description": "Supporting the Armed Forces special unit and self-defense training for volunteers.",
             "post-text": {
                 "event_title": "Mutual Aid Project with the Armed Forces",
@@ -463,6 +467,7 @@
             "alt": "STELP Campaign Image",
             "title": "STELP Event",
             "image-count": "51",
+            "video-count": "1",
             "description": "Assistance for IDPs, hospitals, and military units, thanks to STELP's funding.",
             "post-text": {
                 "event_title": "Together We Made Power: Helping People in Ukraine",

@@ -8,10 +8,18 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "../ui/carousel";
+import useInView from "@/components/team/useInView";
 
-const CampaignPage: React.FC = () => {
+// Helper function to check if a URL is a video
+const isVideo = (url: string): boolean => {
+    const videoExtensions = [".mp4", ".mov", ".webm", ".ogg"];
+    return videoExtensions.some((ext) => url.toLowerCase().endsWith(ext));
+};
+
+const ProjectPage: React.FC = () => {
     const { campaignId } = useParams();
     const { t } = useTranslation();
+    const [ref, isInView] = useInView(0.2);
 
     const [media, setMedia] = useState<string[]>([]);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -28,17 +36,15 @@ const CampaignPage: React.FC = () => {
                 { length: imageCount },
                 (_, index) => `${basePath}${index}.jpg`
             );
-
             const videosArray = Array.from(
                 { length: videoCount },
                 (_, index) => `${basePath}video${index}.mp4`
             );
-
             setMedia([...imagesArray, ...videosArray]);
         };
 
         importMedia();
-    }, [campaignId]);
+    }, [campaignId, t]);
 
     const campaignData = t(`projects.${campaignId}.post-text`, {
         returnObjects: true,
@@ -53,27 +59,44 @@ const CampaignPage: React.FC = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-4 md:p-6 bg-background rounded-lg shadow-md">
-            <h1 className="text-2xl md:text-3xl font-bold text-typography mb-4 text-center">
+        <div
+            ref={ref}
+            className={`max-w-4xl mx-auto p-4 md:p-6 bg-background rounded-lg shadow-md ${
+                isInView ? "animate-fade-in" : "opacity-0"
+            }`}
+        >
+            <h1
+                className={`text-2xl md:text-3xl font-bold text-typography mb-4 text-center ${
+                    isInView ? "animate-slide-in-from-top" : "opacity-0"
+                }`}
+            >
                 {campaignData.event_title}
             </h1>
-            <p className="text-base md:text-lg text-typography mb-6 text-justify">
+            <p
+                className={`text-base md:text-lg text-typography mb-6 text-justify ${
+                    isInView ? "animate-slide-in-from-bottom" : "opacity-0"
+                }`}
+            >
                 {campaignData.event_description}
             </p>
 
             {media.length > 0 && (
                 <>
-                    {media[activeIndex].endsWith(".mp4") ? (
+                    {isVideo(media[activeIndex]) ? (
                         <video
                             src={media[activeIndex]}
                             controls
-                            className="w-full h-auto object-cover rounded-xl mb-6"
+                            className={`w-full h-96 object-cover rounded-xl mb-6 ${
+                                isInView ? "animate-zoom-in" : "opacity-0"
+                            }`}
                         />
                     ) : (
                         <img
                             src={media[activeIndex]}
                             alt={`Media ${activeIndex + 1}`}
-                            className="w-full h-auto object-cover rounded-xl mb-6"
+                            className={`w-full h-96 object-cover rounded-xl mb-6 ${
+                                isInView ? "animate-zoom-in" : "opacity-0"
+                            }`}
                         />
                     )}
                 </>
@@ -88,10 +111,12 @@ const CampaignPage: React.FC = () => {
                 <CarouselContent className="flex">
                     {media.map((item, index) => (
                         <CarouselItem
-                            className="basis-1/2 sm:basis-1/3 p-2"
+                            className={`basis-1/2 sm:basis-1/3 h-48 ${
+                                isInView ? "animate-fade-in" : "opacity-0"
+                            }`}
                             key={index}
                         >
-                            {item.endsWith(".mov") ? (
+                            {isVideo(item) ? (
                                 <video
                                     src={item}
                                     className="w-full h-full object-cover rounded-xl"
@@ -109,7 +134,7 @@ const CampaignPage: React.FC = () => {
                     ))}
                 </CarouselContent>
                 <CarouselPrevious
-                    className="bg-gray-800 text-white left-0 p-2 rounded-full"
+                    className="bg-background text-white p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveIndex(
                             (activeIndex - 1 + media.length) % media.length
@@ -117,17 +142,25 @@ const CampaignPage: React.FC = () => {
                     }
                 />
                 <CarouselNext
-                    className="bg-gray-800 text-white right-2 p-2 rounded-full"
+                    className="bg-gray-800 text-white p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveIndex((activeIndex + 1) % media.length)
                     }
                 />
             </Carousel>
 
-            <h2 className="text-xl md:text-2xl font-bold text-typography mt-8 mb-4">
+            <h2
+                className={`text-xl md:text-2xl font-bold text-typography mt-8 mb-4 ${
+                    isInView ? "animate-slide-in-from-top" : "opacity-0"
+                }`}
+            >
                 {campaignData.event_highlights_title}
             </h2>
-            <ul className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ul
+                className={`mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4 ${
+                    isInView ? "animate-fade-in" : "opacity-0"
+                }`}
+            >
                 {campaignData.event_highlights.map((highlight, index) => (
                     <li
                         key={index}
@@ -143,10 +176,18 @@ const CampaignPage: React.FC = () => {
                 ))}
             </ul>
 
-            <h2 className="text-xl md:text-2xl font-bold text-typography mt-8 mb-4">
+            <h2
+                className={`text-xl md:text-2xl font-bold text-typography mt-8 mb-4 ${
+                    isInView ? "animate-slide-in-from-bottom" : "opacity-0"
+                }`}
+            >
                 {campaignData.event_effect_title}
             </h2>
-            <ul className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ul
+                className={`mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4 ${
+                    isInView ? "animate-fade-in" : "opacity-0"
+                }`}
+            >
                 {campaignData.event_effects.map((effect, index) => (
                     <li
                         key={index}
@@ -172,7 +213,7 @@ const CampaignPage: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {t(`projects.event_cta`)}
+                        {t(`campaigns.event_cta`)}
                     </a>
                 </p>
                 <a href="/" className="hover:opacity-50 mt-4">
@@ -183,4 +224,4 @@ const CampaignPage: React.FC = () => {
     );
 };
 
-export default CampaignPage;
+export default ProjectPage;
