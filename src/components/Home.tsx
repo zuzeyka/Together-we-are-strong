@@ -12,7 +12,7 @@ import Partners from "./about/Partners";
 
 const Home: React.FC = () => {
     return (
-        <>
+        <div className="bg-background">
             <Navbar />
             <Top />
             <Team />
