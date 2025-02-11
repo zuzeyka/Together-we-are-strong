@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             <HelpSection />
             <Donate />
             <ScrollToTop />
-        </>
+        </div>
     );
 };
 
