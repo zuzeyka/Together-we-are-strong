@@ -52,7 +52,7 @@ const Team: React.FC = () => {
                     <TeamCard
                         name={t("team.members.lubov.name")}
                         position={t("team.members.lubov.position")}
-                        image="/DSC_3033.jpg"
+                        image="/IMG_5933.jpg"
                         description={t("team.members.lubov.description")}
                     />
                     <TeamCard
@@ -76,7 +76,31 @@ const Team: React.FC = () => {
                     <TeamCard
                         name={t("team.members.alevtyna.name")}
                         position={t("team.members.alevtyna.position")}
-                        image="/IMG_3468.jpg"
+                        image="/IMG_5901.jpg"
+                        description={t("team.members.alevtyna.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.alevtyna.name")}
+                        position={t("team.members.alevtyna.position")}
+                        image="/IMG_5897.jpg"
+                        description={t("team.members.alevtyna.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.alevtyna.name")}
+                        position={t("team.members.alevtyna.position")}
+                        image="/IMG_5899.jpg"
+                        description={t("team.members.alevtyna.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.alevtyna.name")}
+                        position={t("team.members.alevtyna.position")}
+                        image="/IMG_5900.jpg"
+                        description={t("team.members.alevtyna.description")}
+                    />
+                    <TeamCard
+                        name={t("team.members.alevtyna.name")}
+                        position={t("team.members.alevtyna.position")}
+                        image="/IMG_5925.jpg"
                         description={t("team.members.alevtyna.description")}
                     />
                 </div>
