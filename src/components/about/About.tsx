@@ -9,7 +9,7 @@ const About: React.FC = () => {
     return (
         <section
             ref={ref}
-            className={`relative text-white py-20 mb-12 overflow-hidden ${
+            className={`relative bg-background text-white py-20 mb-12 overflow-hidden ${
                 isInView ? "animate-fade-in" : "opacity-0"
             }`}
         >

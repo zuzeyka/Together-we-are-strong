@@ -13,7 +13,7 @@ const Partners: React.FC = () => {
         <section
             id="partners"
             ref={ref}
-            className={`relative text-white py-20 overflow-hidden ${
+            className={`relative bg-background text-white py-20 overflow-hidden ${
                 isInView ? "animate-fade-in" : "opacity-0"
             }`}
         >
