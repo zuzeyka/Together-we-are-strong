@@ -12,7 +12,7 @@ import useInView from "@/components/team/useInView";
 
 const projects: React.FC = () => {
     const { t } = useTranslation();
-    const [ref, isInView] = useInView(0.2);
+    const [ref, isInView] = useInView(0.1);
 
     return (
         <section id="projects" className="bg-background py-12 text-typography">

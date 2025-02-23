@@ -5,7 +5,7 @@ import useInView from "@/components/team/useInView";
 
 const Team: React.FC = () => {
     const { t } = useTranslation();
-    const [ref, isInView] = useInView(0.2);
+    const [ref, isInView] = useInView(0.05);
 
     return (
         <section id="team" className="bg-background py-16">
@@ -80,28 +80,16 @@ const Team: React.FC = () => {
                         description={t("team.members.alevtyna.description")}
                     />
                     <TeamCard
-                        name={t("team.members.alevtyna.name")}
-                        position={t("team.members.alevtyna.position")}
+                        name={t("team.members.olha.name")}
+                        position={t("team.members.olha.position")}
                         image="/IMG_5897.jpg"
-                        description={t("team.members.alevtyna.description")}
+                        description={t("team.members.olha.description")}
                     />
                     <TeamCard
-                        name={t("team.members.alevtyna.name")}
-                        position={t("team.members.alevtyna.position")}
+                        name={t("team.members.ivan.name")}
+                        position={t("team.members.ivan.position")}
                         image="/IMG_5899.jpg"
-                        description={t("team.members.alevtyna.description")}
-                    />
-                    <TeamCard
-                        name={t("team.members.alevtyna.name")}
-                        position={t("team.members.alevtyna.position")}
-                        image="/IMG_5900.jpg"
-                        description={t("team.members.alevtyna.description")}
-                    />
-                    <TeamCard
-                        name={t("team.members.alevtyna.name")}
-                        position={t("team.members.alevtyna.position")}
-                        image="/IMG_5925.jpg"
-                        description={t("team.members.alevtyna.description")}
+                        description={t("team.members.ivan.description")}
                     />
                 </div>
             </div>

@@ -4,7 +4,7 @@ import useInView from "@/components/team/useInView";
 
 const StatsSection: React.FC = () => {
     const { t } = useTranslation();
-    const [ref, isInView] = useInView(0.2);
+    const [ref, isInView] = useInView(0.1);
 
     return (
         <section

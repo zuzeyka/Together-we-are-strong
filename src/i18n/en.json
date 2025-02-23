@@ -66,6 +66,16 @@
                 "name": "Alevtyna",
                 "position": "Community Engagement Officer",
                 "description": "Builds relationships with local communities, ensuring their needs are met and fostering strong support networks."
+            },
+            "olha": {
+                "name": "Olga",
+                "position": "Coordinator of cooperation with communities",
+                "description": "Responsible for the development of partnerships with communities and initiating joint projects to support their needs."
+            },
+            "ivan": {
+                "name": "Ivan",
+                "position": "Public Research Specialist",
+                "description": "Provides communication with the public, supports the positive image of the organization through various media."
             }
         }
     },

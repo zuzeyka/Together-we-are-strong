@@ -4,7 +4,7 @@ import useInView from "@/components/team/useInView";
 
 const Partners: React.FC = () => {
     const { t } = useTranslation();
-    const [ref, isInView] = useInView(0.2);
+    const [ref, isInView] = useInView(0.1);
 
     const logos = t("helpSection.logos", { returnObjects: true }) as string[];
     const links = t("helpSection.links", { returnObjects: true }) as string[];
