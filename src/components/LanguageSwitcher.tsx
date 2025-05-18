@@ -14,13 +14,13 @@ const LanguageSwitcher: React.FC = () => {
             <div className="lg:flex lg:flex-col justify-center h-full w-full items-center">
                 <Button
                     onClick={() => changeLanguage("en")}
-                    className={`${i18n.language === "en" ? "bg-primary" : "bg-secondary"} px-3 py-1 text-typography rounded text-sm sm:text-base lg:h-full lg:w-full lg:mb-2 mr-2 lg:mr-0`}
+                    className={`${i18n.language === "en" ? "bg-primary hover:bg-primary-dark" : "bg-secondary hover:bg-secondary-dark"} px-3 py-1 text-typography rounded text-sm sm:text-base lg:h-full lg:w-full lg:mb-2 mr-2 lg:mr-0`}
                 >
                     EN
                 </Button>
                 <Button
                     onClick={() => changeLanguage("uk")}
-                    className={`${i18n.language === "uk" ? "bg-primary" : "bg-secondary"} px-3 py-1 text-typography rounded text-sm sm:text-base lg:h-full lg:w-full`}
+                    className={`${i18n.language === "uk" ? "bg-primary hover:bg-primary-dark" : "bg-secondary hover:bg-secondary-dark"} px-3 py-1 text-typography rounded text-sm sm:text-base lg:h-full lg:w-full`}
                 >
                     УК
                 </Button>
