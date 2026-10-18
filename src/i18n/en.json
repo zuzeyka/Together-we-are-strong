@@ -595,14 +595,21 @@
     },
     "donate": {
         "donateTitle": "Donate Details",
-        "bankName": "Recipient Bank: Raiffeisen Bank JSC",
         "name": "Charity Fund: Together We Made Power ",
-        "recipient": "Recipient: GREBENCHUKOVA-ROZUMEY KARINA VOLODYMYRIVNA",
-        "edrpou": "EDRPOU code: 44749163",
-        "ibanNumber": "IBAN Number: ",
-        "currency": "Currency: ",
+        "edrpou": "EDRPOU/RNOKPP: 44749163",
         "detailsButton": "Bank Details",
-        "donateButton": "Donate"
+        "uah": {
+            "currency": "Currency: UAH",
+            "recipient": "Recipient: GREBENCHUKOVA-ROZUMEY KARINA VOLODYMYRIVNA",
+            "iban": "IBAN: UA313052990000026008016812384",
+            "purpose": "Payment Purpose: Account replenishment, GREBENCHUKOVA-ROZUMEY KARINA VOLODYMYRIVNA"
+        },
+        "eur": {
+            "currency": "Currency: EUR",
+            "recipient": "Recipient: MBF RMS BO",
+            "iban": "Account Number: UA073052990000026004036802130",
+            "provider": "Recipient's Payment Service Provider: JSC CB PRIVATBANK"
+        }
     },
     "footer": {
         "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",

@@ -73,14 +73,6 @@ const Donate: React.FC = () => {
                             {t("donate.detailsButton")}
                         </a>
                     </Button>
-                    <Button className="lg:h-24 z-10 px-8 py-3 bg-transparent text-typography box-border border-2 border-secondary font-semibold rounded-2xl hover:bg-secondary-dark">
-                        <a
-                            target="_blank"
-                            href="https://mobile-app.pumb.ua/u9h1mKxptXEDDRRa7"
-                        >
-                            {t("donate.donateButton")}
-                        </a>
-                    </Button>
                 </div>
                 <div
                     className={`flex flex-col justify-between text-left ${
@@ -91,21 +83,12 @@ const Donate: React.FC = () => {
                         {t("donate.name")}
                     </p>
                     <p>{t("donate.edrpou")}</p>
-                    <p>{t("donate.recipient")}</p>
-                    <p>
-                        {t("donate.currency")}
-                        EUR
-                    </p>
-                    <p>
-                        {t("donate.ibanNumber")} UA873003350000000026004784159
-                    </p>
-                    <p>
-                        {t("donate.currency")}
-                        USD
-                    </p>
-                    <p>
-                        {t("donate.ibanNumber")} UA313052990000026008016812384
-                    </p>
+                    <p>{t("donate.uah.currency")}</p>
+                    <p>{t("donate.uah.recipient")}</p>
+                    <p>{t("donate.uah.iban")}</p>
+                    <p>{t("donate.eur.currency")}</p>
+                    <p>{t("donate.eur.recipient")}</p>
+                    <p>{t("donate.eur.iban")}</p>
                 </div>
             </div>
         </section>

@@ -12,14 +12,6 @@ const BankDetails: React.FC = () => {
             <div className="text-left space-y-6 animate-fade-in-up">
                 <div className="border-b border-white/20 pb-4">
                     <h3 className="font-bold text-xl sm:text-2xl animate-slide-in-from-left">
-                        {t("donate.bankName")}
-                    </h3>
-                    <p className="text-base sm:text-lg animate-slide-in-from-right">
-                        {t("donate.recipient")}
-                    </p>
-                </div>
-                <div className="border-b border-white/20 pb-4">
-                    <h3 className="font-bold text-xl sm:text-2xl animate-slide-in-from-left">
                         {t("donate.name")}
                     </h3>
                     <p className="text-base sm:text-lg animate-slide-in-from-right">
@@ -28,19 +20,30 @@ const BankDetails: React.FC = () => {
                 </div>
                 <div className="border-b border-white/20 pb-4">
                     <h3 className="font-bold text-xl sm:text-2xl animate-slide-in-from-left">
-                        {t("donate.currency")} USD
+                        {t("donate.uah.currency")}
                     </h3>
+                    <p className="text-base sm:text-lg animate-slide-in-from-right">
+                        {t("donate.uah.recipient")}
+                    </p>
                     <p className="font-mono text-base sm:text-lg break-all animate-slide-in-from-right">
-                        {t("donate.ibanNumber")}: UA313052990000026008016812384
+                        {t("donate.uah.iban")}
+                    </p>
+                    <p className="text-base sm:text-lg animate-slide-in-from-right">
+                        {t("donate.uah.purpose")}
                     </p>
                 </div>
                 <div>
                     <h3 className="font-bold text-xl sm:text-2xl animate-slide-in-from-left">
-                        {t("donate.currency")} EUR
+                        {t("donate.eur.currency")}
                     </h3>
+                    <p className="text-base sm:text-lg animate-slide-in-from-right">
+                        {t("donate.eur.recipient")}
+                    </p>
                     <p className="font-mono text-base sm:text-lg break-all animate-slide-in-from-right">
-                        {t("donate.ibanNumber")}: UA87 3003 3500 0000 0026 0047
-                        8415 9
+                        {t("donate.eur.iban")}
+                    </p>
+                    <p className="text-base sm:text-lg animate-slide-in-from-right">
+                        {t("donate.eur.provider")}
                     </p>
                 </div>
             </div>
