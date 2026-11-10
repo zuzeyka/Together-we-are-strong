@@ -14,7 +14,7 @@ const Partners: React.FC = () => {
         <section
             id="partners"
             ref={ref}
-            className={`relative bg-background text-white py-20 overflow-hidden ${
+            className={`relative bg-bg text-ink py-20 overflow-hidden ${
                 isInView ? "animate-fade-in" : "opacity-0"
             }`}
         >
@@ -38,12 +38,13 @@ const Partners: React.FC = () => {
                             href={links[index]}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-shrink-0 hover:opacity-75"
+                            // Logos come in white and in colour: a navy tile keeps both readable in light and dark.
+                            className="flex-shrink-0 rounded-card bg-[#13233A] px-6 py-4 hover:opacity-80"
                         >
                             <Picture
                                 src={logo}
                                 sizes="256px"
-                                alt={`Partner ${index + 1}`}
+                                alt={`Partner: ${links[index]?.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] ?? index + 1}`}
                                 className="h-16 lg:h-32 object-contain"
                             />
                         </a>

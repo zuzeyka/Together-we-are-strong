@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 import tailwindcssAnimate from "tailwindcss-animate";
 
+const tok = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+
 export default {
     darkMode: ["class"],
     content: [
@@ -19,110 +21,84 @@ export default {
             },
         },
         extend: {
+            // Colours are tokens from src/index.css (light + .dark); see DESIGN_SYSTEM.md.
             fontFamily: {
-                poppins: ["Poppins", "sans-serif"],
-                montserrat: ["Montserrat", "sans-serif"],
+                sans: ["Onest", "Onest Fallback", "system-ui", "sans-serif"],
+                // Old class names, kept until Phase 2 rewrites the pages: all Onest now.
+                poppins: ["Onest", "Onest Fallback", "system-ui", "sans-serif"],
+                montserrat: ["Onest", "Onest Fallback", "system-ui", "sans-serif"],
             },
             colors: {
+                bg: tok("bg"),
+                surface: tok("surface"),
+                sunk: tok("sunk"),
+                tint: tok("tint"),
+                ink: tok("ink"),
+                muted: tok("muted"),
                 primary: {
-                    light: "#4A90E2",
-                    DEFAULT: "#0057B7",
-                    dark: "#003F87",
+                    DEFAULT: tok("primary"),
+                    hover: tok("primary-hover"),
+                    on: tok("on-primary"),
+                    // old names
+                    light: tok("primary"),
+                    dark: tok("primary-hover"),
                 },
-                secondary: {
-                    light: "#FFE066",
-                    DEFAULT: "#FFD700",
-                    dark: "#CCAC00",
-                },
+                accent: { DEFAULT: tok("accent"), hover: tok("accent-hover"), on: tok("on-accent") },
+                success: tok("success"),
+                danger: tok("danger"),
+                line: tok("line"),
+                "input-line": tok("input-line"),
+                // Old names, mapped onto the tokens until Phase 2 replaces them:
+                background: tok("bg"),
+                foreground: tok("ink"),
+                secondary: { DEFAULT: tok("accent"), light: tok("accent"), dark: tok("accent-hover") },
                 typography: {
-                    DEFAULT: "#f8f9fa",
-                    secondary: "#acacac",
-                    dark: "#212529",
-                },
-                background: "#212529",
-                foreground: "#f8f9fa",
-                border: "hsl(var(--border))",
-                input: "hsl(var(--input))",
-                ring: "hsl(var(--ring))",
-                destructive: {
-                    DEFAULT: "hsl(var(--destructive))",
-                    foreground: "hsl(var(--destructive-foreground))",
-                },
-                muted: {
-                    DEFAULT: "hsl(var(--muted))",
-                    foreground: "hsl(var(--muted-foreground))",
-                },
-                accent: {
-                    DEFAULT: "hsl(var(--accent))",
-                    foreground: "hsl(var(--accent-foreground))",
-                },
-                popover: {
-                    DEFAULT: "hsl(var(--popover))",
-                    foreground: "hsl(var(--popover-foreground))",
-                },
-                card: {
-                    DEFAULT: "hsl(var(--card))",
-                    foreground: "hsl(var(--card-foreground))",
+                    DEFAULT: tok("ink"),
+                    primary: tok("ink"),
+                    secondary: tok("muted"),
+                    dark: "#0E1B2C", // always dark: text on yellow, photo overlays
                 },
             },
             borderRadius: {
-                lg: `var(--radius)`,
-                md: `calc(var(--radius) - 2px)`,
-                sm: "calc(var(--radius) - 4px)",
+                control: "8px",
+                card: "16px",
+            },
+            boxShadow: {
+                card: "var(--shadow-card)",
+            },
+            maxWidth: {
+                container: "1200px",
+                prose: "720px",
+            },
+            fontSize: {
+                // fluid sizes from DESIGN_SYSTEM.md (mobile → desktop)
+                display: ["clamp(2.25rem, 1.6rem + 2.8vw, 3.5rem)", { lineHeight: "1.1", fontWeight: "700" }],
+                h1: ["clamp(1.875rem, 1.4rem + 2vw, 2.75rem)", { lineHeight: "1.15", fontWeight: "700" }],
+                h2: ["clamp(1.5rem, 1.25rem + 1vw, 2rem)", { lineHeight: "1.2", fontWeight: "650" }],
+                h3: ["clamp(1.25rem, 1.2rem + 0.2vw, 1.375rem)", { lineHeight: "1.3", fontWeight: "600" }],
+                body: ["1.0625rem", { lineHeight: "1.6" }],
+                small: ["0.9375rem", { lineHeight: "1.5" }],
+                caption: ["0.8125rem", { lineHeight: "1.4", fontWeight: "500" }],
             },
             keyframes: {
-                "accordion-down": {
-                    from: { height: "0" },
-                    to: { height: "var(--radix-accordion-content-height)" },
-                },
-                "accordion-up": {
-                    from: { height: "var(--radix-accordion-content-height)" },
-                    to: { height: "0" },
-                },
-                fadeInDown: {
-                    "0%": { opacity: 0, transform: "translateY(-50px)" },
+                rise: {
+                    "0%": { opacity: 0, transform: "translateY(12px)" },
                     "100%": { opacity: 1, transform: "translateY(0)" },
                 },
-                fadeInUp: {
-                    "0%": { opacity: 0, transform: "translateY(50px)" },
-                    "100%": { opacity: 1, transform: "translateY(0)" },
-                },
-                slideInFromLeft: {
-                    "0%": { opacity: 0, transform: "translateX(-50px)" },
-                    "100%": { opacity: 1, transform: "translateX(0)" },
-                },
-                slideInFromRight: {
-                    "0%": { opacity: 0, transform: "translateX(50px)" },
-                    "100%": { opacity: 1, transform: "translateX(0)" },
-                },
-                zoomIn: {
-                    "0%": { opacity: 0, transform: "scale(0.8)" },
-                    "100%": { opacity: 1, transform: "scale(1)" },
-                },
-                fadeIn: {
-                    "0%": { opacity: 0 },
-                    "100%": { opacity: 1 },
-                },
-                slideInFromTop: {
-                    "0%": { opacity: 0, transform: "translateY(-50px)" },
-                    "100%": { opacity: 1, transform: "translateY(0)" },
-                },
-                slideInFromBottom: {
-                    "0%": { opacity: 0, transform: "translateY(50px)" },
-                    "100%": { opacity: 1, transform: "translateY(0)" },
-                },
+                fade: { "0%": { opacity: 0 }, "100%": { opacity: 1 } },
             },
+            // One calm entrance for everything (the old names all map to it until Phase 2).
             animation: {
-                "accordion-down": "accordion-down 0.2s ease-out",
-                "accordion-up": "accordion-up 0.2s ease-out",
-                "fade-in-down": "fadeInDown 1s ease-out",
-                "fade-in-up": "fadeInUp 1s ease-out",
-                "slide-in-from-left": "slideInFromLeft 0.8s ease-out",
-                "slide-in-from-right": "slideInFromRight 0.8s ease-out",
-                "zoom-in": "zoomIn 1s ease-out",
-                "fade-in": "fadeIn 1s ease-out",
-                "slide-in-from-top": "slideInFromTop 0.8s ease-out",
-                "slide-in-from-bottom": "slideInFromBottom 0.8s ease-out",
+                rise: "rise 0.35s ease-out both",
+                fade: "fade 0.35s ease-out both",
+                "fade-in": "fade 0.35s ease-out both",
+                "fade-in-up": "rise 0.35s ease-out both",
+                "fade-in-down": "rise 0.35s ease-out both",
+                "slide-in-from-left": "rise 0.35s ease-out both",
+                "slide-in-from-right": "rise 0.35s ease-out both",
+                "slide-in-from-top": "rise 0.35s ease-out both",
+                "slide-in-from-bottom": "rise 0.35s ease-out both",
+                "zoom-in": "fade 0.35s ease-out both",
             },
         },
     },

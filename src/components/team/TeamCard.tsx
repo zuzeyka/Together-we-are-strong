@@ -13,7 +13,7 @@ const TeamCard: React.FC<TeamCardProps> = (props) => {
     return (
         <div
             className={
-                "relative group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300 backshadow" +
+                "relative group rounded-card bg-surface text-ink shadow-card border border-line overflow-hidden" +
                 " " +
                 props.className
             }
@@ -24,24 +24,24 @@ const TeamCard: React.FC<TeamCardProps> = (props) => {
                     src={props.image}
                     alt={props.name}
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="h-72 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="h-72 w-full object-cover object-top "
                 />
             </div>
 
             {/* Content Section */}
             <div className="p-4">
-                <p className="text-lg font-medium text-primary-light">
+                <p className="text-lg font-medium text-primary">
                     {props.position}
                 </p>
-                <h3 className="text-xl font-bold mt-2 group-hover:text-secondary-light">
+                <h3 className="text-xl font-bold mt-2 group-hover:text-primary">
                     {props.name}
                 </h3>
             </div>
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-70 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="absolute inset-0 bg-[#0E1B2C]/85 rounded-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center px-4">
-                    <p className="text-lg font-semibold font-poppins text-typography">
+                    <p className="text-lg font-semibold text-white">
                         {props.description}
                     </p>
                 </div>

@@ -1,50 +1,139 @@
-@import "@fontsource/poppins/400.css";
-@import "@fontsource/poppins/600.css";
-@import "@fontsource/poppins/700.css";
+/* Design tokens and base styles: see DESIGN_SYSTEM.md. Colours are "R G B" channels so Tailwind
+   can add opacity (bg-primary/20). Light is the default; dark follows the phone or the .dark class. */
 
-@import "@fontsource/montserrat/400.css";
-@import "@fontsource/montserrat/600.css";
-@import "@fontsource/montserrat/700.css";
+/* Onest (SIL OFL, public/fonts/OFL.txt), self-hosted, one variable file per script. */
+@font-face {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/onest-cyrillic-ext.woff2") format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/onest-cyrillic.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/onest-latin-ext.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/onest-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Arial resized to Onest's metrics, so text doesn't jump when the font arrives. */
+@font-face {
+    font-family: "Onest Fallback";
+    src: local("Arial");
+    size-adjust: 104%;
+    ascent-override: 92%;
+    descent-override: 24%;
+    line-gap-override: 0%;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    font-family: Poppins, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    scroll-behavior: smooth;
+@layer base {
+    :root {
+        --bg: 251 248 242;          /* #FBF8F2 warm paper */
+        --surface: 255 255 255;     /* #FFFFFF */
+        --sunk: 242 237 227;        /* #F2EDE3 */
+        --tint: 232 241 250;        /* #E8F1FA */
+        --ink: 14 27 44;            /* #0E1B2C text */
+        --muted: 74 85 104;         /* #4A5568 */
+        --primary: 11 95 165;       /* #0B5FA5 logo blue, darkened */
+        --primary-hover: 8 74 130;  /* #084A82 */
+        --on-primary: 255 255 255;
+        --accent: 255 212 59;       /* #FFD43B sunflower: fills only */
+        --accent-hover: 245 196 30; /* #F5C41E */
+        --on-accent: 14 27 44;
+        --success: 31 122 77;       /* #1F7A4D */
+        --danger: 180 35 24;        /* #B42318 */
+        --line: 226 220 208;        /* #E2DCD0 decorative borders */
+        --input-line: 122 133 151;  /* #7A8597 form fields, 3:1 */
+        --shadow-card: 0 1px 2px rgb(14 27 44 / 0.06), 0 8px 24px rgb(14 27 44 / 0.06);
+        color-scheme: light;
+    }
 
-    color-scheme: light dark;
-    color: #f8f9fa;
-    background-color: #212529;
+    .dark {
+        --bg: 11 22 34;             /* #0B1622 deep navy */
+        --surface: 19 35 58;        /* #13233A */
+        --sunk: 8 17 27;            /* #08111B */
+        --tint: 16 43 71;           /* #102B47 */
+        --ink: 244 241 234;         /* #F4F1EA */
+        --muted: 169 180 194;       /* #A9B4C2 */
+        --primary: 108 180 245;     /* #6CB4F5 */
+        --primary-hover: 148 201 248;
+        --on-primary: 11 22 34;
+        --success: 76 195 138;
+        --danger: 255 138 128;
+        --line: 34 53 79;
+        --input-line: 91 107 128;
+        --shadow-card: none;        /* dark mode uses borders, not shadows */
+        color-scheme: dark;
+    }
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem; /* anchors and focused elements never hide under the sticky header */
+    }
 
-body {
-    margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
-}
+    body {
+        margin: 0;
+        min-width: 320px;
+        min-height: 100vh;
+        background: rgb(var(--bg));
+        color: rgb(var(--ink));
+        font-family: "Onest", "Onest Fallback", system-ui, sans-serif;
+        font-size: 1.0625rem; /* 17 px */
+        line-height: 1.6;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
+    h1, h2, h3, h4 {
+        line-height: 1.2;
+        text-wrap: balance;
+    }
+
+    :focus-visible {
+        outline: 2px solid rgb(var(--primary));
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+    ::selection {
+        background: rgb(var(--accent));
+        color: rgb(var(--on-accent));
+    }
 }
 
 @layer utilities {
+    .tabular {
+        font-variant-numeric: tabular-nums;
+    }
+
     @keyframes scrolling {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
     }
 
     .animate-scroll {
@@ -54,15 +143,12 @@ h1 {
     }
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
+/* Motion is decoration only: people who ask for less get none. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

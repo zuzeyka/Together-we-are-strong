@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Picture from "@/components/Picture";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ThemeToggle from "@/components/ds/ThemeToggle";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 
@@ -37,16 +38,16 @@ const Navbar: React.FC = () => {
 
     return (
         <nav
-            className={`${lastScrollY > 100 ? "bg-white/10 backdrop-blur-md" : "bg-transparent"} text-secondary-light justify-between px-4 py-3 w-screen flex fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+            className={`${lastScrollY > 100 ? "bg-surface/95 backdrop-blur-md shadow-card text-ink" : "bg-transparent text-white"} justify-between px-4 py-3 w-screen flex fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
                 showHeader ? "translate-y-0" : "-translate-y-full"
             }`}
         >
             <a href="/" className="hover:opacity-50 flex-shrink-0">
-                <Picture src="/logo.svg" alt="Together We Made Power" sizes="112px" priority className="logo lg:h-28 h-16 w-auto" />
+                <Picture src="/logo.svg" alt="Together We Made Power" sizes="112px" priority className="lg:h-28 h-16 w-auto" />
             </a>
 
             <div
-                className={`absolute top-20 left-0 right-0 bg-black/90 lg:bg-transparent lg:static lg:flex lg:items-center lg:space-x-6 transition-all duration-300 ${
+                className={`absolute top-20 left-0 right-0 bg-surface text-ink lg:text-inherit lg:bg-transparent lg:static lg:flex lg:items-center lg:space-x-6 transition-all duration-300 ${
                     isMenuOpen && showHeader ? "max-h-screen" : "max-h-0"
                 } lg:max-h-full overflow-hidden`}
             >
@@ -79,9 +80,12 @@ const Navbar: React.FC = () => {
                 </ul>
             </div>
 
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <LanguageSwitcher />
+            </div>
             <button
-                className="lg:hidden text-secondary-light focus:outline-none"
+                className="lg:hidden text-current"
                 onClick={toggleMenu}
             >
                 {isMenuOpen ? <X size={28} /> : <Menu size={28} />}

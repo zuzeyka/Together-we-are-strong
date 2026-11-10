@@ -100,7 +100,7 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
 | Phase | Status |
 |---|---|
 | 0 Speed first | done 2026-11-10 on branch `perf/phase-0` (not merged or deployed yet); see below |
-| 1 Design system in code | not started |
+| 1 Design system in code | done 2026-11-10 on branch `design/phase-1` (based on phase 0); see below |
 | 2 Information architecture and pages | not started |
 | 3 Trust and content | not started; needs material from the foundation |
 | 4 Quality gates | not started |
@@ -128,3 +128,37 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
   - `public/` 1.14 GB → 191 MB
   - no video over 5 MB
 - **Not done:** splitting the translation files per language (about 30 KB saving, deferred to Phase 2 with the `/:lang` routes); Lighthouse scores (downloading Lighthouse was blocked here; run PageSpeed on the Vercel preview).
+
+## Phase 1 result (2026-11-10)
+- **Tokens** in `src/index.css`: light by default, `.dark` follows the phone; values as in DESIGN_SYSTEM.md, written as RGB channels so Tailwind opacity works. `tailwind.config.js` maps the new names (`bg`, `surface`, `sunk`, `tint`, `ink`, `muted`, `primary`, `accent`, `success`, `danger`, `line`), and the old names point at them until Phase 2.
+- **Theme:**
+  - `index.html` applies the theme before the first paint, so there's no flash.
+  - The sun/moon switch in the header remembers only a real tap.
+  - `theme-color` meta for both modes.
+- **Font:**
+  - Onest is self-hosted: 4 WOFF2 subsets, 88 KB, OFL licence in `public/fonts/`, the Latin file preloaded, and an Arial fallback resized to match.
+  - Poppins and Montserrat (fontsource) are removed.
+- **Motion:**
+  - The ten animations are now one 0.35 s fade/rise.
+  - `useInView` fires once, so sections no longer hide again when scrolled away.
+  - `prefers-reduced-motion` turns motion off.
+- **Accessibility:**
+  - focus ring on everything, and the one `focus:outline-none` removed
+  - `<html lang>` follows the language
+  - The EN/УК switch is one segmented control with `aria-pressed`.
+  - 44 px touch targets on buttons and switches
+- **Building blocks:**
+  - `ui/button.tsx` variants: default, donate, outline, ghost, link
+  - `ds/` Card, Chip, ProgressBar, CopyField, ThemeToggle (used in Phase 2)
+- **Colour sweep:**
+  - every hard-coded white, black, gray and gradient class replaced, and yellow text removed (it fails on light backgrounds)
+  - The help section now has ink text on yellow; it was white on yellow at 1.33:1.
+  - Partner logos sit on navy tiles, so white logos stay visible.
+  - The hero text has side padding on phones.
+- **Removed:** the Vite template `App.css` (purple glow) and the hover zooms.
+- **Checked:** build and lint (0 errors); screenshots of the whole home page in light and dark at 1280 px, the phone home page, and the dark bank-details page.
+- **Left for Phase 2:**
+  - campaign cards are a third of the width on phones, and descriptions only show on hover
+  - the partner marquee
+  - the old class names
+  - the per-language routes and translation files

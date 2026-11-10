@@ -9,7 +9,7 @@ const About: React.FC = () => {
     return (
         <section
             ref={ref}
-            className={`relative bg-background text-white py-20 mb-12 overflow-hidden ${
+            className={`relative bg-bg text-ink py-20 mb-12 overflow-hidden ${
                 isInView ? "animate-fade-in" : "opacity-0"
             }`}
         >
@@ -44,7 +44,7 @@ const About: React.FC = () => {
                                     : "opacity-0"
                             }`}
                         >
-                            <div className="w-16 flex items-center justify-center text-secondary">
+                            <div className="w-16 flex items-center justify-center text-primary font-bold">
                                 <span className="text-2xl font-bold">
                                     {index + 1}
                                 </span>

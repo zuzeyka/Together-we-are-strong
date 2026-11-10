@@ -19,4 +19,9 @@ i18n.use(LanguageDetector)
         },
     });
 
+// <html lang> follows the language, for screen readers, hyphenation and search engines.
+const setLang = (lng: string) => document.documentElement.setAttribute("lang", lng.startsWith("uk") ? "uk" : "en");
+i18n.on("languageChanged", setLang);
+if (i18n.language) setLang(i18n.language);
+
 export default i18n;

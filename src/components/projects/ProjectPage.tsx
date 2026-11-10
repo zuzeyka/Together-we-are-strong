@@ -141,7 +141,7 @@ const ProjectPage: React.FC = () => {
                     ))}
                 </CarouselContent>
                 <CarouselPrevious
-                    className="bg-background text-white p-2 rounded-full"
+                    className="bg-surface text-ink border border-line p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveIndex(
                             (activeIndex - 1 + media.length) % media.length
@@ -149,7 +149,7 @@ const ProjectPage: React.FC = () => {
                     }
                 />
                 <CarouselNext
-                    className="bg-gray-800 text-white p-2 rounded-full"
+                    className="bg-surface text-ink border border-line p-2 rounded-full"
                     onClickCapture={() =>
                         setActiveIndex((activeIndex + 1) % media.length)
                     }
@@ -214,7 +214,7 @@ const ProjectPage: React.FC = () => {
                 <p className="text-base md:text-lg font-semibold text-primary text-center mb-4">
                     {campaignData.event_thanks}
                 </p>
-                <p className="text-sm md:text-lg text-secondary text-center">
+                <p className="text-sm md:text-lg text-primary underline text-center">
                     <a
                         href="https://www.instagram.com/twmp.foundation/"
                         target="_blank"

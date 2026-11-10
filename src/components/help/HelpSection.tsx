@@ -23,7 +23,7 @@ const HelpSection: React.FC = () => {
                 {t("helpSection.title")}
             </h2>
             <p
-                className={`lg:text-2xl text-xl mb-6 font-poppins text-typography ${
+                className={`lg:text-2xl text-xl mb-6 font-poppins text-typography-dark ${
                     isInView ? "animate-slide-in-from-bottom" : "opacity-0"
                 }`}
             >
@@ -31,12 +31,12 @@ const HelpSection: React.FC = () => {
             </p>
             <div className="space-x-4">
                 <Button
-                    className={`bg-typography-dark text-white py-2 rounded hover:bg-primary ${isInView ? "animate-slide-in-from-left" : "opacity-0"}`}
+                    className={`bg-[#0E1B2C] text-white px-6 py-2 rounded-control min-h-12 hover:bg-[#084A82] ${isInView ? "animate-slide-in-from-left" : "opacity-0"}`}
                 >
                     {t("helpSection.helpButton")}
                 </Button>
                 <Button
-                    className={`bg-typography text-typography-dark px-6 py-2 rounded border border-black hover:bg-typography-secondary ${isInView ? "animate-slide-in-from-right" : "opacity-0"}`}
+                    className={`bg-transparent text-typography-dark px-6 py-2 rounded-control min-h-12 border-2 border-[#0E1B2C] hover:bg-[#0E1B2C]/10 ${isInView ? "animate-slide-in-from-right" : "opacity-0"}`}
                 >
                     {t("helpSection.volunteerButton")}
                 </Button>

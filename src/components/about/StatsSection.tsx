@@ -29,7 +29,7 @@ const StatsSection: React.FC = () => {
                     {Array.from({ length: 8 }).map((_, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col items-center hover:scale-105 backshadow ${
+                            className={`flex flex-col items-center  ${
                                 isInView
                                     ? index === 0 ||
                                       index === 1 ||

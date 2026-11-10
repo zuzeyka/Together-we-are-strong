@@ -11,3 +11,7 @@
 - Media pipeline, `Picture` component, galleries from a manifest, a light hero, caching and a lazy route. Originals archived to `~/Archive/twmp-media-originals-2026-11-10/`.
 - Home page about 155 MB → under 4 MB (first screen under 0.5 MB); `public/` 1.14 GB → 191 MB. Build and lint pass (0 errors).
 - Next: push the branch for a Vercel preview, check it in Firefox and on a phone, then merge to main.
+
+## 2026-11-10: Phase 1 (design system in code), branch design/phase-1
+- Tokens for light and dark, the Onest font self-hosted, one calm animation, focus rings, `html lang`, a theme switch, the building blocks, and every hard-coded colour replaced. Details in REDESIGN_PLAN.md.
+- Fixed along the way: sections hiding again when scrolled away (`useInView`); the theme switch pinning the theme on load.
