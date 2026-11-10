@@ -10,7 +10,7 @@ import {
 } from "../ui/carousel";
 import useInView from "@/components/team/useInView";
 
-const projects: React.FC = () => {
+const Projects: React.FC = () => {
     const { t } = useTranslation();
     const [ref, isInView] = useInView(0.1);
 
@@ -215,4 +215,4 @@ const projects: React.FC = () => {
     );
 };
 
-export default projects;
+export default Projects;

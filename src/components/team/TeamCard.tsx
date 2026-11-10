@@ -1,4 +1,5 @@
 import React from "react";
+import Picture from "@/components/Picture";
 
 interface TeamCardProps {
     name: string;
@@ -19,9 +20,10 @@ const TeamCard: React.FC<TeamCardProps> = (props) => {
         >
             {/* Image Section */}
             <div className="overflow-hidden rounded-t-2xl">
-                <img
+                <Picture
                     src={props.image}
                     alt={props.name}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="h-72 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
             </div>

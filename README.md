@@ -55,3 +55,6 @@ currently no validation that these stay in sync — double-check by hand.
 See `/srv/shared/reports/together-we-are-strong-optimization-report.md` for a
 full optimization analysis (media size, git repo bloat, testing/CI gaps,
 etc.) and a prioritized action plan.
+
+## Photos and videos
+Originals don't live in the repo. Put new ones in the originals archive (same folder layout as the old `public/`, e.g. `projects/<Campaign>/12.jpg`), then run `python3 scripts/optimize_media.py <archive folder>`. It writes the web versions to `public/media/` and updates `src/media-manifest.json`; galleries pick up new files by themselves. In code, show images with `<Picture src="/projects/X/1.jpg" alt="…" sizes="…" />`.

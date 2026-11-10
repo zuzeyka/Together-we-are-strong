@@ -1,4 +1,5 @@
 import React from "react";
+import Picture from "@/components/Picture";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
 import useInView from "@/components/team/useInView";
@@ -36,8 +37,9 @@ const Donate: React.FC = () => {
                                 href="/"
                                 className="hover:opacity-50 h-full w-full"
                             >
-                                <img
+                                <Picture
                                     src="/logo.svg"
+                                    sizes="192px"
                                     alt="Logo"
                                     className="logo"
                                 />
@@ -48,8 +50,9 @@ const Donate: React.FC = () => {
                             href="https://www.instagram.com/twmp.foundation/"
                             className="hover:opacity-50 z-10"
                         >
-                            <img
+                            <Picture
                                 src="/instagram.jpg"
+                                sizes="(min-width: 1024px) 40vw, 100vw"
                                 alt="QR Code"
                                 className="mt-4 h-96 w-full animate-zoom-in object-cover rounded-3xl"
                             />

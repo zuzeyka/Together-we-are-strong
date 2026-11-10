@@ -1,4 +1,5 @@
 import React from "react";
+import Picture from "@/components/Picture";
 import { useTranslation } from "react-i18next";
 
 const BankDetails: React.FC = () => {
@@ -47,8 +48,9 @@ const BankDetails: React.FC = () => {
                     </p>
                 </div>
             </div>
-            <img
+            <Picture
                 src="/instagram.jpg"
+                sizes="480px"
                 alt="QR Code"
                 className="mt-10 h-auto animate-zoom-in"
             />

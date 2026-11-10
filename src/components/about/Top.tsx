@@ -1,17 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import manifest from "@/media-manifest.json";
+
+const hero = (manifest as { videos: Record<string, { poster: string }> }).videos["/mainVideo.mp4"];
+
+// The 15 s background clip plays only when the connection is fast and motion is welcome;
+// otherwise the poster frame stays (it is also what loads first, so the page paints fast).
+const wantsVideo = () => {
+    const c = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    if (c?.saveData || (c?.effectiveType && c.effectiveType !== "4g")) return false;
+    return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+};
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
 
 const Top: React.FC = () => {
     const { t } = useTranslation();
+    const video = useRef<HTMLVideoElement>(null);
+    useEffect(() => {
+        const v = video.current;
+        if (!v || !wantsVideo()) return;
+        v.src = "/media/mainVideo.mp4";
+        v.play().catch(() => {});
+    }, []);
 
     return (
         <div className="w-full h-screen font-montserrat">
             <div className="relative h-screen overflow-hidden">
                 <video
+                    ref={video}
                     className="absolute top-0 left-0 w-full h-full object-cover"
-                    src="/mainVideo.mp4"
-                    autoPlay
+                    poster={hero?.poster}
+                    preload="none"
                     loop
                     muted
                     playsInline

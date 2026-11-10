@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Picture from "@/components/Picture";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
@@ -41,7 +42,7 @@ const Navbar: React.FC = () => {
             }`}
         >
             <a href="/" className="hover:opacity-50 flex-shrink-0">
-                <img src="/logo.svg" alt="Logo" className="logo lg:h-28 h-16" />
+                <Picture src="/logo.svg" alt="Together We Made Power" sizes="112px" priority className="logo lg:h-28 h-16 w-auto" />
             </a>
 
             <div

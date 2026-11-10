@@ -9,6 +9,14 @@ import {
     CarouselPrevious,
 } from "../ui/carousel";
 import useInView from "@/components/team/useInView";
+import Picture from "@/components/Picture";
+import manifest from "@/media-manifest.json";
+
+type Gallery = { images: string[]; videos: string[] };
+const galleries = (manifest as { galleries: Record<string, Gallery> }).galleries;
+const videoInfo = (manifest as { videos: Record<string, { poster: string }> }).videos;
+// Videos are served from public/media (720p) with a poster frame.
+const videoSrc = (path: string) => "/media" + path;
 
 // Helper function to check if a URL is a video
 const isVideo = (url: string): boolean => {
@@ -24,27 +32,12 @@ const ProjectPage: React.FC = () => {
     const [media, setMedia] = useState<string[]>([]);
     const [activeIndex, setActiveIndex] = useState(0);
 
+    // The gallery is whatever files exist (media manifest), not a hand-kept count.
     useEffect(() => {
-        const importMedia = () => {
-            const imageCount = Number(t(`projects.${campaignId}.image-count`));
-            const videoCount = Number(
-                t(`projects.${campaignId}.video-count`, { defaultValue: 0 })
-            );
-
-            const basePath = `/projects/${campaignId}/`;
-            const imagesArray = Array.from(
-                { length: imageCount },
-                (_, index) => `${basePath}${index}.jpg`
-            );
-            const videosArray = Array.from(
-                { length: videoCount },
-                (_, index) => `${basePath}video${index}.mp4`
-            );
-            setMedia([...imagesArray, ...videosArray]);
-        };
-
-        importMedia();
-    }, [campaignId, t]);
+        const g = galleries[campaignId ?? ""];
+        setMedia(g ? [...g.images, ...g.videos] : []);
+        setActiveIndex(0);
+    }, [campaignId]);
 
     const campaignData = t(`projects.${campaignId}.post-text`, {
         returnObjects: true,
@@ -84,16 +77,22 @@ const ProjectPage: React.FC = () => {
                 <>
                     {isVideo(media[activeIndex]) ? (
                         <video
-                            src={media[activeIndex]}
+                            key={media[activeIndex]}
+                            src={videoSrc(media[activeIndex])}
+                            poster={videoInfo[media[activeIndex]]?.poster}
+                            preload="none"
                             controls
+                            playsInline
                             className={`w-full h-96 object-cover rounded-xl mb-6 ${
                                 isInView ? "animate-zoom-in" : "opacity-0"
                             }`}
                         />
                     ) : (
-                        <img
+                        <Picture
                             src={media[activeIndex]}
-                            alt={`Media ${activeIndex + 1}`}
+                            alt={`${campaignData.event_title} ${activeIndex + 1}`}
+                            sizes="(min-width: 896px) 896px, 100vw"
+                            priority
                             className={`w-full h-96 object-cover rounded-xl mb-6 ${
                                 isInView ? "animate-zoom-in" : "opacity-0"
                             }`}
@@ -117,18 +116,26 @@ const ProjectPage: React.FC = () => {
                             key={index}
                         >
                             {isVideo(item) ? (
-                                <video
-                                    src={item}
-                                    className="w-full h-full object-cover rounded-xl"
-                                    muted
-                                    loop
-                                />
+                                // A thumbnail only shows the poster frame; the video loads when opened.
+                                <button type="button" className="relative w-full h-full" onClick={() => setActiveIndex(index)}>
+                                    <img
+                                        src={videoInfo[item]?.poster}
+                                        alt={`${campaignData.event_title}: video ${index + 1}`}
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="w-full h-full object-cover rounded-xl"
+                                    />
+                                    <span className="absolute inset-0 flex items-center justify-center text-4xl text-white drop-shadow">▶</span>
+                                </button>
                             ) : (
-                                <img
-                                    src={item}
-                                    alt={`Media ${index + 1}`}
-                                    className="w-full h-full object-cover rounded-xl"
-                                />
+                                <button type="button" className="w-full h-full" onClick={() => setActiveIndex(index)}>
+                                    <Picture
+                                        src={item}
+                                        alt={`${campaignData.event_title} ${index + 1}`}
+                                        sizes="(min-width: 640px) 300px, 50vw"
+                                        className="w-full h-full object-cover rounded-xl"
+                                    />
+                                </button>
                             )}
                         </CarouselItem>
                     ))}
@@ -217,7 +224,7 @@ const ProjectPage: React.FC = () => {
                     </a>
                 </p>
                 <a href="/" className="hover:opacity-50 mt-4">
-                    <img src="/logo.svg" alt="Logo" className="w-20 md:w-32" />
+                    <Picture src="/logo.svg" alt="Together We Made Power" sizes="128px" className="w-20 md:w-32 h-auto" />
                 </a>
             </div>
         </div>

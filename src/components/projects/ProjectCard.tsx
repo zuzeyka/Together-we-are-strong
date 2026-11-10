@@ -1,4 +1,5 @@
 import { t } from "i18next";
+import Picture from "@/components/Picture";
 import React from "react";
 
 interface ProjectCardProps {
@@ -12,9 +13,10 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
     return (
         <div className="relative backshadow my-12 group rounded-2xl bg-background text-white font-poppins shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="overflow-hidden rounded-t-2xl">
-                <img
+                <Picture
                     src={props.image}
                     alt={props.title}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="h-72 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
             </div>

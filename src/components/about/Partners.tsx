@@ -1,4 +1,5 @@
 import React from "react";
+import Picture from "@/components/Picture";
 import { useTranslation } from "react-i18next";
 import useInView from "@/components/team/useInView";
 
@@ -39,8 +40,9 @@ const Partners: React.FC = () => {
                             rel="noopener noreferrer"
                             className="flex-shrink-0 hover:opacity-75"
                         >
-                            <img
+                            <Picture
                                 src={logo}
+                                sizes="256px"
                                 alt={`Partner ${index + 1}`}
                                 className="h-16 lg:h-32 object-contain"
                             />

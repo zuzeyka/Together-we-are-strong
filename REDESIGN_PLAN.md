@@ -99,8 +99,32 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
 ## Status
 | Phase | Status |
 |---|---|
-| 0 Speed first | not started |
+| 0 Speed first | done 2026-11-10 on branch `perf/phase-0` (not merged or deployed yet); see below |
 | 1 Design system in code | not started |
 | 2 Information architecture and pages | not started |
 | 3 Trust and content | not started; needs material from the foundation |
 | 4 Quality gates | not started |
+
+## Phase 0 result (2026-11-10)
+- `scripts/optimize_media.py` builds `public/media/`:
+  - photos as AVIF + WebP at 480/960/1600 px, with camera metadata (including any GPS) removed
+  - videos as 720p H.264 under 5 MB each, with poster frames
+  - the logo as PNG/WebP
+  - a manifest, `src/media-manifest.json`
+- The originals moved out of the repo to `~/Archive/twmp-media-originals-2026-11-10/` (348 files, 1.2 GB; checked identical before removing).
+- `Picture` component (`src/components/Picture.tsx`): `<picture>` with srcset/sizes, lazy loading, width/height. Used by the team and campaign cards, partner logos, logo, QR and galleries.
+- Campaign galleries come from the files on disk, not the `image-count` keys, which fixes MedicalAid (4 real photos, not 10). Thumbnails are small; videos show a poster and load only when opened.
+- Hero: a still poster loads first (preloaded). The 15 s, 2.4 MB clip plays only on fast connections and when reduced motion is off.
+- `vercel.json`:
+  - `/assets/*` cached for a year (immutable), `/media/*` for 30 days
+  - missing media now return 404 instead of the HTML page
+- `index.html`:
+  - The Rubik font link is removed.
+  - The title and meta description now use the legal name, Together We Made Power.
+  - The PNG favicon comes from the logo.
+- The campaign and bank-details pages are lazy routes. The `projects` component name is fixed (2 lint errors that were already there).
+- **Measured:**
+  - home page if fully scrolled: about 155 MB → about 1.7 MB (desktop) / 3.7 MB (phone, 3× screen); first screen under 0.5 MB
+  - `public/` 1.14 GB → 191 MB
+  - no video over 5 MB
+- **Not done:** splitting the translation files per language (about 30 KB saving, deferred to Phase 2 with the `/:lang` routes); Lighthouse scores (downloading Lighthouse was blocked here; run PageSpeed on the Vercel preview).
