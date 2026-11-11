@@ -7,6 +7,7 @@ import { INSTAGRAM, isCampaign } from "@/content/campaigns";
 import ThemeToggle from "@/components/ds/ThemeToggle";
 import { ExternalLink, L, LogoMark, linkButton, useLang } from "@/site/ui";
 import { cn } from "@/shared/lib/utils";
+import MobileDonateBar from "@/site/MobileDonateBar";
 
 /** Everything under /:lang. An unknown first segment is an old URL (/Grooming, /bank-details). */
 const Layout: React.FC = () => {
@@ -39,6 +40,7 @@ const Layout: React.FC = () => {
                 <Outlet />
             </main>
             <Footer />
+            <MobileDonateBar />
         </div>
     );
 };
@@ -79,8 +81,9 @@ const Header: React.FC = () => {
     useEffect(() => setOpen(false), [pathname]);
     const links = [
         { to: `/${lang}/campaigns`, label: t("ui.nav.projects") },
-        { to: `/${lang}#about`, label: t("ui.nav.about") },
-        { to: `/${lang}#help`, label: t("ui.nav.help") },
+        { to: `/${lang}/about`, label: t("ui.nav.about") },
+        { to: `/${lang}/help`, label: t("ui.nav.help") },
+        { to: `/${lang}/volunteer`, label: t("ui.nav.volunteer") },
     ];
     const navLink = ({ isActive }: { isActive: boolean }) =>
         cn("rounded-control px-3 py-2 font-semibold hover:bg-ink/5", isActive && !pathname.endsWith(`/${lang}`) ? "text-primary" : "text-ink");
@@ -154,7 +157,9 @@ const Footer: React.FC = () => {
                 <nav aria-label="Footer" className="flex flex-col gap-2 text-small">
                     <L to="/campaigns" className="text-ink hover:text-primary">{t("ui.nav.projects")}</L>
                     <L to="/donate" className="text-ink hover:text-primary">{t("ui.nav.donate")}</L>
-                    <L to="/#help" className="text-ink hover:text-primary">{t("ui.nav.help")}</L>
+                    <L to="/about" className="text-ink hover:text-primary">{t("ui.nav.about")}</L>
+                    <L to="/help" className="text-ink hover:text-primary">{t("ui.nav.help")}</L>
+                    <L to="/volunteer" className="text-ink hover:text-primary">{t("ui.nav.volunteer")}</L>
                 </nav>
                 <div>
                     <p className="text-small font-semibold text-ink">{t("ui.footer.follow")}</p>

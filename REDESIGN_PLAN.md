@@ -204,3 +204,23 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
 - **`npm run check:design`** runs in `npm run build`.
 - **Checked:** headless screenshots of EN light and UK dark at 1280 and 390 px; home, donate and a campaign page.
 - **Not built yet** (needs the foundation's material): reports, campaign goals and progress, a contact email, a Monobank jar and an NBU QR. Help and volunteer go to Instagram for now.
+
+## Phase 2b–4 plan: "final version for review" (2026-11-11)
+The user asked for every step that doesn't need the foundation to be done now. The founder will be asked for the links and form details. **No merge into main until the user says so.**
+
+Work is split into four parallel agents, each with its own files.
+
+**Shared setup (done by the lead first):**
+- Translations per area in `src/i18n/extra/<area>.<lang>.json`, deep-merged by the loader.
+- Routes and stub pages: `/about`, `/help`, `/volunteer`, `/donate/thanks`.
+- `MobileDonateBar` mounted in the layout.
+
+| # | Agent | Owns | Status |
+|---|---|---|---|
+| A | About, Help and Volunteer pages; nav | `site/pages/{About,Help,Volunteer}Page.tsx`, `i18n/extra/pages.*.json` | started |
+| B | Donate extras: preset amounts, thank-you page with share, sticky bottom Donate bar on phones | `site/pages/{DonatePage,ThanksPage}.tsx`, `site/MobileDonateBar.tsx`, `i18n/extra/donate.*.json` | started |
+| C | Copy and SEO: one name; meta, Open Graph, hreflang, canonical; icons; sitemap and robots; better photo alts | `index.html`, `public/{icons,og,robots.txt,sitemap.xml}`, `site/ui.tsx` (`usePageMeta`), `i18n/{en,uk}.json`, `scripts/make_og.py` | started |
+| D | Quality checks: axe accessibility scan, link and media check, a performance budget | `scripts/qa/*`, `package.json` scripts | started |
+| — | Lead: merge, build, screenshots, push the preview | | pending |
+
+**Later, needs the foundation:** reports, project goals, contact email, Monobank jar, payment QR, a real help/volunteer form, and stories.

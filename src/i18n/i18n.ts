@@ -17,10 +17,33 @@ export const preferredLang = (): Lang => {
 };
 
 // Each language is its own chunk: a visitor downloads only the one they read.
-const load: Record<Lang, () => Promise<{ default: object }>> = {
+// src/i18n/extra/<area>.<lang>.json files are deep-merged on top (one file per site area).
+type Json = Record<string, unknown>;
+const extras = {
+    en: import.meta.glob<{ default: Json }>("./extra/*.en.json"),
+    uk: import.meta.glob<{ default: Json }>("./extra/*.uk.json"),
+};
+const merge = (a: Json, b: Json): Json => {
+    const out: Json = { ...a };
+    for (const [k, v] of Object.entries(b)) {
+        const prev = out[k];
+        out[k] = v && typeof v === "object" && !Array.isArray(v) && prev && typeof prev === "object" && !Array.isArray(prev) ? merge(prev as Json, v as Json) : v;
+    }
+    return out;
+};
+const base: Record<Lang, () => Promise<{ default: Json }>> = {
     en: () => import("./en.json"),
     uk: () => import("./uk.json"),
 };
+const load: Record<Lang, () => Promise<{ default: object }>> = Object.fromEntries(
+    (Object.keys(base) as Lang[]).map((l) => [
+        l,
+        async () => {
+            const parts = await Promise.all([base[l](), ...Object.values(extras[l]).map((f) => f())]);
+            return { default: parts.map((p) => p.default).reduce(merge) };
+        },
+    ])
+) as Record<Lang, () => Promise<{ default: object }>>;
 
 i18n.use(initReactI18next)
     .use({
