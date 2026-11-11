@@ -1,22 +1,31 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Home from "./components/Home";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Layout from "@/site/Layout";
+import HomePage from "@/site/pages/HomePage";
+import { preferredLang } from "@/i18n/i18n";
 
-// Loaded only when visited, so the home page ships less JavaScript.
-const CampaignPage = lazy(() => import("./components/projects/ProjectPage"));
-const BankDetails = lazy(() => import("./components/donate/BankDetails"));
+// Pages other than the home page are loaded when first visited.
+const CampaignsPage = lazy(() => import("@/site/pages/CampaignsPage"));
+const CampaignPage = lazy(() => import("@/site/pages/CampaignPage"));
+const DonatePage = lazy(() => import("@/site/pages/DonatePage"));
+const NotFound = lazy(() => import("@/site/pages/NotFound"));
 
 function App() {
     return (
-        <Router basename="/">
+        <BrowserRouter>
             <Suspense fallback={null}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/:campaignId" element={<CampaignPage />} />
-                <Route path="/bank-details" element={<BankDetails />} />
-            </Routes>
+                <Routes>
+                    <Route path="/" element={<Navigate to={`/${preferredLang()}`} replace />} />
+                    <Route path="/:lang" element={<Layout />}>
+                        <Route index element={<HomePage />} />
+                        <Route path="campaigns" element={<CampaignsPage />} />
+                        <Route path="campaigns/:id" element={<CampaignPage />} />
+                        <Route path="donate" element={<DonatePage />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Route>
+                </Routes>
             </Suspense>
-        </Router>
+        </BrowserRouter>
     );
 }
 

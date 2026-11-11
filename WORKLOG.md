@@ -15,3 +15,9 @@
 ## 2026-11-10: Phase 1 (design system in code), branch design/phase-1
 - Tokens for light and dark, the Onest font self-hosted, one calm animation, focus rings, `html lang`, a theme switch, the building blocks, and every hard-coded colour replaced. Details in REDESIGN_PLAN.md.
 - Fixed along the way: sections hiding again when scrolled away (`useInView`); the theme switch pinning the theme on load.
+
+## 2026-11-11: Phase 2 (branch design/phase-2)
+- **The user reported** a logo shown as a bare circle and white text on yellow on the preview.
+- **Fixed:** the logo is now rendered from the full SVG. The site has been rebuilt to the stricter rules (DESIGN_SYSTEM.md, "Strict rules"), enforced by `scripts/check-design.mjs`.
+- See the REDESIGN_PLAN.md "Phase 2 result" section.
+- **Next:** the user reviews the Vercel preview; then merge perf/phase-0 → design/phase-1 → design/phase-2 into main (needs the user's OK).

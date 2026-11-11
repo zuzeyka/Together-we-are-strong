@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
     plugins: [react()],
-    base: "./",
+    base: "/", // absolute: nested routes (/en/campaigns/x) must load /assets, not ./assets
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),

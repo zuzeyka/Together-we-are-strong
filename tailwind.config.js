@@ -24,9 +24,6 @@ export default {
             // Colours are tokens from src/index.css (light + .dark); see DESIGN_SYSTEM.md.
             fontFamily: {
                 sans: ["Onest", "Onest Fallback", "system-ui", "sans-serif"],
-                // Old class names, kept until Phase 2 rewrites the pages: all Onest now.
-                poppins: ["Onest", "Onest Fallback", "system-ui", "sans-serif"],
-                montserrat: ["Onest", "Onest Fallback", "system-ui", "sans-serif"],
             },
             colors: {
                 bg: tok("bg"),
@@ -39,25 +36,12 @@ export default {
                     DEFAULT: tok("primary"),
                     hover: tok("primary-hover"),
                     on: tok("on-primary"),
-                    // old names
-                    light: tok("primary"),
-                    dark: tok("primary-hover"),
                 },
                 accent: { DEFAULT: tok("accent"), hover: tok("accent-hover"), on: tok("on-accent") },
                 success: tok("success"),
                 danger: tok("danger"),
                 line: tok("line"),
                 "input-line": tok("input-line"),
-                // Old names, mapped onto the tokens until Phase 2 replaces them:
-                background: tok("bg"),
-                foreground: tok("ink"),
-                secondary: { DEFAULT: tok("accent"), light: tok("accent"), dark: tok("accent-hover") },
-                typography: {
-                    DEFAULT: tok("ink"),
-                    primary: tok("ink"),
-                    secondary: tok("muted"),
-                    dark: "#0E1B2C", // always dark: text on yellow, photo overlays
-                },
             },
             borderRadius: {
                 control: "8px",
@@ -87,18 +71,9 @@ export default {
                 },
                 fade: { "0%": { opacity: 0 }, "100%": { opacity: 1 } },
             },
-            // One calm entrance for everything (the old names all map to it until Phase 2).
             animation: {
                 rise: "rise 0.35s ease-out both",
                 fade: "fade 0.35s ease-out both",
-                "fade-in": "fade 0.35s ease-out both",
-                "fade-in-up": "rise 0.35s ease-out both",
-                "fade-in-down": "rise 0.35s ease-out both",
-                "slide-in-from-left": "rise 0.35s ease-out both",
-                "slide-in-from-right": "rise 0.35s ease-out both",
-                "slide-in-from-top": "rise 0.35s ease-out both",
-                "slide-in-from-bottom": "rise 0.35s ease-out both",
-                "zoom-in": "fade 0.35s ease-out both",
             },
         },
     },

@@ -152,3 +152,20 @@
         scroll-behavior: auto !important;
     }
 }
+
+/* The logo's ring text is black: it always sits on a white disc (DESIGN_SYSTEM.md, rule 3). */
+.logo-disc {
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgb(var(--line));
+}
+
+/* Text on photos and the lightbox: white is allowed only inside .on-photo (rule 1). */
+.on-photo {
+    color: #ffffff;
+}
+.scrim {
+    background: rgb(8 17 27 / 0.94);
+}
+.logo-tile {
+    background: #13233a; /* navy: partner logos are white or coloured */
+}

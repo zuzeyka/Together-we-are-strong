@@ -614,5 +614,137 @@
     "footer": {
         "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",
         "contacts": "contact us at info@charity.org"
+    },
+    "ui": {
+        "skip": "Skip to content",
+        "nav": {
+            "projects": "Projects",
+            "about": "About",
+            "help": "Get help",
+            "donate": "Donate",
+            "menu": "Menu",
+            "close": "Close menu",
+            "home": "Together We Made Power, home page"
+        },
+        "hero": {
+            "eyebrow": "Ukrainian charity fund · since 2022",
+            "title": "Together we made power",
+            "lead": "We help displaced families, mothers with babies, children, hospitals, defenders and animals: quickly, openly and together with our partners.",
+            "donate": "Donate",
+            "projects": "See our projects",
+            "photo": "Volunteers handing out aid in Skvira"
+        },
+        "areas": {
+            "title": "Who we help",
+            "items": {
+                "displaced": [
+                    "Displaced families",
+                    "Housing, food, clothes and essentials for people who lost their homes."
+                ],
+                "mothers": [
+                    "Mothers and babies",
+                    "Baby boxes and care for mothers with newborns."
+                ],
+                "children": [
+                    "Children",
+                    "Gifts, clothes and support for orphans and children with disabilities."
+                ],
+                "hospitals": [
+                    "Hospitals",
+                    "Medicines and equipment for hospitals in need."
+                ],
+                "defenders": [
+                    "Defenders",
+                    "Essential supplies for military units."
+                ],
+                "animals": [
+                    "Animals",
+                    "Food and care for animal shelters."
+                ]
+            }
+        },
+        "impact": {
+            "title": "What we have done",
+            "note": "Since the start of the full-scale invasion in 2022."
+        },
+        "projects": {
+            "title": "Our projects",
+            "lead": "Each project is a real delivery: who we helped, what we brought and with whom.",
+            "all": "See all projects",
+            "read": "Read the story",
+            "count": "{{count}} projects"
+        },
+        "donateTeaser": {
+            "title": "Support our work",
+            "text": "Transfer to the fund's account in hryvnias or euros, or give with PayPal. All the details are on one page, each with a copy button.",
+            "cta": "Donate",
+            "paypal": "Give with PayPal"
+        },
+        "partners": {
+            "title": "Partners",
+            "lead": "Companies and teams who make our projects possible."
+        },
+        "team": {
+            "title": "Our team",
+            "lead": "Volunteers and coordinators behind every delivery."
+        },
+        "help": {
+            "title": "Need help, or want to help?",
+            "needTitle": "I need help",
+            "needText": "Write to us on Instagram: who you are, where you are and what you need. We answer every message.",
+            "volTitle": "I want to volunteer",
+            "volText": "Write to us on Instagram and tell us how you would like to help: driving, packing, translating or something else.",
+            "cta": "Write on Instagram"
+        },
+        "footer": {
+            "legal": "Charity fund «Together We Made Power» (БО МБФ «Разом ми сила»)",
+            "code": "EDRPOU code",
+            "follow": "Follow us",
+            "rights": "© {{year}} Together We Made Power charity fund"
+        },
+        "campaign": {
+            "back": "All projects",
+            "media": "Photos and videos",
+            "showAll": "Show all {{count}}",
+            "video": "Video",
+            "close": "Close",
+            "prev": "Previous",
+            "next": "Next",
+            "support": "Support projects like this one",
+            "supportText": "Every project starts with donations. Thank you for helping us do the next one.",
+            "instagram": "More on Instagram",
+            "notFound": "This project doesn't exist."
+        },
+        "donate": {
+            "title": "Support the fund",
+            "lead": "Choose how you want to give. Every detail has its own copy button.",
+            "tabUA": "In Ukraine (UAH)",
+            "tabEU": "International (EUR)",
+            "recipient": "Recipient",
+            "iban": "IBAN",
+            "account": "Account number",
+            "purpose": "Purpose of payment",
+            "bank": "Bank",
+            "code": "EDRPOU code",
+            "copy": "Copy",
+            "copied": "Copied",
+            "paypalTitle": "PayPal",
+            "paypalText": "Card or PayPal balance, from any country.",
+            "paypal": "Give with PayPal",
+            "trustTitle": "Who receives your money",
+            "thanks": "Thank you. Every transfer goes to the fund's projects."
+        },
+        "notFound": {
+            "title": "Page not found",
+            "back": "Go to the home page"
+        },
+        "theme": {
+            "dark": "Switch to dark mode",
+            "light": "Switch to light mode"
+        },
+        "lang": "Language",
+        "meta": {
+            "description": "Together We Made Power is a Ukrainian charity fund helping displaced families, children, hospitals, defenders and animals."
+        }
     }
 }

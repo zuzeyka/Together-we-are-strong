@@ -13,7 +13,6 @@ Galleries are counted from the files on disk, so a wrong count in the translatio
 Needs Pillow with AVIF/WebP and ffmpeg. Safe to re-run: existing outputs are skipped.
 Run: python3 scripts/optimize_media.py [ORIGINALS_DIR]
 """
-import base64
 import io
 import json
 import re
@@ -105,21 +104,17 @@ def video_job(path: str):
 
 
 def logo():
-    """logo.svg is a 458 KB SVG wrapping a PNG: export that PNG at web sizes instead."""
-    svg = (SRC / "logo.svg").read_text(errors="ignore")
-    m = max(re.findall(r"base64,([A-Za-z0-9+/=\s]+)", svg), key=len, default=None)
-    if not m:
+    """The full logo (ring, hands, text) rendered from logo.svg with rsvg-convert at web sizes."""
+    svg = SRC / "logo.svg"
+    if not svg.exists():
         return {}
-    im = Image.open(io.BytesIO(base64.b64decode(m))).convert("RGBA")
-    (OUT).mkdir(parents=True, exist_ok=True)
-    out = {}
+    OUT.mkdir(parents=True, exist_ok=True)
     for size in (64, 192, 512):
-        small = im.copy()
-        small.thumbnail((size, size), Image.LANCZOS)
-        small.save(OUT / f"logo-{size}.png", optimize=True)
-        small.save(OUT / f"logo-{size}.webp", quality=90)
-        out[size] = small.size
-    return {"/logo.svg": {"w": out[512][0], "h": out[512][1], "widths": [64, 192, 512], "logo": True}}
+        png = subprocess.run(["rsvg-convert", "-w", str(size), "-h", str(size), str(svg)], check=True, capture_output=True).stdout
+        im = Image.open(io.BytesIO(png)).convert("RGBA")
+        im.save(OUT / f"logo-{size}.png", optimize=True)
+        im.save(OUT / f"logo-{size}.webp", quality=90)
+    return {"/logo.svg": {"w": 512, "h": 512, "widths": [64, 192, 512], "logo": True}}
 
 
 def main():

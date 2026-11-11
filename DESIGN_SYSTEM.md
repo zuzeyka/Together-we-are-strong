@@ -127,3 +127,54 @@ Written 2026-11-10. The rules for every page of the site: colours, type, layout,
   - no single image over 300 KB, no video over 5 MB
 - Pages load only the current language's strings.
 
+
+## Strict rules (v2, 2026-11-11)
+These rules are enforced by `npm run check:design` (`scripts/check-design.mjs`), which fails the build on a violation.
+
+### 1. Text and background: only these pairs
+| Text | On | Ratio (light / dark) |
+|---|---|---|
+| `text-ink` | `bg-bg`, `bg-surface`, `bg-sunk`, `bg-tint` | 16.4 / 16.2 |
+| `text-muted` | same | 7.1 / 8.7 |
+| `text-primary` (links, small accents) | same | 6.2 / 8.2 |
+| `text-accent-on` (dark ink) | `bg-accent` (yellow) | 12.2 |
+| `text-primary-on` | `bg-primary` | 6.6 / 8.2 |
+| `text-white` | **only** inside `.on-photo` (a photo or the navy brand band) | ≥ 7 |
+
+**Banned anywhere:**
+- `text-white` outside `.on-photo`
+- `text-accent` (yellow text) and `text-black`
+- Tailwind palette colours (`gray-*`, `blue-*`, `red-*`, …), hex colours in classes, and gradients
+- the old aliases `secondary*`, `typography*`, `background`
+
+### 2. Yellow
+- Yellow is used for **one** button per screen (Donate), progress fills, and the selected-state chip.
+- Never as text, a thin line, or a section background.
+
+### 3. The logo
+- Always the full mark (ring, hands, text) from `/media/logo-*.png`, on a light surface or a white disc in dark mode, and never smaller than 40 px.
+- Next to it, the wordmark "Together We Made Power" in `text-ink`.
+
+### 4. Layout
+- Every section is `py-16 md:py-24`, its content in `max-w-container mx-auto px-4 md:px-6`.
+- Sections alternate `bg-bg` and `bg-sunk`, with one `bg-tint` for impact.
+- Card grids: 1 column under 640 px, 2 from 640 px, 3 from 1024 px.
+
+### 5. Information is never hover-only
+- Summaries, roles and descriptions are always visible.
+- Hover only changes shadow or colour.
+
+### 6. Copy
+- **Headings:** 2–6 words. **Paragraphs:** at most 3 sentences.
+- **Buttons:** verbs ("Donate", "See all campaigns", "Copy IBAN").
+- Every number says what it counts.
+
+### 7. Media
+- Every image goes through `<Picture>` with `sizes`.
+- Only the first visible image is `priority`.
+- No autoplay video, no carousel that moves by itself.
+
+### 8. Links and pages
+- Language in the URL (`/en/…`, `/uk/…`).
+- Internal links stay in the same tab.
+- External links get `rel="noopener"` and an icon.

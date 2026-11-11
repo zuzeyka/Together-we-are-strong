@@ -101,7 +101,7 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
 |---|---|
 | 0 Speed first | done 2026-11-10 on branch `perf/phase-0` (not merged or deployed yet); see below |
 | 1 Design system in code | done 2026-11-10 on branch `design/phase-1` (based on phase 0); see below |
-| 2 Information architecture and pages | not started |
+| 2 Information architecture and pages | done on branch `design/phase-2`, awaiting review |
 | 3 Trust and content | not started; needs material from the foundation |
 | 4 Quality gates | not started |
 
@@ -162,3 +162,45 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
   - the partner marquee
   - the old class names
   - the per-language routes and translation files
+
+## Phase 2 plan (2026-11-11)
+**Why now:** on the preview the user found the logo shown as a bare circle (the web copies were cut from a picture inside `logo.svg`, which holds only the ring) and white text on yellow. They asked for a full redesign with strict rules.
+
+**Fixed first:** the logo is rendered from the SVG with `rsvg-convert`, giving the whole mark.
+
+**New structure** (`/:lang` routes, `en` | `uk`; old URLs redirect):
+- `/:lang`, home:
+  1. **Hero:** split layout, real photo, short mission, Donate + "See campaigns"
+  2. **Impact strip:** 4 numbers
+  3. **What we help with:** 6 areas
+  4. **Latest campaigns:** 6 cards + "All campaigns"
+  5. **Donate teaser**
+  6. **Partners:** static grid
+  7. **Team:** 12, compact, roles visible
+  8. **Get help / volunteer**
+  9. **Footer**
+- `/:lang/campaigns`: all 18 campaigns.
+- `/:lang/campaigns/:id`: cover, story, a gallery grid with a viewer, highlights, impact, Donate.
+- `/:lang/donate`:
+  - tabs "In Ukraine (UAH)" and "International (EUR)" plus PayPal
+  - a copy button on every detail
+  - the legal details as a trust block
+
+**Content:** campaign covers move from code into `src/content/campaigns.ts`. New UI strings live under `ui.*` in `en.json` and `uk.json`.
+
+**Optimization:** routes lazy-loaded, translations loaded per language, the hero image preloaded, no video on the home page.
+
+**Rules:** `scripts/check-design.mjs` enforces DESIGN_SYSTEM.md "Strict rules". The old Tailwind aliases are removed.
+
+### Phase 2 result (2026-11-11)
+- **Logo:** rendered in full from the SVG and always shown on a white disc.
+- **New site** in `src/site/` (Layout, ui, CampaignCard, pages/):
+  - routes: `/:lang`, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/donate`; old URLs (`/Grooming`, `/bank-details`) redirect
+  - Old `src/components/{about,donate,help,projects,team,…}` removed.
+- **Data:** campaigns and partners in `src/content/campaigns.ts`; new strings under `ui.*` in both languages.
+- **Per-language translation chunks:** en 9 KB, uk 12 KB gzip. Main JS about 87 KB gzip.
+- **Removed dependencies:** embla, cva, radix slot, language detector.
+- **Bug fixed:** `vite.config.ts` `base: "./"` broke nested URLs (blank pages); it is now `/`.
+- **`npm run check:design`** runs in `npm run build`.
+- **Checked:** headless screenshots of EN light and UK dark at 1280 and 390 px; home, donate and a campaign page.
+- **Not built yet** (needs the foundation's material): reports, campaign goals and progress, a contact email, a Monobank jar and an NBU QR. Help and volunteer go to Instagram for now.
