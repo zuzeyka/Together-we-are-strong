@@ -20,7 +20,12 @@ const Layout: React.FC = () => {
     }, [lang, i18n]);
     // New page: start at the top; a #section link: scroll to it once it has rendered.
     useEffect(() => {
-        if (!hash) return window.scrollTo(0, 0);
+        // Statement, not "return window.scrollTo()": newer Chrome returns a Promise from scrollTo,
+        // and React would call it as the effect cleanup on the next page change (blank page).
+        if (!hash) {
+            window.scrollTo(0, 0);
+            return;
+        }
         const id = hash.slice(1);
         const t = setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 80);
         return () => clearTimeout(t);
@@ -78,7 +83,9 @@ const Header: React.FC = () => {
     const lang = useLang();
     const [open, setOpen] = useState(false);
     const { pathname } = useLocation();
-    useEffect(() => setOpen(false), [pathname]);
+    useEffect(() => {
+        setOpen(false);
+    }, [pathname]);
     const links = [
         { to: `/${lang}/campaigns`, label: t("ui.nav.projects") },
         { to: `/${lang}/about`, label: t("ui.nav.about") },

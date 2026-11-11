@@ -26,3 +26,9 @@
 - Four parallel agents (pages, donate, copy/SEO, QA), then a lead merge and fixes. Details are in the REDESIGN_PLAN.md "Phase 2b–4 result" section.
 - QA is clean: `npm run qa`.
 - **Not merged:** the user reviews the preview first.
+
+## 2026-11-11: blank page after the first click (fixed)
+- **Report from the user:** switching language or opening another page showed an empty page until a reload.
+- **Cause:** a Layout effect did `return window.scrollTo(0, 0)`. Newer Chrome returns a Promise from scrollTo, and React called it as the cleanup on the next route change and crashed.
+- **Fix:** the effect now uses a plain statement.
+- **Not caught by `npm run qa`,** which loads each page fresh. Added `npm run qa:nav` (`scripts/qa/nav.mjs`), which clicks through pages and both language switches.
