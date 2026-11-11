@@ -6,7 +6,7 @@
     "homepage": ".",
     "scripts": {
         "dev": "vite --host",
-        "build": "node scripts/check-design.mjs && tsc && vite build && node scripts/prerender-meta.mjs",
+        "build": "node scripts/check-design.mjs && tsc && vite build",
         "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "check:design": "node scripts/check-design.mjs",
