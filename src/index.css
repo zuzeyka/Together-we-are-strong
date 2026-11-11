@@ -169,3 +169,15 @@
 .logo-tile {
     background: #13233a; /* navy: partner logos are white or coloured */
 }
+
+/* Sticky mobile Donate bar (src/site/MobileDonateBar.tsx): it sets .has-mobile-bar on <html> on pages
+ * where it can appear. Below `sm` the page gets room under the last content, and focused elements
+ * scroll clear of the bar. 5rem ≈ the bar's 48 px button + 12 px padding top and bottom + border. */
+@media (max-width: 639.98px) {
+    html.has-mobile-bar {
+        scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+    }
+    html.has-mobile-bar body {
+        padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+    }
+}

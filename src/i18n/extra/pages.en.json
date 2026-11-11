@@ -1,3 +1,132 @@
 {
-    "ui": {}
+    "ui": {
+        "about": {
+            "eyebrow": "About the fund",
+            "title": "Who we are",
+            "lead": "Together We Made Power is a Ukrainian charity fund run by volunteers. We find out what people need, gather it with our partners and deliver it by hand.",
+            "photo": "Volunteers of the fund unloading boxes of aid",
+            "missionTitle": "Why we exist",
+            "missionLabel": "Our mission",
+            "visionLabel": "Our vision",
+            "how": {
+                "title": "How we work",
+                "lead": "Every delivery follows the same four steps, from the first message to the moment help arrives.",
+                "step": "Step {{n}}:",
+                "steps": {
+                    "request": { "title": "We hear the need", "text": "A family, a hospital or a shelter writes to us, or our volunteers on the ground tell us what is missing." },
+                    "check": { "title": "We check it", "text": "A coordinator talks to the people asking and confirms what exactly is needed, how much and by when." },
+                    "collect": { "title": "We gather the aid", "text": "We buy what is needed with your donations or get it from partners, then sort and pack it." },
+                    "deliver": { "title": "We deliver it", "text": "Our volunteers take the aid to the people themselves and report back with photos on Instagram." }
+                }
+            },
+            "partnerNote": "Want your company to join them?",
+            "partnerLink": "See how we partner",
+            "legal": {
+                "title": "Legal details",
+                "text": "The fund is officially registered in Ukraine as a charitable organisation. You can check us in the state register by this code.",
+                "name": "Legal name"
+            },
+            "teamLink": "Meet the whole team"
+        },
+        "helpPage": {
+            "eyebrow": "Get help",
+            "title": "Ask us for help",
+            "lead": "If the war has left you or your family without the basics, write to us. We read every message and answer as soon as we can.",
+            "handle": "Our Instagram: @twmp.foundation. Direct messages are open to everyone.",
+            "form": "Fill in the request form",
+            "homeCta": "How to ask for help",
+            "copy": "Copy text",
+            "copied": "Copied",
+            "who": {
+                "title": "Who can ask",
+                "lead": "Most of our help goes to people who have lost their homes or their income because of the war.",
+                "items": {
+                    "displaced": { "title": "Displaced people", "text": "People who had to leave their homes and are starting over in a new city." },
+                    "families": { "title": "Families with children", "text": "Especially large families and parents raising children on their own." },
+                    "mothers": { "title": "Mothers of newborns", "text": "Baby boxes and essentials for the first months." },
+                    "vulnerable": { "title": "Older and disabled people", "text": "People who cannot easily get food, medicine or care by themselves." },
+                    "institutions": { "title": "Hospitals and shelters", "text": "Hospitals, orphanages and animal shelters that need supplies or equipment." }
+                },
+                "note": "What we can give depends on our current projects and donations. If we cannot help ourselves, we will try to point you to someone who can."
+            },
+            "write": {
+                "title": "What to write",
+                "lead": "A complete first message saves time for everyone. Please include:",
+                "items": {
+                    "name": { "title": "Your name", "text": "How we should address you." },
+                    "city": { "title": "Your city", "text": "Where you live now, and where you moved from if you are displaced." },
+                    "family": { "title": "Your family", "text": "Who lives with you: the number of adults and children, and the children's ages." },
+                    "need": { "title": "What you need", "text": "Be specific: food, clothes and sizes, baby items, medicine, something else." },
+                    "contact": { "title": "How to reach you", "text": "A phone number, or say that Instagram messages are fine." }
+                },
+                "templateTitle": "Message template",
+                "template": "Hello! My name is …\nI live in … (moved from …)\nFamily: … adults, … children (ages …)\nWhat we need: …\nHow to reach me: …"
+            },
+            "next": {
+                "title": "What happens next",
+                "steps": {
+                    "read": { "title": "We read your message", "text": "A coordinator reads it and replies in Instagram. It can take a few days when there are many requests." },
+                    "clarify": { "title": "We ask questions", "text": "We may ask for a few more details, for example to confirm your status or the sizes you need." },
+                    "plan": { "title": "We find the help", "text": "We add you to the nearest delivery or project, or point you to a partner who can help faster." },
+                    "deliver": { "title": "You get it", "text": "We agree on a time and place together, or bring the aid to you." }
+                }
+            },
+            "privacy": {
+                "title": "Your details stay private",
+                "text": "We use what you tell us only to help you. We never publish it or pass it to anyone without your consent."
+            },
+            "volunteerNote": "Want to help others instead?",
+            "volunteerLink": "Become a volunteer"
+        },
+        "volunteerPage": {
+            "eyebrow": "Volunteer",
+            "title": "Help with your time",
+            "lead": "The fund runs on volunteers. Join us for one delivery or for every one: each pair of hands means more families helped.",
+            "cta": "Apply on Instagram",
+            "form": "Fill in the sign-up form",
+            "homeCta": "How to volunteer",
+            "ways": {
+                "title": "Ways to help",
+                "lead": "Choose what suits you. You do not need experience: we will show you how.",
+                "items": {
+                    "driving": { "title": "Driving", "text": "Take aid to families, hospitals and shelters in your own car." },
+                    "packing": { "title": "Packing", "text": "Sort donations and pack food sets, baby boxes and gifts." },
+                    "translating": { "title": "Translating", "text": "Help us talk to partners abroad and translate reports, posts and letters." },
+                    "events": { "title": "Events", "text": "Help run charity brunches, fairs and holidays for children." },
+                    "design": { "title": "Design and IT", "text": "Make posts and posters, take photos, or help with the website." }
+                }
+            },
+            "asks": {
+                "title": "What we ask",
+                "lead": "Volunteering is free and flexible, but people rely on us, so we ask for three things.",
+                "items": {
+                    "reliable": { "title": "Reliability", "text": "If you say you will come, come. If plans change, tell the coordinator early." },
+                    "time": { "title": "A few hours a month", "text": "Even one shift a month helps. You choose the days that work for you." },
+                    "care": { "title": "Care and respect", "text": "We work with people in hard times, so we treat them and their details with care." }
+                }
+            },
+            "apply": {
+                "title": "How to apply",
+                "lead": "Send us a direct message on Instagram. Use the template: it covers everything we need to know.",
+                "steps": {
+                    "write": { "title": "Write to us", "text": "Copy the template, fill it in and send it to @twmp.foundation." },
+                    "chat": { "title": "Meet the coordinator", "text": "We reply, get to know you and tell you about the nearest tasks." },
+                    "start": { "title": "Join a task", "text": "Come to your first delivery or packing day. A team member will be with you." }
+                },
+                "templateTitle": "Application template",
+                "template": "Hello! I'd like to volunteer.\nMy name is …\nCity: …\nHow I can help: driving / packing / translating / events / design and IT\nTime I can give: … hours a month\nHow to reach me: …"
+            },
+            "companies": {
+                "title": "For companies",
+                "text": "Businesses help us with money, goods, services and their teams' time. We agree on a joint project and report on every step.",
+                "items": [
+                    "Sponsor a project or a delivery",
+                    "Donate goods or services",
+                    "Bring your team for a volunteer day"
+                ],
+                "cta": "Discuss a partnership",
+                "partners": "See our partners"
+            }
+        }
+    }
 }

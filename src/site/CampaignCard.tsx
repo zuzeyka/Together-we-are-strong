@@ -5,7 +5,7 @@ import Picture from "@/components/Picture";
 import { L } from "@/site/ui";
 
 /** A project card: photo, title and summary always visible; the whole card is one link. */
-const CampaignCard: React.FC<{ id: string; cover: string; priority?: boolean }> = ({ id, cover, priority }) => {
+const CampaignCard: React.FC<{ id: string; cover: string; priority?: boolean; heading?: "h2" | "h3" }> = ({ id, cover, priority, heading: H = "h3" }) => {
     const { t } = useTranslation();
     return (
         <L
@@ -22,7 +22,7 @@ const CampaignCard: React.FC<{ id: string; cover: string; priority?: boolean }> 
                 />
             </div>
             <div className="flex flex-1 flex-col gap-2 p-5">
-                <h3 className="text-h3 text-ink group-hover:text-primary">{t(`projects.${id}.title`)}</h3>
+                <H className="text-h3 text-ink group-hover:text-primary">{t(`projects.${id}.title`)}</H>
                 <p className="line-clamp-3 text-small text-muted">{t(`projects.${id}.description`)}</p>
                 <span className="mt-auto inline-flex items-center gap-1 pt-2 text-small font-semibold text-primary">
                     {t("ui.projects.read")} <ArrowRight className="size-4" aria-hidden />

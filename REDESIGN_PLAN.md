@@ -217,10 +217,35 @@ Work is split into four parallel agents, each with its own files.
 
 | # | Agent | Owns | Status |
 |---|---|---|---|
-| A | About, Help and Volunteer pages; nav | `site/pages/{About,Help,Volunteer}Page.tsx`, `i18n/extra/pages.*.json` | started |
-| B | Donate extras: preset amounts, thank-you page with share, sticky bottom Donate bar on phones | `site/pages/{DonatePage,ThanksPage}.tsx`, `site/MobileDonateBar.tsx`, `i18n/extra/donate.*.json` | started |
-| C | Copy and SEO: one name; meta, Open Graph, hreflang, canonical; icons; sitemap and robots; better photo alts | `index.html`, `public/{icons,og,robots.txt,sitemap.xml}`, `site/ui.tsx` (`usePageMeta`), `i18n/{en,uk}.json`, `scripts/make_og.py` | started |
-| D | Quality checks: axe accessibility scan, link and media check, a performance budget | `scripts/qa/*`, `package.json` scripts | started |
-| — | Lead: merge, build, screenshots, push the preview | | pending |
+| A | About, Help and Volunteer pages; nav | `site/pages/{About,Help,Volunteer}Page.tsx`, `i18n/extra/pages.*.json` | done |
+| B | Donate extras: preset amounts, thank-you page with share, sticky bottom Donate bar on phones | `site/pages/{DonatePage,ThanksPage}.tsx`, `site/MobileDonateBar.tsx`, `i18n/extra/donate.*.json` | done |
+| C | Copy and SEO: one name; meta, Open Graph, hreflang, canonical; icons; sitemap and robots; better photo alts | `index.html`, `public/{icons,og,robots.txt,sitemap.xml}`, `site/ui.tsx` (`usePageMeta`), `i18n/{en,uk}.json`, `scripts/make_og.py` | done |
+| D | Quality checks: axe accessibility scan, link and media check, a performance budget | `scripts/qa/*`, `package.json` scripts | done |
+| — | Lead: merge, build, screenshots, push the preview | | done |
 
 **Later, needs the foundation:** reports, project goals, contact email, Monobank jar, payment QR, a real help/volunteer form, and stories.
+
+### Phase 2b–4 result (2026-11-11)
+- **New pages:**
+  - About, Help and Volunteer, each with a copyable message template
+  - Donate: amount presets (₴/€), FAQ, thank-you page with share buttons
+  - a sticky Donate bar on phones
+- **Copy:** one name everywhere; EN and UK fixes; 18 cover alts written from the photos.
+- **Meta:** per-page title, description, canonical, hreflang and Open Graph.
+  - `scripts/prerender-meta.mjs` (part of the build) writes `dist/<lang>/<route>/index.html` with those tags, so link previews work without JavaScript.
+  - Vercel serves those files before its SPA rewrite.
+- **Icons and robots:** a vector `icon.svg`, favicon, maskable icons, a manifest, OG images (`scripts/make_og.py`), and `sitemap.xml` (48 URLs) plus `robots.txt`.
+- **QA:** `npm run qa` (`scripts/qa/`) builds outside `dist/` and checks 50 routes × (390 / 1280) × (light / dark).
+  - Last run: axe 0 issues; links, media and i18n 0 broken; budgets all met (first view 0.2–0.54 MB, LCP ≤ 1.36 s, CLS ≤ 0.035).
+- **Fixed during review:**
+  - `cn()` dropped the custom text sizes (tailwind-merge was not configured), so headings rendered small.
+  - Tall sections stayed invisible on phones (fade-in threshold).
+  - Header logo label; projects page `h1`; mobile bar landmark.
+- **Media:** 44 files over 300 KB re-encoded. Seven WebP fallbacks of very grainy photos are still 0.32–0.68 MB, used only in the full-screen viewer by browsers without AVIF.
+- **Waiting on the foundation:**
+  - `MONOBANK_JAR` and `PAYMENT_QR` (`src/content/campaigns.ts`), shown only once set
+  - `HELP_FORM_URL` / `VOLUNTEER_FORM_URL` (Help and Volunteer pages)
+  - a contact email
+  - reports, project goals, stories
+- **Content questions for the owner:** Russian spellings Dmitry / Andrey / Danil vs Dmytro / Andrii / Danylo; Grooming is "dog grooming" in UK only.
+- **Next:** the user reviews the preview, then says whether to merge phase-0 → 1 → 2 into main.

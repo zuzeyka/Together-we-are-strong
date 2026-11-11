@@ -9,9 +9,9 @@ const CampaignsPage: React.FC = () => {
     usePageMeta(t("ui.projects.title"));
     return (
         <Section labelledBy="all-projects">
-            <SectionHead id="all-projects" title={t("ui.projects.title")} lead={`${t("ui.projects.lead")} ${t("ui.projects.count", { count: CAMPAIGNS.length })}`} />
+            <SectionHead level={1} id="all-projects" title={t("ui.projects.title")} lead={`${t("ui.projects.lead")} ${t("ui.projects.count", { count: CAMPAIGNS.length })}`} />
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {CAMPAIGNS.map((c, i) => <CampaignCard key={c.id} {...c} priority={i === 0} />)}
+                {CAMPAIGNS.map((c, i) => <CampaignCard key={c.id} {...c} priority={i === 0} heading="h2" />)}
             </div>
         </Section>
     );

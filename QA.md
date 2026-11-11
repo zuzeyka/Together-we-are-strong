@@ -1,0 +1,188 @@
+# QA report
+
+Automated checks for the site. They cover accessibility (axe-core), links and media, translation
+keys, console errors and the performance budgets in `DESIGN_SYSTEM.md`.
+
+## How to run
+
+```sh
+npm run qa                      # build, serve, check all 50 routes (en + uk), refresh this file (~4.5 min)
+npm run qa -- --no-build        # reuse the last build
+npm run qa -- --only=/uk/donate # only routes whose path contains the text
+npm run qa -- --no-report       # leave QA.md alone
+QA_OUT_DIR=/some/tmp/dir npm run qa   # build location (default $TMPDIR/twmp-qa/dist; never dist/)
+```
+
+- Code: `scripts/qa/serve-and-run.mjs`. Its only dependency is the `axe-core` devDependency. It drives
+  headless Chromium from `~/.cache/ms-playwright` (or `$CHROME`) over CDP with Node's built-in
+  WebSocket. The build is served by a small http server that copies `vercel.json`: a missing
+  `/media/` or `/assets/` path returns 404, and any other path returns `index.html`. Text responses
+  are gzipped.
+- Each route is loaded twice. The first load is at 390 px in light mode, with cache disabled,
+  Fast-4G-like throttling and 4x CPU throttling. It records first-view bytes, JS, LCP and CLS, then
+  scrolls the page and runs axe in light and in dark. The second load is at 1280 px, unthrottled,
+  and also runs axe in light and in dark. Dark mode is the emulated `prefers-color-scheme: dark`
+  plus the `dark` class, which is what `index.html` sets. Reduced motion is emulated so that the
+  reveal fades don't skew the contrast checks.
+- The run exits with code 1 on serious or critical axe violations, broken internal links or broken
+  media. Budget misses, translation gaps and console errors are warnings only.
+- Raw results go to `<QA_OUT_DIR>/../qa-results.json`.
+
+## Findings, 2026-11-11 (branch design/phase-2)
+
+Pages were being edited while this ran, so line numbers can drift.
+
+1. **Serious: `label-content-name-mismatch`. The header logo link on every `/uk` route at
+   1280 px.** The visible text is the English "Together We Made Power", but the accessible name
+   is `ui.nav.home` = "Разом ми сила, головна сторінка". Speech-input users who say what they
+   see can't activate the link. Fix: `src/i18n/uk.json:600`. Make the uk label contain the
+   visible text, e.g. "Together We Made Power — головна сторінка". Alternatively, drop the
+   `aria-label` in `src/site/Layout.tsx:93` and mark the visible text as the name. On mobile the
+   text is hidden, which is why only 1280 px fails. This is the only finding that fails `npm run qa`.
+2. **Moderate: `page-has-heading-one` on `/en/campaigns` and `/uk/campaigns`.** The page title
+   is an `<h2>` from `SectionHead` (`src/site/ui.tsx:154`), used in
+   `src/site/pages/CampaignsPage.tsx:12`. The page needs an `<h1>`. One way is a `level`/`as` prop
+   on `SectionHead`.
+3. **Moderate: `region` on 44 routes at 390 px.** The fixed mobile donate bar
+   (`src/site/MobileDonateBar.tsx:69`) is outside every landmark. Make it an `<aside>` (or `<nav>`)
+   with an `aria-label`, or render it inside `<main>`/`<footer>`.
+4. **Translations: none missing.** All 235 literal keys and 27 template-key patterns resolve in
+   both languages after merging `extra/`. Some keys are left over:
+   - en only: 38 `projects.*.image-count` / `video-count` keys.
+   - uk only: a whole `contacts.*` block (11 keys).
+
+   Neither set is used in src, so both look like dead strings to clean up.
+5. **Media: 0 broken URLs across 1034 checked variants.** 43 files in `media/` are over 300 KB,
+   all of them 1600 px (and some 960 px) variants. The worst is
+   `media/projects/WCKitchen/2-1600.webp` at 1.06 MB. None was fetched at 390 or 1280 px, where
+   the largest image actually loaded was 118 KB. A 2x-DPR desktop, or a `sizes` value that picks
+   1600w, would fetch them. `scripts/optimize_media.py` should cap the 1600w quality and size.
+6. **Performance: within budget everywhere.** Under the throttled mobile load:
+   - First view: 194–541 KB. Heaviest are `/*/campaigns/WCKitchen` and `SupportForChildren`.
+   - JS: 101–120 KB gzip per page. The entry chunk is 86.6 KB.
+   - LCP: 1.02–1.36 s.
+   - CLS: at most 0.035, on `/uk`. The small shifts on uk campaign pages come from the longer
+     strings.
+7. **Links and console:** no broken internal links and no console errors on any route.
+
+Limitations:
+- axe catches about a third of WCAG issues. Keyboard order, focus visibility, screen-reader
+  wording and contrast over photos (axe reports those as "incomplete", and they aren't listed
+  here) still need a manual pass.
+- LCP and CLS come from a lab run on localhost with Fast-4G-like throttling, not field data.
+  Lighthouse's slower mobile preset would give higher numbers. CLS is read before scrolling, so
+  shifts caused by the reveal-on-scroll animation aren't counted.
+- External links are listed, not fetched. Forms aren't submitted.
+
+<!-- qa:auto:start -->
+_Generated by `npm run qa` on 2026-11-11 14:54 (267 s, 100 page loads, Chromium Chrome/156.0.8078.4, axe-core 4.14.0)._
+
+### Summary
+
+| Check | Result |
+|---|---|
+| Routes | 50 (en + uk) at 390 and 1280 px, light and dark |
+| axe violations (unique rule + element) | critical 0, serious 0, moderate 0, minor 0 |
+| Broken internal links | 0 |
+| Broken media (status or content type) | 0 |
+| Translation keys used in src | 235; missing 0; en-only 16, uk-only 0 |
+| Routes with console errors | 0 |
+| Build JS (gzip) | entry 86.9 KB, all chunks 134.3 KB (budget 150 KB per page) |
+| Budget misses | 0 (warnings) |
+| Exit | pass |
+
+### Per route
+
+Perf columns come from the 390 px light load with cache disabled, Fast-4G-like throttling (150 ms RTT, 9 Mbps, CPU 4x). "First view" = bytes until the network is idle, before scrolling. LCP and CLS are read before any scroll. axe = unique violations over all four modes as critical/serious/moderate/minor.
+
+| Route | First view KB | JS gz KB | Largest image KB | LCP s | CLS | axe c/s/m/mi | Console | Bad links |
+|---|---:|---:|---|---:|---:|---|---:|---:|
+| /en | 262.9 | 102 | 80.2 | 1.21 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns | 400.3 | 102.5 | 118.3 | 1.06 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/LargeRelocationAid | 348.7 | 105.1 | 49.6 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/RelocationAid | 357.7 | 105.1 | 56.7 | 1.11 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/MaternityAid | 440.9 | 105.1 | 59.8 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/GastroFamilyAid | 355.1 | 105.1 | 43.2 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/MedicalAid | 287.6 | 105.1 | 39.8 | 1.09 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/MilitarySupport | 442.3 | 105.1 | 80.2 | 1.20 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/AnimalShelterSupport | 471.9 | 105.1 | 93.5 | 1.13 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/SupportForChildren | 529 | 105.1 | 118.3 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/GiftCampaign | 332.1 | 105.1 | 82.4 | 1.16 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/InternatSupport | 324.1 | 105.1 | 38.8 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/CharityBrunch | 347.9 | 105.1 | 62.6 | 1.13 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/HospitalSupport | 419.8 | 105.1 | 43.7 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/AnimalSupport | 515.3 | 105.1 | 94.2 | 1.26 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/Grooming | 376.5 | 105.1 | 42.2 | 1.11 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/MutualAidProject | 457.5 | 105.1 | 84.7 | 1.11 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/STELP | 281.2 | 105.1 | 56.6 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/ALLSTARSIT | 234.5 | 105.1 | 40.8 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/campaigns/WCKitchen | 537.5 | 105.1 | 101.5 | 1.13 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/donate | 195.5 | 106.8 | 22.8 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/donate/thanks | 194.6 | 106 | 22.8 | 1.09 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/about | 250.8 | 105.5 | 56.7 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/help | 194.2 | 105.6 | 22.8 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /en/volunteer | 195.5 | 106.9 | 22.8 | 1.10 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk | 258.4 | 120.2 | 80.2 | 1.00 | 0.035 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns | 404.1 | 106.3 | 118.3 | 1.12 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/LargeRelocationAid | 352.5 | 108.9 | 49.6 | 1.15 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/RelocationAid | 332.4 | 108.9 | 56.7 | 1.15 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/MaternityAid | 444.8 | 108.9 | 59.8 | 1.16 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/GastroFamilyAid | 358.9 | 108.9 | 43.2 | 1.14 | 0.017 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/MedicalAid | 291.4 | 108.9 | 39.8 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/MilitarySupport | 446.1 | 108.9 | 80.2 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/AnimalShelterSupport | 475.7 | 108.9 | 93.5 | 1.15 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/SupportForChildren | 532.8 | 108.9 | 118.3 | 1.35 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/GiftCampaign | 335.9 | 108.9 | 82.4 | 1.23 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/InternatSupport | 327.9 | 108.9 | 38.8 | 1.15 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/CharityBrunch | 351.7 | 108.9 | 62.6 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/HospitalSupport | 457.8 | 108.9 | 43.7 | 1.16 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/AnimalSupport | 519.2 | 108.9 | 94.2 | 1.20 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/Grooming | 380.3 | 108.9 | 42.2 | 1.10 | 0.017 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/MutualAidProject | 461.4 | 108.9 | 84.7 | 1.16 | 0.017 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/STELP | 285 | 108.9 | 56.6 | 1.16 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/ALLSTARSIT | 267 | 108.9 | 40.8 | 1.16 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/campaigns/WCKitchen | 541.3 | 108.9 | 101.5 | 1.16 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/donate | 227.2 | 110.7 | 22.8 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/donate/thanks | 198.4 | 109.8 | 22.8 | 1.13 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/about | 254.6 | 109.3 | 56.7 | 1.13 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/help | 198.1 | 109.4 | 22.8 | 1.18 | 0.000 | 0/0/0/0 | 0 | 0 |
+| /uk/volunteer | 199.3 | 110.7 | 22.8 | 1.14 | 0.000 | 0/0/0/0 | 0 | 0 |
+
+⚠ = over budget.
+
+### Accessibility violations
+
+None.
+
+### Links and media
+
+No broken internal links or media.
+
+- Media variants checked: 1034 unique URLs.
+- Files in media/ over 300 KB (served only if a page asks for that width): 8
+  - media/projects/WCKitchen/2-1600.webp 661.4 KB
+  - media/projects/WCKitchen/6-1600.webp 497 KB
+  - media/projects/WCKitchen/4-1600.webp 401.4 KB
+  - media/projects/WCKitchen/7-1600.webp 395.5 KB
+  - media/projects/MutualAidProject/0-1600.webp 357.4 KB
+  - media/projects/WCKitchen/5-1600.webp 334.2 KB
+  - media/projects/WCKitchen/3-1600.webp 326.4 KB
+  - media/projects/GastroFamilyAid/7-1600.webp 314.8 KB
+
+### Translations
+
+Every literal key used in src exists in both languages.
+- Template keys (checked by pattern, en/uk matches): `stats.stat${n}.description` 8/8, `stats.stat${n}.value` 8/8, `ui.about.how.steps.${key}.title` 4/4, `ui.about.how.steps.${key}.text` 4/4, `team.members.${key}.name` 12/12, `team.members.${key}.position` 12/12, `ui.donatePage.presets.${p.key}` 4/4, `ui.donatePage.faq.${k}.q` 4/4, `ui.donatePage.faq.${k}.a` 4/4, `ui.helpPage.who.items.${key}.title` 5/5, `ui.helpPage.who.items.${key}.text` 5/5, `ui.helpPage.write.items.${key}.title` 5/5, `ui.helpPage.write.items.${key}.text` 5/5, `ui.helpPage.next.steps.${key}.title` 4/4, `ui.helpPage.next.steps.${key}.text` 4/4, `ui.areas.items.${key}` 6/6, `ui.help.${key}Title` 2/2, `ui.help.${key}Text` 2/2, `ui.thanks.steps.${k}.title` 3/3, `ui.thanks.steps.${k}.text` 3/3, `ui.volunteerPage.ways.items.${key}.title` 5/5, `ui.volunteerPage.ways.items.${key}.text` 5/5, `ui.volunteerPage.asks.items.${key}.title` 3/3, `ui.volunteerPage.asks.items.${key}.text` 3/3, `ui.volunteerPage.apply.steps.${key}.title` 3/3, `ui.volunteerPage.apply.steps.${key}.text` 3/3, `ui.meta.pages.${key}.${k}` 7/7
+- Keys only in en (16): `helpSection.logos`, `helpSection.logos.0`, `helpSection.logos.1`, `helpSection.logos.2`, `helpSection.logos.3`, `helpSection.logos.4`, `helpSection.logos.5`, `helpSection.logos.6`, `helpSection.links`, `helpSection.links.0`, `helpSection.links.1`, `helpSection.links.2`, `helpSection.links.3`, `helpSection.links.4`, `helpSection.links.5`, `helpSection.links.6`
+
+### Console errors
+
+None.
+
+### Performance budgets
+
+All routes within budget.
+
+Largest JS chunks (gzip): index-nlHEbg55.js 86.9 KB (entry), uk-oZhLJK31.js 11.8 KB, en-xwNJ7aE2.js 9.6 KB, pages.uk-zBKsxzbg.js 3.6 KB, DonatePage-u9Xs8Sa6.js 2.7 KB
+
+<!-- qa:auto:end -->

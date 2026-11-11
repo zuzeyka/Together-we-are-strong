@@ -21,3 +21,8 @@
 - **Fixed:** the logo is now rendered from the full SVG. The site has been rebuilt to the stricter rules (DESIGN_SYSTEM.md, "Strict rules"), enforced by `scripts/check-design.mjs`.
 - See the REDESIGN_PLAN.md "Phase 2 result" section.
 - **Next:** the user reviews the Vercel preview; then merge perf/phase-0 → design/phase-1 → design/phase-2 into main (needs the user's OK).
+
+## 2026-11-11: Phase 2b–4 ("final version for review")
+- Four parallel agents (pages, donate, copy/SEO, QA), then a lead merge and fixes. Details are in the REDESIGN_PLAN.md "Phase 2b–4 result" section.
+- QA is clean: `npm run qa`.
+- **Not merged:** the user reviews the preview first.

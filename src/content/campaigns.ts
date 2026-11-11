@@ -37,3 +37,24 @@ export const PARTNERS: { logo: string; url: string; name: string }[] = [
     { logo: "/partners/gastroFamily.webp", url: "https://gfm.com.ua/", name: "Gastro Family" },
     { logo: "/partners/CGU.png", url: "https://cossackguardofukraine.org/", name: "Cossack Guard of Ukraine" },
 ];
+
+/* ---- Donation flow (Phase 2b). ---------------------------------------------------------------
+ * PLACEHOLDERS: the founder will supply these. While a value is "", the site shows NOTHING for it
+ * (no fake jar, no fake QR). Fill in and redeploy; DonatePage.tsx renders the option automatically.
+ *   MONOBANK_JAR   — full Monobank jar link, e.g. "https://send.monobank.ua/jar/XXXXXXXXXX"
+ *   PAYMENT_QR     — path under /public to the bank's payment QR image, e.g. "/media/donate-qr.png"
+ */
+export const MONOBANK_JAR = "";
+export const PAYMENT_QR = "";
+
+/** The public site address used in share links (the language is appended: /en or /uk). */
+export const SITE_URL = "https://www.twmp.com.ua";
+
+/** Suggested amounts on the Donate page. They only guide a bank transfer or PayPal; there is no payment processor.
+ * The examples (ui.donatePage.presets.<key>) are worded as contributions, never as exact prices. */
+export const DONATION_PRESETS: { uah: number; eur: number; key: "food" | "baby" | "medicine" | "shelter" }[] = [
+    { uah: 200, eur: 5, key: "food" },
+    { uah: 500, eur: 10, key: "baby" },
+    { uah: 1000, eur: 25, key: "medicine" },
+    { uah: 2000, eur: 50, key: "shelter" },
+];

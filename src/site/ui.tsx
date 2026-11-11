@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/shared/lib/utils";
 import useInView from "@/site/useInView";
-import { isLang, type Lang } from "@/i18n/i18n";
+import { LANGS, isLang, type Lang } from "@/i18n/i18n";
 
 /* Small shared pieces for every page (DESIGN_SYSTEM.md, "Strict rules"). */
 
@@ -18,14 +18,113 @@ export const L: React.FC<{ to: string; className?: string; children: React.React
     return <Link to={`/${lang}${to === "/" ? "" : to.replace(/^\/#/, "#")}`} {...rest} />;
 };
 
-/** Page title and description for the browser tab and search engines. */
-export const usePageMeta = (title?: string) => {
+const SITE = "https://www.twmp.com.ua";
+
+export type PageMetaOptions = {
+    /** Search/share snippet; default: ui.meta.pages.<route>.description, else ui.meta.description. */
+    description?: string;
+    /** Share image, a site path ("/og/home-en.png") or a full URL; default: per route, else /og/default.png. */
+    image?: string;
+    imageWidth?: number;
+    imageHeight?: number;
+    imageAlt?: string;
+    /** The path after /:lang ("/campaigns/STELP"); default: the current URL's. */
+    path?: string;
+    type?: "website" | "article";
+    /** Keep the page out of search results (thanks page, unknown URLs). */
+    noindex?: boolean;
+};
+
+type RouteKey = "home" | "campaigns" | "campaign" | "donate" | "thanks" | "about" | "help" | "volunteer" | "notFound";
+const routeKey = (rest: string): RouteKey => {
+    if (rest === "") return "home";
+    if (rest === "/campaigns") return "campaigns";
+    if (/^\/campaigns\/[^/]+$/.test(rest)) return "campaign";
+    if (rest === "/donate") return "donate";
+    if (rest === "/donate/thanks") return "thanks";
+    if (rest === "/about" || rest === "/help" || rest === "/volunteer") return rest.slice(1) as RouteKey;
+    return "notFound";
+};
+
+const upsert = (selector: string, make: () => HTMLElement, attr: string, value: string | null) => {
+    let el = document.head.querySelector<HTMLElement>(selector);
+    if (value === null) return el?.remove();
+    if (!el) {
+        el = make();
+        document.head.appendChild(el);
+    }
+    el.setAttribute(attr, value);
+};
+const meta = (key: string, value: string | null) => {
+    const attr = key.startsWith("og:") ? "property" : "name";
+    const make = () => {
+        const el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        return el;
+    };
+    upsert(`meta[${attr}="${key}"]`, make, "content", value);
+};
+const link = (rel: string, href: string | null, hreflang?: string) =>
+    upsert(
+        hreflang ? `link[rel="${rel}"][hreflang="${hreflang}"]` : `link[rel="${rel}"]:not([hreflang])`,
+        () => {
+            const el = document.createElement("link");
+            el.rel = rel;
+            if (hreflang) el.hreflang = hreflang;
+            return el;
+        },
+        "href",
+        href
+    );
+
+/**
+ * Title, description, canonical URL, hreflang alternates, Open Graph and Twitter tags for the
+ * current page. `usePageMeta(title?)` alone gives sensible per-route defaults (from ui.meta.pages);
+ * pass options to override the description, share image or path.
+ */
+export const usePageMeta = (title?: string, options: PageMetaOptions = {}) => {
     const { t } = useTranslation();
+    const lang = useLang();
+    const { pathname } = useLocation();
+    const { description, image, imageWidth, imageHeight, imageAlt, path, type, noindex } = options;
     useEffect(() => {
-        const site = t("ui.hero.title");
-        document.title = title ? `${title} · ${site}` : `${site} · ${t("ui.hero.eyebrow")}`;
-        document.querySelector('meta[name="description"]')?.setAttribute("content", t("ui.meta.description"));
-    }, [title, t]);
+        const rest = (path ?? pathname.replace(/^\/[^/]+/, "")).replace(/\/+$/, "");
+        const key = routeKey(rest);
+        const page = (k: string) => t(`ui.meta.pages.${key}.${k}`, { defaultValue: "" }) as string;
+        const site = t("ui.meta.siteName");
+        const name = title || page("title");
+        const fullTitle = name && key !== "home" ? `${name} · ${site}` : `${site} · ${t("ui.meta.tagline")}`;
+        const hide = noindex ?? (key === "thanks" || key === "notFound");
+        // An explicit noindex means "this URL isn't a real page" (unknown campaign): no route snippet.
+        const desc = description || (noindex ? "" : page("description")) || t("ui.meta.description");
+        const ownImage = image ?? (key === "home" || key === "donate" ? `/og/${key}-${lang}.png` : "/og/default.png");
+        const abs = (p: string) => (/^https?:/.test(p) ? p : SITE + p);
+        const url = `${SITE}/${lang}${rest}`;
+
+        document.title = fullTitle;
+        meta("description", desc);
+        meta("robots", hide ? "noindex, follow" : null);
+        // Pages kept out of search get no canonical or language alternates.
+        link("canonical", hide ? null : url);
+        for (const l of LANGS) link("alternate", hide ? null : `${SITE}/${l}${rest}`, l);
+        link("alternate", hide ? null : `${SITE}/en${rest}`, "x-default");
+
+        meta("og:type", type ?? (key === "campaign" && !hide ? "article" : "website"));
+        meta("og:site_name", site);
+        meta("og:title", name || fullTitle);
+        meta("og:description", desc);
+        meta("og:url", url);
+        meta("og:locale", lang === "uk" ? "uk_UA" : "en_US");
+        meta("og:locale:alternate", lang === "uk" ? "en_US" : "uk_UA");
+        meta("og:image", abs(ownImage));
+        meta("og:image:width", imageWidth ? String(imageWidth) : image ? null : "1200");
+        meta("og:image:height", imageHeight ? String(imageHeight) : image ? null : "630");
+        meta("og:image:alt", imageAlt || (image ? name || site : t("ui.meta.imageAlt")));
+        meta("twitter:card", "summary_large_image");
+        meta("twitter:title", name || fullTitle);
+        meta("twitter:description", desc);
+        meta("twitter:image", abs(ownImage));
+    }, [title, description, image, imageWidth, imageHeight, imageAlt, path, type, noindex, pathname, lang, t]);
 };
 
 type Tone = "bg" | "sunk" | "tint";
@@ -39,7 +138,7 @@ export const Section: React.FC<{ id?: string; tone?: Tone; className?: string; c
     children,
     labelledBy,
 }) => {
-    const [ref, seen] = useInView(0.1);
+    const [ref, seen] = useInView(0); // any pixel on screen: very tall sections (all projects on a phone) must still appear
     return (
         <section id={id} aria-labelledby={labelledBy} className={cn(tones[tone], "py-16 md:py-24")}>
             <div ref={ref} className={cn("mx-auto max-w-container px-4 md:px-6", seen ? "animate-rise" : "opacity-0", className)}>
@@ -49,17 +148,26 @@ export const Section: React.FC<{ id?: string; tone?: Tone; className?: string; c
     );
 };
 
-export const SectionHead: React.FC<{ id: string; title: string; lead?: string; action?: React.ReactNode }> = ({ id, title, lead, action }) => (
+export const SectionHead: React.FC<{ id: string; title: string; lead?: string; action?: React.ReactNode; level?: 1 | 2 }> = ({
+    id,
+    title,
+    lead,
+    action,
+    level = 2,
+}) => {
+    const H = level === 1 ? "h1" : "h2";
+    return (
     <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="max-w-prose">
-            <h2 id={id} className="text-h2 text-ink">
+            <H id={id} className={cn(level === 1 ? "text-h1" : "text-h2", "text-ink")}>
                 {title}
-            </h2>
+            </H>
             {lead && <p className="mt-3 text-body text-muted">{lead}</p>}
         </div>
         {action}
     </div>
-);
+    );
+};
 
 /** The full logo on a white disc, so its black ring text stays readable in dark mode too. */
 export const LogoMark: React.FC<{ size?: number; className?: string }> = ({ size = 48, className }) => (

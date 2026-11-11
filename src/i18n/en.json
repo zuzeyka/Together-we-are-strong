@@ -1,6 +1,6 @@
 {
     "header": {
-        "title": "Together We Are Strong",
+        "title": "Together We Made Power",
         "nav": {
             "team": "Team",
             "projects": "Projects",
@@ -10,7 +10,7 @@
         }
     },
     "home": {
-        "title": "Together, We Made Power",
+        "title": "Together We Made Power",
         "description": "We are a team of caring individuals united by a common goal – supporting the Ukrainian people, especially during this difficult time for our country. Our mission is to unite resources and efforts of people from all over the world to effectively counter the challenges of war in various areas. While our defenders are fighting for their homeland on the front lines, we are building a strong and reliable rear for our people, providing the necessary assistance and support.",
         "cta": "Join the Mission"
     },
@@ -48,7 +48,7 @@
                 "description": "Manages volunteer activities, recruits new members, and ensures everyone is engaged in meaningful work."
             },
             "volodimyr": {
-                "name": "Volodimyr",
+                "name": "Volodymyr",
                 "position": "Logistics Manager",
                 "description": "Organizes transportation and distribution of aid, ensuring supplies reach those in need efficiently."
             },
@@ -68,14 +68,14 @@
                 "description": "Builds relationships with local communities, ensuring their needs are met and fostering strong support networks."
             },
             "olha": {
-                "name": "Olga",
-                "position": "Coordinator of cooperation with communities",
-                "description": "Responsible for the development of partnerships with communities and initiating joint projects to support their needs."
+                "name": "Olha",
+                "position": "Community Partnerships Coordinator",
+                "description": "Develops partnerships with communities and initiates joint projects that meet their needs."
             },
             "ivan": {
                 "name": "Ivan",
-                "position": "Public Research Specialist",
-                "description": "Provides communication with the public, supports the positive image of the organization through various media."
+                "position": "Public Relations Specialist",
+                "description": "Handles communication with the public and supports the organization’s positive image across various media."
             }
         }
     },
@@ -85,9 +85,8 @@
         "button-more": "Learn More",
         "event_cta": "Follow our journey and see the impact of your support on Instagram @twmp.foundation!",
         "Grooming": {
-            "alt": "Grooming Campaign Image",
+            "alt": "The fund's volunteers in a group photo next to a TWMP banner",
             "title": "Grooming",
-            "image-count": "99",
             "description": "Supporting vulnerable communities with essential grooming supplies.",
             "post-text": {
                 "event_title": "Empowering Communities with Grooming Supplies",
@@ -106,9 +105,8 @@
             }
         },
         "MaternityAid": {
-            "alt": "Maternity Aid Campaign Image",
+            "alt": "Volunteers unload a van and hand a baby stroller to mothers outside a building",
             "title": "Aid for Mothers and Children in the Kyiv Region",
-            "image-count": "11",
             "description": "Support for pregnant women and children in the Kyiv region.",
             "post-text": {
                 "event_title": "Humanitarian Aid for Mothers and Children",
@@ -127,9 +125,8 @@
             }
         },
         "RelocationAid": {
-            "alt": "Relocation Aid Campaign Image",
-            "title": "Help with new clothes/shoes. Aid for Displaced Persons",
-            "image-count": "12",
+            "alt": "Volunteers hand out boxes of clothes and shoes to displaced women and children",
+            "title": "New Clothes and Shoes: Aid for Displaced Persons",
             "description": "Providing humanitarian assistance to ≈250 displaced persons, including ≈50 children, who lost their homes.",
             "post-text": {
                 "event_title": "Supporting Displaced Persons in Temporary Housing",
@@ -153,9 +150,8 @@
             }
         },
         "LargeRelocationAid": {
-            "alt": "Large Relocation Aid Campaign Image",
-            "title": "Distribution of products in Skvira. Aid for Displaced Persons",
-            "image-count": "10",
+            "alt": "Displaced families, many with small children, queue for food at a distribution point in Skvyra",
+            "title": "Food Distribution in Skvyra: Aid for Displaced Persons",
             "description": "Providing humanitarian assistance to ≈1000 displaced persons, including ≈200 children, who lost their homes.",
             "post-text": {
                 "event_title": "Supporting Displaced Persons in Temporary Housing",
@@ -179,9 +175,8 @@
             }
         },
         "GastroFamilyAid": {
-            "alt": "Gastro Family Aid Campaign Image",
+            "alt": "Takeaway boxes of hot meals with chicken and vegetables lined up on a counter",
             "title": "Support from Gastro Family",
-            "image-count": "9",
             "description": "The incredible Gastro Family restaurant network has been aiding hospitals, the military, and civilians since the early days of the war.",
             "post-text": {
                 "event_title": "Delicious Meals Made with Love by Gastro Family",
@@ -198,26 +193,25 @@
                     "Brought joy to children through delicious meals and desserts.",
                     "Strengthened community spirit through care and collaboration."
                 ],
-                "event_thanks": "We extend heartfelt thanks to @dmytro_borisov @lena_borysova and their professional team for their humanity, support, and trust. Together, we are strong!"
+                "event_thanks": "We extend heartfelt thanks to @dmytro_borisov and @lena_borysova and their professional team for their humanity, support, and trust. Together, we are strong!"
             }
         },
         "MedicalAid": {
-            "alt": "Medical Equipment Aid Campaign Image",
+            "alt": "A donation box with the fund's logo next to a Keren for Our Child banner asking to help children with cancer",
             "title": "Aid for Medical Equipment",
-            "image-count": "10",
-            "description": "Fundraising for the purchase of an Evroklav23VS+ sterilizer for children with oncology.",
+            "description": "Fundraising for the purchase of an Evroklav23VS+ sterilizer for children with cancer.",
             "post-text": {
                 "event_title": "United Support for Medical Assistance",
-                "event_description": "Thanks to joint efforts, we raised 19,000 UAH, which were transferred to our partner, the Keren for Our Child Foundation, for purchasing an Evroklav23VS+ sterilizer worth 130,000 UAH. This is an important step in supporting children with oncology.",
+                "event_description": "Thanks to joint efforts, we raised 19,000 UAH, which was transferred to our partner, the Keren for Our Child Foundation, for purchasing an Evroklav23VS+ sterilizer worth 130,000 UAH. This is an important step in supporting children with cancer.",
                 "event_highlights_title": "Highlights of Our Efforts",
                 "event_highlights": [
                     "Raised 19,000 UAH for medical equipment.",
-                    "Collaborated with @endorphin__music and raised 50% of ticket sales.",
+                    "Partnered with @endorphin__music, who donated 50% of ticket sales.",
                     "Received 20% of profits from @estetikakyiv for supporting children."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
-                    "Supported the purchase of equipment for treating children with oncology.",
+                    "Supported the purchase of equipment for treating children with cancer.",
                     "Engaged partners in charitable activities.",
                     "United the community around a common goal."
                 ],
@@ -225,9 +219,8 @@
             }
         },
         "MilitarySupport": {
-            "alt": "Military Support Campaign Image",
+            "alt": "Two soldiers in new winter jackets hold the fund's logo next to bags of supplies",
             "title": "Support for the Military",
-            "image-count": "6",
             "description": "Financial support for the military through partners and friends.",
             "post-text": {
                 "event_title": "111,600 UAH for Military Support",
@@ -248,10 +241,8 @@
             }
         },
         "AnimalShelterSupport": {
-            "alt": "Animal Shelter Support Campaign Image",
+            "alt": "Pet carriers and boxes of food delivered to a room at an animal shelter",
             "title": "Support for Animal Shelters",
-            "image-count": "6",
-            "video-count": "1",
             "description": "Providing shelters with food, canned goods, and essential resources for cats and dogs.",
             "post-text": {
                 "event_title": "Supporting Animal Shelters",
@@ -272,9 +263,8 @@
             }
         },
         "SupportForChildren": {
-            "alt": "Support for Children Campaign Image",
+            "alt": "Open boxes packed with baby food, diapers and hygiene items for children",
             "title": "Support for Children with Disabilities and Orphans",
-            "image-count": "7",
             "description": "Providing assistance to children with disabilities and orphans under 18.",
             "post-text": {
                 "event_title": "Support for Children with Disabilities and Orphans",
@@ -295,9 +285,8 @@
             }
         },
         "GiftCampaign": {
-            "alt": "Children's Gift Campaign Image",
+            "alt": "Rows of paper gift bags with toys and sweets ready for children",
             "title": "Gifts for Children",
-            "image-count": "13",
             "description": "Gift packages for children provided by our partners.",
             "post-text": {
                 "event_title": "Heartfelt Gifts for Children",
@@ -307,7 +296,7 @@
                     "Ball by @lux_groups_ua.",
                     "Badminton set by @lux_groups_ua.",
                     "Catchball by @lux_groups_ua.",
-                    "Mortal Combat toy by @kiwi_party_.",
+                    "Mortal Kombat toy by @kiwi_party_.",
                     "Waffles by @kyivbkk.",
                     "Kinder chocolate by @auchanukraine.",
                     "Sweet gingerbread by @lux_groups_ua.",
@@ -315,7 +304,7 @@
                     "Nike banana bag by @charityfoundation_ua.",
                     "Markers by @lux_groups_ua.",
                     "Cookies by @lux_groups_ua.",
-                    "Sticker packet by @lux_groups_ua."
+                    "Sticker pack by @lux_groups_ua."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
@@ -327,34 +316,31 @@
             }
         },
         "InternatSupport": {
-            "alt": "Internat Support Campaign Image",
-            "title": "Support for a Children's Internat",
-            "image-count": "5",
-            "video-count": "5",
+            "alt": "Children and staff at a residential home open gift boxes brought by a volunteer",
+            "title": "Support for a Children's Residential Home",
             "description": "Assistance for children with special needs, orphans, and those affected by war.",
             "post-text": {
-                "event_title": "Support for a Children's Internat in Difficult Times",
-                "event_description": "In January, our team visited a children's internat housing children with special needs, orphans, and those affected by war. We delivered essential aid and brought joy to the children.",
+                "event_title": "Support for a Children's Residential Home in Difficult Times",
+                "event_description": "In January, our team visited a children's residential home that houses children with special needs, orphans, and those affected by war. We delivered essential aid and brought joy to the children.",
                 "event_highlights_title": "Highlights of Assistance",
                 "event_highlights": [
                     "Provided a generator for heat and electricity.",
-                    "Delivered warm children's costumes and footwear.",
+                    "Delivered warm clothing sets and footwear for the children.",
                     "Donated blankets for comfort.",
                     "Prepared and distributed treats for the children."
                 ],
                 "event_effect_title": "The Impact",
                 "event_effects": [
-                    "Improved living conditions in the children's internat.",
+                    "Improved living conditions in the children's residential home.",
                     "Brought joy and support to children during difficult times.",
-                    "Raised awareness about the needs of internats in Ukraine."
+                    "Raised awareness about the needs of children's residential homes in Ukraine."
                 ],
                 "event_thanks": "Heartfelt thanks to our sponsor @stelp_supporter_on_site for their assistance and trust in our foundation. Together, we are strong! 💙💛"
             }
         },
         "CharityBrunch": {
-            "alt": "Charity Brunch Image",
+            "alt": "Guests of the charity brunch pose together in a decorated restaurant hall",
             "title": "Charity Brunch",
-            "image-count": "4",
             "description": "Funds raised to support families with infants who lost their homes.",
             "post-text": {
                 "event_title": "Charity Brunch to Support Families",
@@ -375,9 +361,8 @@
             }
         },
         "HospitalSupport": {
-            "alt": "Hospital Support Campaign Image",
+            "alt": "Hospital staff holding the fund's logo stand beside boxes of delivered supplies",
             "title": "Hospital Support",
-            "image-count": "11",
             "description": "Supporting over 15 medical institutions across Ukraine.",
             "post-text": {
                 "event_title": "Supporting Medical Institutions in Ukraine",
@@ -394,15 +379,13 @@
                     "Ensured stable operation of medical facilities.",
                     "Raised awareness of medical support needs during the war."
                 ],
-                "event_thanks": "Heartfelt thanks to @stelp_supporter_on_site for aiding in supporting hospitals. Together, we are strong! 💙💛"
+                "event_thanks": "Heartfelt thanks to @stelp_supporter_on_site for helping us support hospitals. Together, we are strong! 💙💛"
             }
         },
         "AnimalSupport": {
-            "alt": "Animal Support Image",
+            "alt": "A volunteer holds a puppy at the Sirius shelter",
             "title": "Animal Support",
-            "image-count": "5",
-            "video-count": "7",
-            "description": "Supporting Sirius shelter, home to over 3000 dogs.",
+            "description": "Supporting the Sirius shelter, home to over 3000 dogs.",
             "post-text": {
                 "event_title": "Supporting Sirius Animal Shelter",
                 "event_description": "Our team continues to support animals. This time, we delivered 700 kg of meat to the Sirius shelter, which houses over 3000 stray dogs.",
@@ -422,10 +405,8 @@
             }
         },
         "MutualAidProject": {
-            "alt": "Mutual Aid Project Image",
+            "alt": "Fund volunteers and soldiers of the special unit in a group photo outdoors",
             "title": "Mutual Aid Project",
-            "image-count": "9",
-            "video-count": "3",
             "description": "Supporting the Armed Forces special unit and self-defense training for volunteers.",
             "post-text": {
                 "event_title": "Mutual Aid Project with the Armed Forces",
@@ -446,22 +427,21 @@
             }
         },
         "ALLSTARSIT": {
-            "alt": "ALLSTARSIT Campaign Image",
+            "alt": "Children and volunteers laugh and dance at the “Gift a Holiday to Children” party",
             "title": "ALLSTARSIT",
-            "image-count": "19",
             "description": "Partnering with ALLSTARSIT to expand humanitarian aid across Ukraine.",
             "post-text": {
                 "event_title": "ALLSTARSIT Collaboration for Ukraine",
-                "event_description": "This partnership enabled us to extend our reach and help thousands more in need. Together, we organized a charity event, 'Gift a Holiday to Children,' to support orphans, displaced children, and those who lost parents during the war.",
+                "event_description": "This partnership enabled us to extend our reach and help thousands more in need. Together, we organized a charity event, “Gift a Holiday to Children”, to support orphans, displaced children, and those who lost parents during the war.",
                 "event_highlights_title": "Highlights of Our Work",
                 "event_highlights": [
-                    "Hosted a master class 'Plaster Figurine Painting.'",
-                    "Conducted a 'String Art' workshop.",
-                    "Featured performances by Ukrainian boy band D-side Band and Amador Lopez, a singer and choreographer from 'Rumbero’s.'",
-                    "Organized a puppet show 'Paw Patrol.'",
+                    "Hosted a “Plaster Figurine Painting” master class.",
+                    "Ran a “String Art” workshop.",
+                    "Featured performances by Ukrainian boy band D-side Band and Amador Lopez, a singer and choreographer from Rumbero’s.",
+                    "Organized a “Paw Patrol” puppet show.",
                     "Set up beauty bars, giant designer coloring books, and fun photobooths.",
                     "Provided children with gifts such as plush toys, pillows, blankets, and gingerbread cookies.",
-                    "Offered sweet treats like cotton candy, hot dogs, juices, and doughnuts from GastroFamily Market.",
+                    "Offered treats like cotton candy, hot dogs, juices, and doughnuts from GastroFamily Market.",
                     "Ensured access to free sparkling and still water courtesy of Morshynska."
                 ],
                 "event_effect_title": "The Impact",
@@ -474,17 +454,15 @@
             }
         },
         "STELP": {
-            "alt": "STELP Campaign Image",
+            "alt": "Children play with colorful soft cubes at a holiday party next to a Christmas tree",
             "title": "STELP Event",
-            "image-count": "51",
-            "video-count": "1",
             "description": "Assistance for IDPs, hospitals, and military units, thanks to STELP's funding.",
             "post-text": {
                 "event_title": "Together We Made Power: Helping People in Ukraine",
                 "event_description": "Since the first days of the full-scale invasion of Ukraine, we have tirelessly worked to provide aid to those most affected by the crisis. Thanks to STELP's funding, we have made incredible progress.",
                 "event_highlights_title": "Highlights of Our Work",
                 "event_highlights": [
-                    "Distributed 10,000€ worth of winter clothing to 480 children, including those who are disabled or orphaned.",
+                    "Distributed €10,000 worth of winter clothing to 480 children, including those who are disabled or orphaned.",
                     "Delivered 500 food boxes, each containing 17 kilograms of essential supplies.",
                     "Prepared 127 baby boxes with necessary items for children aged 0–5 years.",
                     "Organized a celebration for 80 children who lost families or are living with disabilities, providing warm blankets, toys, and treats.",
@@ -500,12 +478,11 @@
             }
         },
         "WCKitchen": {
-            "alt": "WCKitchen Campaign Image",
+            "alt": "Humanitarian aid banners of GRP Help and the fund, with World Central Kitchen logos",
             "title": "Partnership with WCKitchen",
-            "image-count": "8",
             "description": "Providing aid to internally displaced persons through food packages from our partners at WCKitchen.",
             "post-text": {
-                "event_title": "Together We Are Strong: Helping IDPs with WCKitchen",
+                "event_title": "Together We Made Power: Helping IDPs with WCKitchen",
                 "event_description": "Volunteer work is hard labor, driven by the initiative of volunteers, a shared spirit of victory, and the sincere gratitude of the people we help. Thanks to our partnership with WCKitchen, we established a food package distribution point for IDPs.",
                 "event_highlights_title": "Highlights of Our Work",
                 "event_highlights": [
@@ -570,7 +547,7 @@
     },
     "helpSection": {
         "title": "Need help?",
-        "description": "Leave your application by filling out the form",
+        "description": "Fill out the form to ask for help.",
         "helpButton": "I need help",
         "volunteerButton": "Become a volunteer",
         "partnersTitle": "Partners",
@@ -594,8 +571,8 @@
         ]
     },
     "donate": {
-        "donateTitle": "Donate Details",
-        "name": "Charity Fund: Together We Made Power ",
+        "donateTitle": "Donation Details",
+        "name": "Charity fund: Together We Made Power",
         "edrpou": "EDRPOU/RNOKPP: 44749163",
         "detailsButton": "Bank Details",
         "uah": {
@@ -612,7 +589,7 @@
         }
     },
     "footer": {
-        "copyright": "© 2024 Together We Are Strong. All Rights Reserved.",
+        "copyright": "© 2024 Together We Made Power. All rights reserved.",
         "contacts": "contact us at info@charity.org"
     },
     "ui": {
@@ -629,11 +606,11 @@
         },
         "hero": {
             "eyebrow": "Ukrainian charity fund · since 2022",
-            "title": "Together we made power",
+            "title": "Together We Made Power",
             "lead": "We help displaced families, mothers with babies, children, hospitals, defenders and animals: quickly, openly and together with our partners.",
             "donate": "Donate",
             "projects": "See our projects",
-            "photo": "Volunteers handing out aid in Skvira"
+            "photo": "Volunteers handing out aid in Skvyra"
         },
         "areas": {
             "title": "Who we help",
@@ -714,7 +691,9 @@
             "support": "Support projects like this one",
             "supportText": "Every project starts with donations. Thank you for helping us do the next one.",
             "instagram": "More on Instagram",
-            "notFound": "This project doesn't exist."
+            "notFound": "This project doesn't exist.",
+            "photoAlt": "Photo {{n}} of {{total}} from: {{title}}",
+            "videoAlt": "Video {{n}} of {{total}} from: {{title}}"
         },
         "donate": {
             "title": "Support the fund",
@@ -745,7 +724,33 @@
         },
         "lang": "Language",
         "meta": {
-            "description": "Together We Made Power is a Ukrainian charity fund helping displaced families, children, hospitals, defenders and animals."
+            "siteName": "Together We Made Power",
+            "tagline": "Ukrainian charity fund",
+            "description": "Together We Made Power is a Ukrainian charity fund helping displaced families, mothers and babies, children, hospitals, defenders and animals since 2022.",
+            "imageAlt": "Together We Made Power: the fund’s round logo, a small yellow hand holding the finger of a large blue hand.",
+            "pages": {
+                "campaigns": {
+                    "description": "Every project we have run since 2022: aid for displaced families, mothers and babies, children, hospitals, defenders and animal shelters, with photos and partners."
+                },
+                "campaign": {
+                    "description": "A project of Together We Made Power, a Ukrainian charity fund."
+                },
+                "donate": {
+                    "description": "Donate to Together We Made Power: a bank transfer in hryvnias (UAH) or euros (EUR), or PayPal. All the details on one page, each with a copy button."
+                },
+                "thanks": {
+                    "description": "Thank you for supporting Together We Made Power."
+                },
+                "about": {
+                    "description": "Who we are, how we work and the team behind Together We Made Power, a Ukrainian charity fund working since 2022 (EDRPOU 44749163)."
+                },
+                "help": {
+                    "description": "Need help? Displaced families, mothers with babies, children, hospitals and military units can ask Together We Made Power for aid. Tell us who you are, where you are and what you need."
+                },
+                "volunteer": {
+                    "description": "Volunteer with Together We Made Power: driving, packing, translating and more. Tell us how you would like to help."
+                }
+            }
         }
     }
 }

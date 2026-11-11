@@ -1,3 +1,77 @@
 {
-    "ui": {}
+    "ui": {
+        "donatePage": {
+            "amountTitle": "Choose an amount",
+            "amountNote": "Any amount helps. These are examples of what a gift adds to, not exact prices.",
+            "presets": {
+                "food": "Helps fill a 17 kg food box for a displaced family",
+                "baby": "Contributes to a baby box for a child aged 0–5",
+                "medicine": "Helps buy medicines for a hospital",
+                "shelter": "Helps feed an animal shelter for a week"
+            },
+            "transfer": "Transfer {{amount}} to the details below",
+            "amountUAH": "Amount, UAH",
+            "amountEUR": "Amount, EUR",
+            "paypalAmount": "Suggested: {{amount}}",
+            "done": "Done? Tell us you transferred",
+            "qrAlt": "QR code for a bank transfer to the fund",
+            "qrCaption": "Scan with your banking app",
+            "jarTitle": "Monobank jar",
+            "jarText": "Top up the fund's jar with any Ukrainian card.",
+            "jar": "Open the jar",
+            "faqTitle": "Questions about giving",
+            "faq": {
+                "safe": {
+                    "q": "Is it safe to donate?",
+                    "a": "Yes. Your transfer goes straight from your bank to the details published by the fund, with no middlemen. The fund is officially registered in Ukraine, EDRPOU 44749163."
+                },
+                "receipt": {
+                    "q": "Can I get a receipt?",
+                    "a": "Write to us on Instagram with the date and amount of your transfer. We'll confirm we received it and tell you what it went to."
+                },
+                "companies": {
+                    "q": "Can companies donate?",
+                    "a": "Yes. Companies can transfer to the same details or become a partner of a project. Write to us on Instagram and we'll agree on the details."
+                },
+                "where": {
+                    "q": "Where does the money go?",
+                    "a": "To the fund's projects: food and baby boxes for displaced families, medicines for hospitals, help for defenders and animal shelters. Every project is on the site, with photos."
+                }
+            },
+            "instagram": "Write on Instagram",
+            "projects": "See our projects"
+        },
+        "thanks": {
+            "title": "Thank you for your help",
+            "lead": "Your transfer turns into food, medicines and care for people who need them right now. We're grateful you're with us.",
+            "nextTitle": "What happens next",
+            "steps": {
+                "receive": {
+                    "title": "We receive it",
+                    "text": "The transfer reaches the fund's account, usually within a few banking days."
+                },
+                "spend": {
+                    "title": "It goes to a project",
+                    "text": "We add it to a current project: food and baby boxes, medicines, help for defenders or animals."
+                },
+                "report": {
+                    "title": "We show the result",
+                    "text": "We post photos from every delivery on Instagram and on the site."
+                }
+            },
+            "shareTitle": "Tell your friends",
+            "shareLead": "One message can bring the next donation. Share the fund's site with people who care.",
+            "shareText": "I support Together We Made Power, a Ukrainian charity fund. Join me:",
+            "copyLink": "Copy link",
+            "copied": "Link copied",
+            "copyFailed": "Couldn't copy automatically. Here is the link:",
+            "moreTitle": "See what we do",
+            "moreLead": "Browse our projects to see where donations go.",
+            "projects": "See our projects",
+            "instagram": "Follow on Instagram"
+        },
+        "mobileBar": {
+            "donate": "Donate"
+        }
+    }
 }

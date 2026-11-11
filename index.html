@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/png" href="/media/logo-64.png" />
-        <link rel="apple-touch-icon" href="/media/logo-192.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/icons/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#0B1622" media="(prefers-color-scheme: dark)" />
         <!-- Theme before first paint (no flash): the visitor's choice, else the phone setting. -->
@@ -16,8 +18,24 @@
             } catch (e) {}
         </script>
         <link rel="preload" href="/fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin />
-        <title>Together We Made Power — charity fund</title>
-        <meta name="description" content="Together We Made Power is a Ukrainian charity fund helping displaced families, children, hospitals, defenders and animals." />
+        <!-- Defaults for crawlers that don't run JavaScript (social previews). usePageMeta (src/site/ui.tsx)
+             replaces them per page and adds canonical and hreflang links. -->
+        <title>Together We Made Power · Ukrainian charity fund</title>
+        <meta name="description" content="Together We Made Power («Разом ми сила») is a Ukrainian charity fund helping displaced families, mothers and babies, children, hospitals, defenders and animals since 2022." />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Together We Made Power" />
+        <meta property="og:title" content="Together We Made Power · Ukrainian charity fund" />
+        <meta property="og:description" content="Together We Made Power («Разом ми сила») is a Ukrainian charity fund helping displaced families, mothers and babies, children, hospitals, defenders and animals since 2022." />
+        <meta property="og:image" content="https://www.twmp.com.ua/og/default.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Together We Made Power: the fund's round logo, a small yellow hand holding the finger of a large blue hand." />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="uk_UA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Together We Made Power · Ukrainian charity fund" />
+        <meta name="twitter:description" content="Together We Made Power («Разом ми сила») is a Ukrainian charity fund helping displaced families, mothers and babies, children, hospitals, defenders and animals since 2022." />
+        <meta name="twitter:image" content="https://www.twmp.com.ua/og/default.png" />
     </head>
     <body>
         <div id="root"></div>

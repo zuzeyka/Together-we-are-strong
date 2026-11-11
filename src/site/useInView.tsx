@@ -20,7 +20,7 @@ const useInView = (threshold = 0.5) => {
                 }
             },
             // A low threshold on phones: tall sections may never be 50% visible on a small screen.
-            { threshold: Math.min(threshold, 0.15) }
+            { threshold: Math.min(threshold, 0.15), rootMargin: "0px 0px -40px 0px" }
         );
         observer.observe(node);
         return () => observer.disconnect();

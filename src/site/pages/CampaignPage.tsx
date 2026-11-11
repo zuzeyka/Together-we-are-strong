@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, ChevronLeft, ChevronRight, Instagram, Play, X } from "lucide-react";
-import Picture from "@/components/Picture";
+import Picture, { mediaBase } from "@/components/Picture";
 import manifest from "@/media-manifest.json";
 import { CAMPAIGNS, INSTAGRAM } from "@/content/campaigns";
 import { ExternalLink, L, Section, linkButton, usePageMeta } from "@/site/ui";
@@ -11,6 +11,15 @@ import NotFound from "./NotFound";
 type Gallery = { images: string[]; videos: string[] };
 const galleries = (manifest as { galleries: Record<string, Gallery> }).galleries;
 const posters = (manifest as { videos: Record<string, { poster: string }> }).videos;
+const images = (manifest as { images: Record<string, { w: number; h: number; widths: number[] }> }).images;
+
+/** The cover's largest WebP (1600 wide where the original allows) as the share image. */
+const shareImage = (cover: string) => {
+    const info = images[cover];
+    if (!info) return {};
+    const w = Math.max(...info.widths);
+    return { image: `${mediaBase(cover)}-${w}.webp`, imageWidth: w, imageHeight: Math.round((info.h * w) / info.w) };
+};
 const isVideo = (p: string) => p.endsWith(".mp4") || p.endsWith(".mov");
 
 type Post = {
@@ -30,7 +39,11 @@ const CampaignPage: React.FC = () => {
     const { t } = useTranslation();
     const campaign = CAMPAIGNS.find((c) => c.id === id);
     const post = t(`projects.${id}.post-text`, { returnObjects: true }) as Post;
-    usePageMeta(campaign ? t(`projects.${id}.title`) : undefined);
+    const title = t(`projects.${id}.title`);
+    usePageMeta(
+        campaign ? title : t("ui.notFound.title"),
+        campaign ? { description: t(`projects.${id}.description`), ...shareImage(campaign.cover), imageAlt: t(`projects.${id}.alt`) } : { noindex: true }
+    );
     const g = galleries[id ?? ""] ?? { images: [], videos: [] };
     const media = [...g.images, ...g.videos];
     const [showAll, setShowAll] = useState(false);
@@ -38,6 +51,11 @@ const CampaignPage: React.FC = () => {
 
     if (!campaign || typeof post !== "object") return <NotFound />;
     const shown = showAll ? media : media.slice(0, PAGE);
+    const nImages = g.images.length;
+    const mediaAlt = (i: number) =>
+        i < nImages
+            ? t("ui.campaign.photoAlt", { n: i + 1, total: nImages, title: post.event_title })
+            : t("ui.campaign.videoAlt", { n: i - nImages + 1, total: g.videos.length, title: post.event_title });
 
     return (
         <>
@@ -48,7 +66,7 @@ const CampaignPage: React.FC = () => {
                 <h1 className="mt-4 text-h1 text-ink">{post.event_title}</h1>
                 <p className="mt-4 text-body text-muted">{post.event_description}</p>
                 <div className="mt-8 overflow-hidden rounded-card shadow-card">
-                    <Picture src={campaign.cover} alt={post.event_title} sizes="(min-width: 768px) 720px, 100vw" priority className="aspect-[3/2] w-full object-cover" />
+                    <Picture src={campaign.cover} alt={t(`projects.${id}.alt`, { defaultValue: post.event_title })} sizes="(min-width: 768px) 720px, 100vw" priority className="aspect-[3/2] w-full object-cover" />
                 </div>
                 {[
                     [post.event_highlights_title, post.event_highlights],
@@ -80,13 +98,13 @@ const CampaignPage: React.FC = () => {
                                 <button type="button" onClick={() => setOpen(i)} className="group relative block aspect-square w-full overflow-hidden rounded-control bg-bg">
                                     {isVideo(item) ? (
                                         <>
-                                            <img src={posters[item]?.poster} alt={`${t("ui.campaign.video")} ${i + 1}`} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+                                            <img src={posters[item]?.poster} alt={mediaAlt(i)} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                                             <span className="on-photo scrim absolute bottom-2 left-2 inline-flex items-center gap-1 rounded-full px-3 py-1 text-caption">
                                                 <Play className="size-4" aria-hidden /> {t("ui.campaign.video")}
                                             </span>
                                         </>
                                     ) : (
-                                        <Picture src={item} alt={`${post.event_title}, ${i + 1}`} sizes="(min-width: 1024px) 380px, (min-width: 640px) 33vw, 50vw" className="h-full w-full object-cover transition-opacity group-hover:opacity-90" />
+                                        <Picture src={item} alt={mediaAlt(i)} sizes="(min-width: 1024px) 380px, (min-width: 640px) 33vw, 50vw" className="h-full w-full object-cover transition-opacity group-hover:opacity-90" />
                                     )}
                                 </button>
                             </li>
@@ -115,13 +133,20 @@ const CampaignPage: React.FC = () => {
                 </div>
             </Section>
 
-            {open !== null && <Viewer media={media} index={open} onIndex={setOpen} onClose={() => setOpen(null)} title={post.event_title} />}
+            {open !== null && <Viewer media={media} index={open} onIndex={setOpen} onClose={() => setOpen(null)} title={post.event_title} alt={mediaAlt} />}
         </>
     );
 };
 
 /** Full-screen photo/video viewer: arrows or swipe-free buttons, Esc closes, focus stays inside. */
-const Viewer: React.FC<{ media: string[]; index: number; onIndex: (i: number) => void; onClose: () => void; title: string }> = ({ media, index, onIndex, onClose, title }) => {
+const Viewer: React.FC<{ media: string[]; index: number; onIndex: (i: number) => void; onClose: () => void; title: string; alt: (i: number) => string }> = ({
+    media,
+    index,
+    onIndex,
+    onClose,
+    title,
+    alt,
+}) => {
     const { t } = useTranslation();
     const go = useCallback((d: number) => onIndex((index + d + media.length) % media.length), [index, media.length, onIndex]);
     useEffect(() => {
@@ -151,7 +176,7 @@ const Viewer: React.FC<{ media: string[]; index: number; onIndex: (i: number) =>
                 {isVideo(item) ? (
                     <video key={item} src={`/media${item}`} poster={posters[item]?.poster} controls playsInline preload="metadata" className="max-h-full max-w-full rounded-control" />
                 ) : (
-                    <Picture src={item} alt={`${title}, ${index + 1}`} sizes="100vw" priority className="max-h-[80vh] w-auto max-w-full rounded-control object-contain" />
+                    <Picture src={item} alt={alt(index)} sizes="100vw" priority className="max-h-[80vh] w-auto max-w-full rounded-control object-contain" />
                 )}
                 {media.length > 1 && (
                     <>

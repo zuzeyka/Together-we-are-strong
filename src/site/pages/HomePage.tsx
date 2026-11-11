@@ -1,9 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Baby, Dog, HandHeart, Home as HomeIcon, Stethoscope, Instagram, Shield, Users } from "lucide-react";
+import { ArrowRight, Baby, Dog, HandHeart, Home as HomeIcon, Stethoscope, Shield, Users } from "lucide-react";
 import Picture from "@/components/Picture";
 import CampaignCard from "@/site/CampaignCard";
-import { CAMPAIGNS, HERO_IMAGE, INSTAGRAM, PARTNERS, PAYPAL } from "@/content/campaigns";
+import { CAMPAIGNS, HERO_IMAGE, PARTNERS, PAYPAL } from "@/content/campaigns";
+import { TEAM } from "@/content/team";
 import { ExternalLink, L, Section, SectionHead, linkButton, usePageMeta } from "@/site/ui";
 import { cn } from "@/shared/lib/utils";
 
@@ -14,12 +15,6 @@ const AREAS = [
     ["hospitals", Stethoscope],
     ["defenders", Shield],
     ["animals", Dog],
-] as const;
-
-const TEAM = [
-    ["karina", "/IMG_3276.jpg"], ["dmitry", "/IMG_3384.jpg"], ["artur", "/DSC_4457.jpg"], ["svitlana", "/DSC_4427.jpg"],
-    ["alexandra", "/5Z7A1014.jpg"], ["lubov", "/IMG_5933.jpg"], ["volodimyr", "/DSC_4400.jpg"], ["danil", "/DSC_2244.jpg"],
-    ["andrey", "/DSC_4463.jpg"], ["alevtyna", "/IMG_5901.jpg"], ["olha", "/IMG_5897.jpg"], ["ivan", "/IMG_5899.jpg"],
 ] as const;
 
 const HomePage: React.FC = () => {
@@ -126,9 +121,14 @@ const HomePage: React.FC = () => {
             </Section>
 
             <Section labelledBy="team">
-                <SectionHead id="team" title={t("ui.team.title")} lead={t("ui.team.lead")} />
+                <SectionHead
+                    id="team"
+                    title={t("ui.team.title")}
+                    lead={t("ui.team.lead")}
+                    action={<L to="/about#team" className={linkButton.text}>{t("ui.about.teamLink")} <ArrowRight className="size-4" aria-hidden /></L>}
+                />
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
-                    {TEAM.map(([key, photo]) => (
+                    {TEAM.slice(0, 8).map(({ key, photo }) => (
                         <li key={key}>
                             <div className="aspect-square overflow-hidden rounded-card bg-sunk">
                                 <Picture src={photo} alt={t(`team.members.${key}.name`)} sizes="(min-width: 1024px) 280px, (min-width: 640px) 33vw, 50vw" className="h-full w-full object-cover object-top" />
@@ -144,18 +144,18 @@ const HomePage: React.FC = () => {
                 <SectionHead id="help-title" title={t("ui.help.title")} />
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     {[
-                        [Users, "need"],
-                        [HandHeart, "vol"],
-                    ].map(([Icon, key]) => {
+                        [Users, "need", "/help", "ui.helpPage.homeCta"],
+                        [HandHeart, "vol", "/volunteer", "ui.volunteerPage.homeCta"],
+                    ].map(([Icon, key, to, cta]) => {
                         const I = Icon as typeof Users;
                         return (
                             <div key={key as string} className="flex flex-col gap-3 rounded-card border border-line bg-surface p-6 shadow-card">
                                 <I className="size-8 text-primary" aria-hidden />
                                 <h3 className="text-h3 text-ink">{t(`ui.help.${key}Title`)}</h3>
                                 <p className="text-body text-muted">{t(`ui.help.${key}Text`)}</p>
-                                <ExternalLink href={INSTAGRAM} className={cn(linkButton.primary, "mt-2 self-start")}>
-                                    <Instagram className="size-5" aria-hidden /> {t("ui.help.cta")}
-                                </ExternalLink>
+                                <L to={to as string} className={cn(linkButton.primary, "mt-2 self-start")}>
+                                    {t(cta as string)} <ArrowRight className="size-5" aria-hidden />
+                                </L>
                             </div>
                         );
                     })}

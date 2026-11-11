@@ -1,0 +1,6 @@
+# Together We Made Power (twmp.com.ua)
+# /:lang/donate/thanks is kept out of search with a noindex tag, not here (a blocked page can't show its noindex).
+User-agent: *
+Allow: /
+
+Sitemap: https://www.twmp.com.ua/sitemap.xml
