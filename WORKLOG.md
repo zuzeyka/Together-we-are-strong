@@ -32,3 +32,15 @@
 - **Cause:** a Layout effect did `return window.scrollTo(0, 0)`. Newer Chrome returns a Promise from scrollTo, and React called it as the cleanup on the next route change and crashed.
 - **Fix:** the effect now uses a plain statement.
 - **Not caught by `npm run qa`,** which loads each page fresh. Added `npm run qa:nav` (`scripts/qa/nav.mjs`), which clicks through pages and both language switches.
+
+## 2026-11-11: merged and live
+- On the user's OK: fast-forwarded main to design/phase-2 (which includes perf/phase-0 and design/phase-1) and pushed. Vercel deployed it to twmp.com.ua.
+- **Live checks:**
+  - Routes, old URLs, media and the sitemap return 200.
+  - Per-page meta is served (e.g. /uk/campaigns/WCKitchen).
+  - `npm run qa:nav` against https://www.twmp.com.ua passes with no console errors.
+- **Waiting on the founder:**
+  - `MONOBANK_JAR` / `PAYMENT_QR` (`src/content/campaigns.ts`)
+  - `HELP_FORM_URL` / `VOLUNTEER_FORM_URL` (Help and Volunteer pages)
+  - contact email, reports, project goals, stories
+  - Ukrainian spellings of team names

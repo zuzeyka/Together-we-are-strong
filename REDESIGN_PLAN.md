@@ -101,7 +101,7 @@ Routes: `/:lang/` home, `/:lang/campaigns`, `/:lang/campaigns/:id`, `/:lang/dona
 |---|---|
 | 0 Speed first | done 2026-11-10 on branch `perf/phase-0` (not merged or deployed yet); see below |
 | 1 Design system in code | done 2026-11-10 on branch `design/phase-1` (based on phase 0); see below |
-| 2 Information architecture and pages | done on branch `design/phase-2`, awaiting review |
+| 2 Information architecture and pages | done, live on main since 2026-11-11 |
 | 3 Trust and content | not started; needs material from the foundation |
 | 4 Quality gates | not started |
 
