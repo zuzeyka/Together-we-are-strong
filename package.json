@@ -10,7 +10,8 @@
         "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "check:design": "node scripts/check-design.mjs",
-        "qa": "node scripts/qa/serve-and-run.mjs"
+        "qa": "node scripts/qa/serve-and-run.mjs",
+        "qa:nav": "node scripts/qa/nav.mjs"
     },
     "dependencies": {
         "clsx": "^2.1.0",
