@@ -264,7 +264,7 @@ The founder liked the old video at the top and the moving partner logos, and ask
 **Result:** with motion, the video plays and the marquee moves. With reduced motion, no video is requested and partners show as a grid (checked with CDP). `npm run qa`: 0 axe issues, budgets met (home first view ~240 KB, LCP ≤ 1.24 s). `qa:nav` passes. Waiting for the user's review before merging.
 
 ### Phase 5b: who the fund helps (2026-11-12, same branch)
-The user corrected the scope. Help is for **children**: displaced children from other regions, children with disabilities or other difficulties, single mothers, and sometimes pets. It is not for everyone.
+The user corrected the scope. Help is for **children**: displaced children from other regions, children with disabilities or other difficulties, single mothers, and pets (the user later dropped "sometimes"). It is not for everyone.
 
 Rewritten in EN and UK:
 - the hero line

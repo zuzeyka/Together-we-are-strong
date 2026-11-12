@@ -10,7 +10,7 @@ import { TEAM } from "@/content/team";
 import { ExternalLink, L, Section, SectionHead, linkButton, usePageMeta } from "@/site/ui";
 import { cn } from "@/shared/lib/utils";
 
-// Who the fund helps: children first (the founder's description, 2026-11-12).
+// Who the fund helps: children, single mothers and animals (the founder's description, 2026-11-12).
 const AREAS = [
     ["displaced", HomeIcon],
     ["disabilities", Accessibility],

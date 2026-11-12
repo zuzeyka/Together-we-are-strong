@@ -44,3 +44,10 @@
   - `HELP_FORM_URL` / `VOLUNTEER_FORM_URL` (Help and Volunteer pages)
   - contact email, reports, project goals, stories
   - Ukrainian spellings of team names
+
+## 2026-11-12: hero video, animated partners, "who we help" narrowed (merged and live)
+- Branch `design/hero-video`:
+  - Home hero over the founder's video (poster first; pause button; reduced motion or Save-Data → poster only).
+  - Partners marquee (pause on hover/focus and via a button; still grid with reduced motion).
+  - "Who we help" now: displaced children, children with disabilities, single mothers, animals ("sometimes" removed at the user's request).
+- Merged to main on the user's OK.

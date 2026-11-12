@@ -35,7 +35,7 @@
                 },
                 "where": {
                     "q": "Where does the money go?",
-                    "a": "To the fund's projects for children: clothes, food and baby boxes for displaced children and single mothers, help for children with disabilities, and now and then for animal shelters. Every project is on the site, with photos."
+                    "a": "To the fund's projects for children: clothes, food and baby boxes for displaced children and single mothers, help for children with disabilities, and for animal shelters. Every project is on the site, with photos."
                 }
             },
             "instagram": "Write on Instagram",
@@ -52,7 +52,7 @@
                 },
                 "spend": {
                     "title": "It goes to a project",
-                    "text": "We add it to a current project: clothes, food and baby boxes for children and their mothers, and sometimes help for animals."
+                    "text": "We add it to a current project: clothes, food and baby boxes for children and their mothers, and help for animals."
                 },
                 "report": {
                     "title": "We show the result",
