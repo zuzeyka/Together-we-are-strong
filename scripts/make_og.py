@@ -40,8 +40,8 @@ W, H, PAD = 1200, 630, 72
 
 OG = {
     "default": ("Together We Made Power", "«Разом ми сила» · Ukrainian charity fund since 2022", "Charity fund · Благодійний фонд"),
-    "home-en": ("Together We Made Power", "We help displaced families, children, hospitals, defenders and animals.", "Ukrainian charity fund · since 2022"),
-    "home-uk": ("Разом ми сила", "Допомагаємо переселенцям, дітям, лікарням, захисникам і тваринам.", "Український благодійний фонд · з 2022 року"),
+    "home-en": ("Together We Made Power", "We help children: displaced children, children with disabilities and single mothers.", "Ukrainian charity fund · since 2022"),
+    "home-uk": ("Разом ми сила", "Допомагаємо дітям: переселенцям, дітям з інвалідністю та мамам-одиначкам.", "Український благодійний фонд · з 2022 року"),
     "donate-en": ("Support the fund", "Bank transfer in hryvnias or euros, or PayPal. Every gift goes to our projects.", "Together We Made Power"),
     "donate-uk": ("Підтримати фонд", "Переказ у гривнях чи євро або внесок через PayPal. Усе йде на проєкти фонду.", "Разом ми сила"),
 }

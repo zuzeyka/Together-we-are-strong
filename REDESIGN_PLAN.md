@@ -262,3 +262,17 @@ The founder liked the old video at the top and the moving partner logos, and ask
 | Q | build, `npm run qa`, `npm run qa:nav`, screenshots, push a preview; merge only on the user's OK | done 2026-11-12 |
 
 **Result:** with motion, the video plays and the marquee moves. With reduced motion, no video is requested and partners show as a grid (checked with CDP). `npm run qa`: 0 axe issues, budgets met (home first view ~240 KB, LCP ≤ 1.24 s). `qa:nav` passes. Waiting for the user's review before merging.
+
+### Phase 5b: who the fund helps (2026-11-12, same branch)
+The user corrected the scope. Help is for **children**: displaced children from other regions, children with disabilities or other difficulties, single mothers, and sometimes pets. It is not for everyone.
+
+Rewritten in EN and UK:
+- the hero line
+- home "Who we help" (4 cards: displaced children, children with disabilities, single mothers, animals sometimes)
+- Help page "Who can ask" (same 4), a note that adults without children usually can't be helped, and the message template (asks about the children)
+- About mission and "how we work"
+- Volunteer lead
+- donate presets, FAQ and thank-you texts
+- meta descriptions and the home OG images
+
+The impact numbers and past project stories are unchanged, because they're history. Status: done, waiting for review together with Phase 5.

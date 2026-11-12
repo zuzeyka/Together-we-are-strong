@@ -4,9 +4,9 @@
             "amountTitle": "Choose an amount",
             "amountNote": "Any amount helps. These are examples of what a gift adds to, not exact prices.",
             "presets": {
-                "food": "Helps fill a 17 kg food box for a displaced family",
+                "food": "Helps fill a 17 kg food box for a family with children",
                 "baby": "Contributes to a baby box for a child aged 0–5",
-                "medicine": "Helps buy medicines for a hospital",
+                "medicine": "Helps buy medicine or care items for a child with a disability",
                 "shelter": "Helps feed an animal shelter for a week"
             },
             "transfer": "Transfer {{amount}} to the details below",
@@ -35,7 +35,7 @@
                 },
                 "where": {
                     "q": "Where does the money go?",
-                    "a": "To the fund's projects: food and baby boxes for displaced families, medicines for hospitals, help for defenders and animal shelters. Every project is on the site, with photos."
+                    "a": "To the fund's projects for children: clothes, food and baby boxes for displaced children and single mothers, help for children with disabilities, and now and then for animal shelters. Every project is on the site, with photos."
                 }
             },
             "instagram": "Write on Instagram",
@@ -43,7 +43,7 @@
         },
         "thanks": {
             "title": "Thank you for your help",
-            "lead": "Your transfer turns into food, medicines and care for people who need them right now. We're grateful you're with us.",
+            "lead": "Your transfer turns into food, clothes and care for children who need them right now. We're grateful you're with us.",
             "nextTitle": "What happens next",
             "steps": {
                 "receive": {
@@ -52,7 +52,7 @@
                 },
                 "spend": {
                     "title": "It goes to a project",
-                    "text": "We add it to a current project: food and baby boxes, medicines, help for defenders or animals."
+                    "text": "We add it to a current project: clothes, food and baby boxes for children and their mothers, and sometimes help for animals."
                 },
                 "report": {
                     "title": "We show the result",

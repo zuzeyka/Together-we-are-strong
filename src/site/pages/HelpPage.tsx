@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Accessibility, Baby, Check, Home as HomeIcon, Instagram, Stethoscope, ShieldCheck, Users } from "lucide-react";
+import { Accessibility, Baby, Check, Dog, Home as HomeIcon, Instagram, ShieldCheck } from "lucide-react";
 import { INSTAGRAM } from "@/content/campaigns";
 import MessageTemplate from "@/site/MessageTemplate";
 import { cn } from "@/shared/lib/utils";
@@ -16,10 +16,9 @@ const HELP_FORM_URL: string | null = null;
 
 const WHO = [
     ["displaced", HomeIcon],
-    ["families", Users],
+    ["disabilities", Accessibility],
     ["mothers", Baby],
-    ["vulnerable", Accessibility],
-    ["institutions", Stethoscope],
+    ["animals", Dog],
 ] as const;
 
 const CHECKLIST = ["name", "city", "family", "need", "contact"] as const;
@@ -56,7 +55,7 @@ const HelpPage: React.FC = () => {
 
             <Section tone="sunk" labelledBy="who">
                 <SectionHead id="who" title={t("ui.helpPage.who.title")} lead={t("ui.helpPage.who.lead")} />
-                <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {WHO.map(([key, Icon]) => (
                         <li key={key} className="flex gap-4 rounded-card border border-line bg-surface p-5 shadow-card">
                             <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-tint text-primary">

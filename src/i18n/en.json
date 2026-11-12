@@ -502,7 +502,7 @@
     },
     "about": {
         "title": "Empowering Communities, Changing Lives",
-        "description": "The TWMP Foundation aims to support internally displaced persons, provide resources to children and hospitals, and strengthen communities through innovative projects.",
+        "description": "The TWMP Foundation helps children: children displaced from other regions, children with disabilities and other difficulties, and the single mothers raising them. Sometimes we also help animal shelters.",
         "support": "Supported over 10,900 internally displaced persons with housing, food, and medical supplies.",
         "projects": "Initiated over 100 community projects to foster growth and resilience.",
         "partnerships": "Collaborated with 50+ organizations to amplify the impact of our efforts.",
@@ -607,7 +607,7 @@
         "hero": {
             "eyebrow": "Ukrainian charity fund · since 2022",
             "title": "Together We Made Power",
-            "lead": "We help displaced families, mothers with babies, children, hospitals, defenders and animals: quickly, openly and together with our partners.",
+            "lead": "We help children whose lives the war turned upside down: children who fled other regions, children with disabilities and other difficulties, and the single mothers raising them. Sometimes we help animals too.",
             "donate": "Donate",
             "projects": "See our projects",
             "photo": "Volunteers handing out aid in Skvyra"
@@ -616,28 +616,20 @@
             "title": "Who we help",
             "items": {
                 "displaced": [
-                    "Displaced families",
-                    "Housing, food, clothes and essentials for people who lost their homes."
+                    "Displaced children",
+                    "Children who had to flee their homes in other regions: clothes, shoes, food and gifts."
+                ],
+                "disabilities": [
+                    "Children with disabilities",
+                    "Children with disabilities or other difficulties, and the homes that care for them."
                 ],
                 "mothers": [
-                    "Mothers and babies",
-                    "Baby boxes and care for mothers with newborns."
-                ],
-                "children": [
-                    "Children",
-                    "Gifts, clothes and support for orphans and children with disabilities."
-                ],
-                "hospitals": [
-                    "Hospitals",
-                    "Medicines and equipment for hospitals in need."
-                ],
-                "defenders": [
-                    "Defenders",
-                    "Essential supplies for military units."
+                    "Single mothers",
+                    "Mothers raising children on their own, including mothers of newborns: baby boxes and essentials."
                 ],
                 "animals": [
-                    "Animals",
-                    "Food and care for animal shelters."
+                    "Animals, sometimes",
+                    "Now and then we bring food and care to animal shelters."
                 ]
             }
         },
@@ -726,11 +718,11 @@
         "meta": {
             "siteName": "Together We Made Power",
             "tagline": "Ukrainian charity fund",
-            "description": "Together We Made Power is a Ukrainian charity fund helping displaced families, mothers and babies, children, hospitals, defenders and animals since 2022.",
+            "description": "Together We Made Power is a Ukrainian charity fund for children: displaced children, children with disabilities and single mothers, and sometimes animals. Since 2022.",
             "imageAlt": "Together We Made Power: the fund’s round logo, a small yellow hand holding the finger of a large blue hand.",
             "pages": {
                 "campaigns": {
-                    "description": "Every project we have run since 2022: aid for displaced families, mothers and babies, children, hospitals, defenders and animal shelters, with photos and partners."
+                    "description": "Every project we have run since 2022, most of them for children and their mothers, with photos and partners."
                 },
                 "campaign": {
                     "description": "A project of Together We Made Power, a Ukrainian charity fund."
@@ -745,7 +737,7 @@
                     "description": "Who we are, how we work and the team behind Together We Made Power, a Ukrainian charity fund working since 2022 (EDRPOU 44749163)."
                 },
                 "help": {
-                    "description": "Need help? Displaced families, mothers with babies, children, hospitals and military units can ask Together We Made Power for aid. Tell us who you are, where you are and what you need."
+                    "description": "Help from Together We Made Power is for children: displaced children from other regions, children with disabilities or other difficulties, and single mothers. Write to us on Instagram."
                 },
                 "volunteer": {
                     "description": "Volunteer with Together We Made Power: driving, packing, translating and more. Tell us how you would like to help."

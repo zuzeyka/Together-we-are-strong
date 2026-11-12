@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Baby, Dog, HandHeart, Home as HomeIcon, Stethoscope, Shield, Users } from "lucide-react";
+import { Accessibility, ArrowRight, Baby, Dog, HandHeart, Home as HomeIcon, Users } from "lucide-react";
 import Picture from "@/components/Picture";
 import CampaignCard from "@/site/CampaignCard";
 import { CAMPAIGNS, PAYPAL } from "@/content/campaigns";
@@ -10,12 +10,11 @@ import { TEAM } from "@/content/team";
 import { ExternalLink, L, Section, SectionHead, linkButton, usePageMeta } from "@/site/ui";
 import { cn } from "@/shared/lib/utils";
 
+// Who the fund helps: children first (the founder's description, 2026-11-12).
 const AREAS = [
     ["displaced", HomeIcon],
+    ["disabilities", Accessibility],
     ["mothers", Baby],
-    ["children", HandHeart],
-    ["hospitals", Stethoscope],
-    ["defenders", Shield],
     ["animals", Dog],
 ] as const;
 
@@ -56,7 +55,7 @@ const HomePage: React.FC = () => {
 
             <Section labelledBy="areas">
                 <SectionHead id="areas" title={t("ui.areas.title")} />
-                <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {AREAS.map(([key, Icon]) => {
                         const [title, text] = t(`ui.areas.items.${key}`, { returnObjects: true }) as string[];
                         return (
