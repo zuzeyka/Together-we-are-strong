@@ -1,0 +1,8 @@
+{
+    "ui": {
+        "heroVideo": {
+            "pause": "Pause animation",
+            "play": "Play animation"
+        }
+    }
+}

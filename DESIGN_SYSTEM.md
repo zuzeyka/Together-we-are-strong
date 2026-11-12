@@ -172,7 +172,9 @@ These rules are enforced by `npm run check:design` (`scripts/check-design.mjs`),
 ### 7. Media
 - Every image goes through `<Picture>` with `sizes`.
 - Only the first visible image is `priority`.
-- No autoplay video, no carousel that moves by itself.
+- No autoplay video and nothing that moves by itself, with two exceptions (2026-11-12, the founder's wish):
+  - **The home hero video:** muted, ≤ 3 MB, the poster painted first, loaded only when it may play, paused off-screen, with a pause button. With reduced motion or Save-Data, only the poster shows.
+  - **The partners marquee:** pauses on hover or focus, has a pause button, and duplicates are hidden from screen readers and Tab. With reduced motion it is a still grid.
 
 ### 8. Links and pages
 - Language in the URL (`/en/…`, `/uk/…`).

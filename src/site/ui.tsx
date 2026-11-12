@@ -179,8 +179,13 @@ export const LogoMark: React.FC<{ size?: number; className?: string }> = ({ size
     </span>
 );
 
-export const ExternalLink: React.FC<{ href: string; className?: string; children: React.ReactNode }> = ({ href, className, children }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+export const ExternalLink: React.FC<{ href: string; className?: string; children: React.ReactNode; tabIndex?: number }> = ({
+    href,
+    className,
+    children,
+    tabIndex,
+}) => (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className} tabIndex={tabIndex}>
         {children}
         <span className="sr-only"> (opens in a new tab)</span>
     </a>

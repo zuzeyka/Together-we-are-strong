@@ -249,3 +249,16 @@ Work is split into four parallel agents, each with its own files.
   - reports, project goals, stories
 - **Content questions for the owner:** Russian spellings Dmitry / Andrey / Danil vs Dmytro / Andrii / Danylo; Grooming is "dog grooming" in UK only.
 - **Next:** the user reviews the preview, then says whether to merge phase-0 → 1 → 2 into main.
+
+## Phase 5: hero video and moving partners (2026-11-12, branch `design/hero-video`)
+The founder liked the old video at the top and the moving partner logos, and asked for both back (animated).
+
+| Step | What | Status |
+|---|---|---|
+| V1 | **Home hero:** full-width background video (the 15 s, 720p, 2.4 MB clip from Phase 0), muted, looping, playsInline, poster first. Text on a navy scrim (`.on-photo`), Donate + "See our projects" | done 2026-11-12 |
+| V2 | **Video safety:** pause/play button (WCAG 2.2.2). Reduced motion or Save-Data → poster only, no video download. The video loads after first paint (`preload="none"`, starts when in view). The poster is preloaded on home pages only (prerender-meta) | done 2026-11-12 |
+| P1 | **Partners marquee:** seamless loop (list ×2, translate −50 %), faded edges, pauses on hover/focus, pause button. Reduced motion → the static grid. Used on home and About | done 2026-11-12 |
+| R | **DESIGN_SYSTEM rule 7:** amended. Both exceptions are allowed only with a pause control and a reduced-motion fallback | done 2026-11-12 |
+| Q | build, `npm run qa`, `npm run qa:nav`, screenshots, push a preview; merge only on the user's OK | done 2026-11-12 |
+
+**Result:** with motion, the video plays and the marquee moves. With reduced motion, no video is requested and partners show as a grid (checked with CDP). `npm run qa`: 0 axe issues, budgets met (home first view ~240 KB, LCP ≤ 1.24 s). `qa:nav` passes. Waiting for the user's review before merging.

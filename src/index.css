@@ -181,3 +181,49 @@
         padding-bottom: calc(5rem + env(safe-area-inset-bottom));
     }
 }
+
+/* Home hero over the video (DESIGN_SYSTEM.md rule 7 exception): a navy scrim so white text stays ≥ 7:1. */
+.hero-scrim {
+    background: linear-gradient(to top, rgb(8 17 27 / 0.92) 0%, rgb(8 17 27 / 0.62) 45%, rgb(8 17 27 / 0.35) 100%);
+}
+.on-photo-muted {
+    color: rgb(255 255 255 / 0.9);
+}
+.photo-button {
+    color: #ffffff;
+    background: rgb(8 17 27 / 0.55);
+    border: 1px solid rgb(255 255 255 / 0.35);
+}
+.photo-button:hover {
+    background: rgb(8 17 27 / 0.8);
+}
+.photo-outline {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+.photo-outline:hover {
+    background: rgb(255 255 255 / 0.12);
+}
+
+/* Partners marquee: two copies of the list, moved by exactly one copy's width. */
+.marquee {
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee-track {
+    animation: marquee 38s linear infinite;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track,
+.marquee-paused {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
+}

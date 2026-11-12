@@ -3,7 +3,9 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight, Baby, Dog, HandHeart, Home as HomeIcon, Stethoscope, Shield, Users } from "lucide-react";
 import Picture from "@/components/Picture";
 import CampaignCard from "@/site/CampaignCard";
-import { CAMPAIGNS, HERO_IMAGE, PARTNERS, PAYPAL } from "@/content/campaigns";
+import { CAMPAIGNS, PAYPAL } from "@/content/campaigns";
+import HeroVideo from "@/site/motion/HeroVideo";
+import PartnersMarquee from "@/site/motion/PartnersMarquee";
 import { TEAM } from "@/content/team";
 import { ExternalLink, L, Section, SectionHead, linkButton, usePageMeta } from "@/site/ui";
 import { cn } from "@/shared/lib/utils";
@@ -23,29 +25,20 @@ const HomePage: React.FC = () => {
 
     return (
         <>
-            {/* Hero: words first on phones, the photo beside them on wide screens. */}
-            <section className="bg-bg">
-                <div className="mx-auto grid max-w-container items-center gap-10 px-4 py-12 md:px-6 md:py-20 lg:grid-cols-2">
-                    <div className="animate-rise">
-                        <p className="text-small font-semibold uppercase tracking-wide text-primary">{t("ui.hero.eyebrow")}</p>
-                        <h1 className="mt-3 text-display text-ink">{t("ui.hero.title")}</h1>
-                        <p className="mt-5 max-w-prose text-body text-muted md:text-[1.1875rem]">{t("ui.hero.lead")}</p>
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            <L to="/donate" className={linkButton.donate}>{t("ui.hero.donate")}</L>
-                            <L to="/campaigns" className={linkButton.outline}>{t("ui.hero.projects")}</L>
-                        </div>
-                    </div>
-                    <div className="overflow-hidden rounded-card shadow-card">
-                        <Picture
-                            src={HERO_IMAGE}
-                            alt={t("ui.hero.photo")}
-                            sizes="(min-width: 1024px) 580px, 100vw"
-                            priority
-                            className="aspect-[4/3] h-full w-full object-cover"
-                        />
+            {/* Hero over the founder's video (poster first; see HeroVideo). White text only inside .on-photo. */}
+            <HeroVideo>
+                <div className="max-w-2xl animate-rise">
+                    <p className="on-photo-muted text-small font-semibold uppercase tracking-wide">{t("ui.hero.eyebrow")}</p>
+                    <h1 className="mt-3 text-display">{t("ui.hero.title")}</h1>
+                    <p className="on-photo-muted mt-5 max-w-prose text-body md:text-[1.1875rem]">{t("ui.hero.lead")}</p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                        <L to="/donate" className={linkButton.donate}>{t("ui.hero.donate")}</L>
+                        <L to="/campaigns" className="photo-outline inline-flex min-h-12 items-center justify-center gap-2 rounded-control px-6 font-semibold">
+                            {t("ui.hero.projects")}
+                        </L>
                     </div>
                 </div>
-            </section>
+            </HeroVideo>
 
             {/* Impact numbers: each says what it counts. */}
             <Section tone="tint" labelledBy="impact" id="about">
@@ -108,16 +101,7 @@ const HomePage: React.FC = () => {
 
             <Section tone="sunk" labelledBy="partners">
                 <SectionHead id="partners" title={t("ui.partners.title")} lead={t("ui.partners.lead")} />
-                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                    {PARTNERS.map(({ logo, url, name }) => (
-                        <li key={logo}>
-                            {/* Logos come in white and in colour: the navy tile keeps both readable. */}
-                            <ExternalLink href={url} className="logo-tile flex h-28 items-center justify-center rounded-card p-5 transition-opacity hover:opacity-85">
-                                <Picture src={logo} alt={name} sizes="200px" className="max-h-16 w-auto object-contain" />
-                            </ExternalLink>
-                        </li>
-                    ))}
-                </ul>
+                <PartnersMarquee />
             </Section>
 
             <Section labelledBy="team">

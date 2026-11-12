@@ -76,6 +76,8 @@ for (const lang of ["en", "uk"]) {
             `<meta name="twitter:description" content="${esc(desc)}" />`,
             `<meta name="twitter:image" content="${SITE}${image}" />`,
         ];
+        // The home hero's video poster is that page's largest paint: fetch it early, on home pages only.
+        if (r.key === "home") tags.unshift(`<link rel="preload" as="image" href="/media/mainVideo-poster.webp" fetchpriority="high" />`);
         const html = stripped.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`).replace("</head>", `        ${tags.join("\n        ")}\n    </head>`);
         const dir = join(DIST, lang, r.rest);
         mkdirSync(dir, { recursive: true });

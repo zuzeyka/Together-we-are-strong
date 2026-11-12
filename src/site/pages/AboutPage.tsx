@@ -2,9 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Compass, HandHeart, Landmark, MessageCircle, PackageCheck, Search, Target, Truck } from "lucide-react";
 import Picture from "@/components/Picture";
-import { PARTNERS } from "@/content/campaigns";
+import PartnersMarquee from "@/site/motion/PartnersMarquee";
 import { EDRPOU, TEAM } from "@/content/team";
-import { ExternalLink, L, Section, SectionHead, linkButton, usePageMeta } from "@/site/ui";
+import { L, Section, SectionHead, linkButton, usePageMeta } from "@/site/ui";
 
 const STEPS = [
     ["request", MessageCircle],
@@ -115,16 +115,7 @@ const AboutPage: React.FC = () => {
 
             <Section labelledBy="about-partners" id="partners">
                 <SectionHead id="about-partners" title={t("ui.partners.title")} lead={t("ui.partners.lead")} />
-                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                    {PARTNERS.map(({ logo, url, name }) => (
-                        <li key={logo}>
-                            {/* Logos come in white and in colour: the navy tile keeps both readable. */}
-                            <ExternalLink href={url} className="logo-tile flex h-28 items-center justify-center rounded-card p-5 transition-opacity hover:opacity-85">
-                                <Picture src={logo} alt={name} sizes="200px" className="max-h-16 w-auto object-contain" />
-                            </ExternalLink>
-                        </li>
-                    ))}
-                </ul>
+                <PartnersMarquee />
                 <p className="mt-8 text-body text-muted">
                     {t("ui.about.partnerNote")}{" "}
                     <L to="/volunteer#companies" className={linkButton.text}>{t("ui.about.partnerLink")}</L>
